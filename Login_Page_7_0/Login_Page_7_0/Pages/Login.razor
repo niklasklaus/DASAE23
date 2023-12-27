@@ -1,0 +1,65 @@
+﻿@inject HttpClient Http
+@page "/login"
+
+<title>Login</title>
+
+<link href="/css/mainComponent.css" rel="stylesheet"/>
+<link href="/css/loginNew.css" rel="stylesheet"/>
+
+<div class="content-container">
+    <div class="header-container">
+        <a class="image-header"><img class="img-size" src="images_login_page/Strabag_Logo.png"/></a>
+        <a class="image-header-icon-search"><img class="img-size" src="images_login_page/Search_Icon.png"/></a>
+        <a class="image-header-icon-menu"><img class="img-size" src="images_login_page/Navbar_Menu_Icon.png"/></a>
+    </div>
+
+
+    <div class="default-container">
+        <div class="item-topic"><h1>Login</h1></div>
+        <div class="item-input-Username">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <label class="primary-label-text" for="usernameLogin">Username:</label>
+                <InputText class="input-form" type="text"  id="usernameLogin" @bind-Value="_loginModel.Username"></InputText>
+            </EditForm>
+        </div>
+        <div class="item-input-Password">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <label class="primary-label-text" for="passwordLogin">Passwort:</label>
+                <InputText class="input-form" type="password" id="passwordLogin" @bind-Value="_loginModel.Password"></InputText>
+            </EditForm>
+        </div>
+        <div class="item-input-Remember">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <input class="check-box-style" type="checkbox" id="addition" name="math" value="add" bind-Value="@_loginModel.RememberMe"/>
+                <label class="primary-label-text" for="addition">Remember Me?</label>
+            </EditForm>
+        </div>
+        <div class="item-input-ButtonLogin">
+            <button class="primary-btn-login" type="submit" id="loginBtn">Anmelden</button>
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img class="img-property" src="images_login_page/Strabag_Logo.png"/>
+    </div>
+    
+    
+    
+</div>
+
+@code {
+
+    public LoginModel _loginModel { get; set; } = new();
+    
+    public class LoginModel
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public bool RememberMe { get; set; }
+    }
+
+    public void ExecuteLogin()
+    {
+        _loginModel = new LoginModel();
+    }
+}

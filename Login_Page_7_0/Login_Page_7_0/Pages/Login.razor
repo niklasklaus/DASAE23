@@ -1,4 +1,6 @@
 ﻿@inject HttpClient Http
+@inject LoginService loginService
+@inject NavigationManager navigationManager
 @page "/login"
 
 <title>Login</title>
@@ -35,7 +37,7 @@
             </EditForm>
         </div>
         <div class="item-input-ButtonLogin">
-            <button class="primary-btn-login" type="submit" id="loginBtn">Anmelden</button>
+            <button @onclick="ExecuteLogin" class="primary-btn-login" type="submit" id="loginBtn">Anmelden</button>
         </div>
     </div>
     
@@ -43,23 +45,60 @@
         <img class="img-property" src="images_login_page/Strabag_Logo.png"/>
     </div>
     
+    @if (!string.IsNullOrEmpty(errorMsg))
+    {
+        <p>@errorMsg</p>
+    }
+    
     
     
 </div>
 
 @code {
 
-    public LoginModel _loginModel { get; set; } = new();
-    
+    public LoginModel _loginModel = new();
+    public static string errorMsg;
+
     public class LoginModel
     {
+        private LoginService loginService;
+        private NavigationManager navigationManager;
+
+        public LoginModel() {}
+        public LoginModel(LoginService loginService, NavigationManager navigationManager)
+        {
+            this.loginService = loginService;
+            this.navigationManager = navigationManager;
+        }
+        
         public string Username { get; set; }
         public string Password { get; set; }
         public bool RememberMe { get; set; }
+
+        public void Login()
+        {
+            bool isAuthenticated = loginService.Authenticate(Username, Password);
+            
+            if (isAuthenticated)
+            {
+                navigationManager.NavigateTo("/customer");
+            }
+
+            else
+            {
+                errorMsg = $"Fehler bei der Anmeldung. Bitte überprüfen Sie die eingegebenen Daten";
+            }
+        }
     }
+    
+   
 
     public void ExecuteLogin()
     {
-        _loginModel = new LoginModel();
+        _loginModel = new LoginModel(loginService, navigationManager);
+        _loginModel.Login();
     }
+
+   
+    
 }

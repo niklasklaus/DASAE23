@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Login_Page_7_0
 build_property.RootNamespace = Login_Page_7_0
-build_property.ProjectDir = E:\Diplomarbeit\Website\LoginPage\Login_Page_7_0\Login_Page_7_0\
+build_property.ProjectDir = C:\Users\Niklas\repos_da_5chit\DASAE23\Login_Page_7_0\Login_Page_7_0\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Diplomarbeit\Website\LoginPage\Login_Page_7_0\Login_Page_7_0
+build_property.MSBuildProjectDirectory = C:\Users\Niklas\repos_da_5chit\DASAE23\Login_Page_7_0\Login_Page_7_0
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/App.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Pages/CustomerData.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Pages/CustomerData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Pages/Index.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Pages/Login.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Shared/SurveyPrompt.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/_Imports.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Shared/MainLayout.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-vew9v8k2cg
 
-[E:/Diplomarbeit/Website/LoginPage/Login_Page_7_0/Login_Page_7_0/Shared/NavMenu.razor]
+[C:/Users/Niklas/repos_da_5chit/DASAE23/Login_Page_7_0/Login_Page_7_0/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-htlyudkkry

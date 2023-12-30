@@ -2,6 +2,7 @@ using DA_Angebotserstellungssoftware;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using DA_Angebotserstellungssoftware.Data;
+using DA_Angebotserstellungssoftware.InsertCustomerData;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddScoped<MySqlConnectionManager>(provider =>
 });
 
 builder.Services.AddScoped<LoginService>();
+builder.Services.AddScoped<InsertCustomerDataService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

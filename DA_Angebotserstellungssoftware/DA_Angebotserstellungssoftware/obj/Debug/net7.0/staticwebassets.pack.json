@@ -1,103 +1,115 @@
 {
   "Files": [
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
       "PackagePath": "staticwebassets\\DA_Angebotserstellungssoftware.bundle.scp.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\Navbar_Menu_Icon.png",
-      "PackagePath": "staticwebassets\\css\\Navbar_Menu_Icon.png"
-    },
-    {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerDataNew.css",
-      "PackagePath": "staticwebassets\\css\\customerDataNew.css"
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
+      "PackagePath": "staticwebassets\\css\\chooseLV_style.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
+      "PackagePath": "staticwebassets\\css\\customerData.css"
+    },
+    {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Add_Icon.png"
+    },
+    {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Delete_Icon.png"
+    },
+    {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Logo.png"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Logo_Neu.png"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Navbar_Menu_Icon.png"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Search_Icon.png"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Settings_Icon.png"
+    },
+    {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Strabag_Logo.png"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\loginNew.css",
-      "PackagePath": "staticwebassets\\css\\loginNew.css"
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
+      "PackagePath": "staticwebassets\\css\\listOfLV.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponent.css",
-      "PackagePath": "staticwebassets\\css\\mainComponent.css"
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponentNew.css",
-      "PackagePath": "staticwebassets\\css\\mainComponentNew.css"
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
+      "PackagePath": "staticwebassets\\css\\mainComponents.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

@@ -1,0 +1,87 @@
+﻿@page "/ChooseLV"
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/chooseLV_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="default-content-container-chooseLV">
+        
+            <div class="header-choose_LV"><h1>LV auswählen:</h1></div>
+            <div class="item-grid item-MainInput">
+                <label class="primary-label-text kind-item-label-choose" for="mainChoice">Überverzeichnis:</label>
+                <EditForm Model="@_ChooseLv" OnValidSubmit="ExecuteConfirm" class="kind-item-input-choose">
+                    <InputSelect class="kind-item-input-choose" id="mainLVInputSelect" @bind-Value="_ChooseLv.MainLV">
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            <option value="Test">Test</option>
+                        }
+                    </InputSelect>
+                </EditForm>
+            </div>
+        
+            
+            <div class="item-grid item-SubInput">
+                <label class="primary-label-text kind-item-label-choose" for="subChoice">Unterverzeichnis:</label>
+                <EditForm Model="@_ChooseLv" OnValidSubmit="ExecuteConfirm" class="kind-item-input-choose">
+                    <InputSelect class="kind-item-input-choose" id="subLVInputSelect" @bind-Value="_ChooseLv.SubLV">
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            <option value="Sub Test">Sub Test</option>
+                        }
+                    </InputSelect>
+                </EditForm>
+            </div>
+            
+            <div class="item-input-ButtonConfirm">
+                <button class="primary-btn-login" type="submit" id="ConfirmBtn">Bestätigen</button>
+            </div>
+        
+        
+        <div class="space-column"></div>
+        
+        
+            <div class="header-product_LV"><h1>Produkte:</h1></div>
+            <div class="product_table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name LV</th>
+                        <th>Menge</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @for (int i = 1; i <= 150; i++)
+                    {
+                        <tr>
+                            <td>Lv @i</td>
+                            <td>@i</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+@code {
+    public ChooseLVModel _ChooseLv { get; set; } = new();
+    
+    public class ChooseLVModel
+    {
+        public string MainLV { get; set; }
+        public string SubLV { get; set; }
+    }
+
+    public void ExecuteConfirm()
+    {
+        _ChooseLv = new ChooseLVModel();
+    }
+}

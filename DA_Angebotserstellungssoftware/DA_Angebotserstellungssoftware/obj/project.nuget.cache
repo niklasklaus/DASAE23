@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jp33w/CI8k+V1Wf4zuNV3/J1Sl4TZJ/8Rlz7wAkRsgh540TaNCNYgfzlX0wmpNddOT0X9wk6W6C5UwJqLt0E+w==",
+  "dgSpecHash": "oCvMo+isrxWRJZXGBCdZSbW4/EYy+OKnLbAw8KQG4stqVI4wLB5bIg1n5yFM/i0lMzcYXdAtiSwp6Y01qCxCJg==",
   "success": true,
-  "projectFilePath": "E:\\Schule\\DA\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
+  "projectFilePath": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Niklas\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
-    "C:\\Users\\Niklas\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
+    "C:\\Users\\lukas\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\lukas\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
   ],
   "logs": []
 }

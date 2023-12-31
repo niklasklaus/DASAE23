@@ -1,0 +1,81 @@
+﻿@page "/customerbackup"
+@using DA_Angebotserstellungssoftware.InsertCustomerData
+@inject InsertCustomerDataService insertCustomer
+@inject NavigationManager navigationManager
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/CustomerData.css" rel="stylesheet"/>
+
+<div class="default-customer-container">
+    <div class="header-container">
+        <a class="image-header"><img class="img-size" src="css/images_login_page/Strabag_Logo.png"/></a>
+        <a class="image-header-icon-search"><img class="img-size" src="css/images_login_page/Search_Icon.png"/></a>
+        <a class="image-header-icon-menu"><img class="img-size" src="css/images_login_page/Navbar_Menu_Icon.png"/></a>
+    </div>
+    
+    <div class="header-customer"><h1>Kundendaten eingeben</h1></div>
+    <div class="item-grid item-Anrede">
+        <label class="primary-label-text kind-item-label" for="CustomerAnrede">Anrede:</label>
+        <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+            <InputText class="input-form input-field-customer" type="text" id="CustomerAnrede" @bind-Value="@_customer.Anrede"></InputText>
+        </EditForm>
+    </div>
+    <div class="item-grid item-FirstName">
+        <label class="primary-label-text kind-item-label" for="CustomerFirstName">Vorname:</label>
+        <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+            <InputText class="input-form input-field-customer" type="text" id="CustomerFirstName" @bind-Value="@_customer.FirstName"></InputText>
+        </EditForm>
+    </div>
+    <div class="item-grid item-LastName">
+        <label class="primary-label-text kind-item-label" for="CustomerLastName">Nachname:</label>
+        <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+            <InputText class="input-form input-field-customer" type="text" id="CustomerLastName" @bind-Value="@_customer.LastName"></InputText>
+        </EditForm>
+    </div>
+    <div class="item-grid item-Address">
+        <label class="primary-label-text kind-item-label" for="CustomerAddress">Anschrift:</label>
+        <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+            <InputText class="input-form input-field-customer" type="text" id="CustomerAddress" @bind-Value="@_customer.Address"></InputText>
+        </EditForm>
+    </div>
+    <div class="item-grid item-UIDNumber">
+        <label class="primary-label-text kind-item-label" for="CustomerUIDNumber">Firmen UID-Nummer:</label>
+        <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+            <InputText class="input-form input-field-customer" type="text" id="CustomerUIDNumber" @bind-Value="@_customer.UIDNumber"></InputText>
+        </EditForm>
+    </div>
+    <div class="item-input-ButtonNext">
+        <button @onclick="ExecuteNext" class="primary-btn-login" type="submit" id="loginBtn">Weiter</button>
+    </div>
+    
+    <div class="customer-footer-container">
+        <p class="text-footer">© STRABAG</p>
+        <a class="image-footer-container"><img class="img-size" src="css/images_login_page/Strabag_Logo.png"/></a>
+    </div>
+    
+    @if (!string.IsNullOrEmpty(Msg))
+    {
+        <div class="alert alert-info">
+            <p>@Msg</p>
+        </div>
+    }
+</div>
+
+@code {
+    public CustomerModel _customer { get; set; } = new();
+    public string Msg;
+    
+    public class CustomerModel
+    {
+        public string Anrede { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string UIDNumber { get; set; }
+    }
+
+    public void ExecuteNext()
+    {
+        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber);
+        Msg = $"Der Kunde wurde erfolgriech hinzugefügt";
+    }
+}

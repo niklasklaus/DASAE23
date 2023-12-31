@@ -2,6 +2,15 @@
     overflow: hidden;
 }
 
+.default-content-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F2F3F3;
+
+    display: grid;
+    grid-template-rows: 2fr 20fr 2fr;
+}
+
 .primary-btn-login{
     background-color: #E92020;
     color: #ffffff;
@@ -22,6 +31,8 @@ p{
 
 .header-container{
     border-bottom: 8px solid #F2F3F3;
+    padding: 5px 0 5px 0;
+    background-color: white;
 
     display: grid;
     grid-template-rows: 1fr;
@@ -70,6 +81,32 @@ p{
     margin-right: 4px;
 }
 
+.customer-footer-container{
+    border-top: 8px solid #F2F3F3;
+    display: grid;
+    grid-template-columns: 4fr 10fr 2fr;
+    grid-row: 3;
+    background-color: white;
+}
+
+.image-footer-container{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    object-fit: contain;
+    align-self: center;
+    width: 150px;
+    justify-self: end;
+    margin-right: 10px;
+}
+
+.text-footer{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    align-self: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 770px ){
     .header-container{
         display: grid;
@@ -88,8 +125,21 @@ p{
     }
 }
 
+@media only screen and (max-height: 600px){
+    .primary-label-text{
+        font-size: 1em;
+        color: #000000;
+    }
+}
+
 .img-size{
     height: 100%;
     width: 100%;
+}
+
+.img-footer-size{
+    height: 100%;
+    width: 100%;
     margin-bottom: 10px;
+    margin-top: 10px;
 }

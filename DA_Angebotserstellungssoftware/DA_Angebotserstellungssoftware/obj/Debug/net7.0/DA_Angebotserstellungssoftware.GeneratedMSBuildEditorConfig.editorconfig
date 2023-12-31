@@ -9,57 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DA_Angebotserstellungssoftware
 build_property.RootNamespace = DA_Angebotserstellungssoftware
-build_property.ProjectDir = E:\Schule\DA\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\
+build_property.ProjectDir = E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Schule\DA\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware
+build_property.MSBuildProjectDirectory = E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/App.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/ChooseLV.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hvb3NlTFYucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/CustomerData.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/CustomerBackup.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJCYWNrdXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/CustomerData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Index.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Login.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/SurveyPrompt.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/LV_List_Page.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTFZfTGlzdF9QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/Footer_Basic.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlcl9CYXNpYy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/Navbar_Basic.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhcl9CYXNpYy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/_Imports.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/MainLayout.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-4n4h28a60i
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/NavMenu.razor]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-c4kn647fgq
 
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Schule/DA/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/_Host.cshtml]
+[E:/Diplomarbeit/Website/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

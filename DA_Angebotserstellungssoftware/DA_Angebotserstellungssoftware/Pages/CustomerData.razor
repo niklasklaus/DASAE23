@@ -1,6 +1,8 @@
 ﻿@page "/customer"
 @using DA_Angebotserstellungssoftware.InsertCustomerData
+@using DA_Angebotserstellungssoftware.InsertLVs
 @inject InsertCustomerDataService insertCustomer
+@inject InsertLVsService lvs
 @inject NavigationManager navigationManager
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/customerData.css" rel="stylesheet"/>
@@ -42,7 +44,7 @@
                 </EditForm>
             </div>
             <div class="item-input-ButtonNext">
-                <button class="primary-btn-login" type="submit" id="loginBtn">WEITER</button>
+                <button  @onclick="ExecuteNext" class="primary-btn-login" type="submit" id="loginBtn">WEITER</button>
             </div>
         </div>
         
@@ -73,6 +75,8 @@
     public void ExecuteNext()
     {
         insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber);
+        string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        lvs.InsertLVs(filePath);
         Msg = $"Der Kunde wurde erfolgriech hinzugefügt";
     }
 }

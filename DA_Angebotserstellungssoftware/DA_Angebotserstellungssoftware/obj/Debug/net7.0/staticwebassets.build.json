@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "29/k+/pHvqEdwFLlqBdOlbuiEIZA6/VGtUmEh0f6rYA=",
+  "Hash": "CMJHDrA17W+/HaPPMBIU33lldpKXcZr/DiizjTPOg44=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "DA_Angebotserstellungssoftware\\wwwroot",
       "Source": "DA_Angebotserstellungssoftware",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "DA_Angebotserstellungssoftware.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "DA_Angebotserstellungssoftware.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/chooseLV_style.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\chooseLV_style.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/customerData.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\customerData.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Add_Icon.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Add_Icon.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Delete_Icon.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Delete_Icon.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Logo_Neu.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Logo_Neu.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Logo.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Logo.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Navbar_Menu_Icon.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Search_Icon.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Search_Icon.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Settings_Icon.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Settings_Icon.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Strabag_Logo.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Strabag_Logo.png"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/listOfLV.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\listOfLV.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/mainComponents.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css\\mainComponents.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

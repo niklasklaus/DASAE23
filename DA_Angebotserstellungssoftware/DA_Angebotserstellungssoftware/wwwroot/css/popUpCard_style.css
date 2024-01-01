@@ -1,0 +1,42 @@
+﻿.content-container-popup{
+    height: 30vh;
+    
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.popup-header1{
+    grid-row: 1;
+}
+
+.popup-header2{
+    grid-row: 4;
+}
+
+.popup-header1 h1{
+    font-size: 1.3em;
+}
+
+.popup-header2 h1{
+    font-size: 1.3em;
+}
+
+.popup-slider{
+    grid-row: 2;
+}
+
+.popup-input{
+    width: 10%;
+}
+
+.price-input-container{
+    grid-row: 5;
+}
+
+.price-input{
+    width: 10%;
+}
+
+.btn-confirm-position{
+    grid-row: 6;
+}

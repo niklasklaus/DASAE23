@@ -1,9 +1,12 @@
+using Blazored.Modal;
 using DA_Angebotserstellungssoftware;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using DA_Angebotserstellungssoftware.Data;
 using DA_Angebotserstellungssoftware.InsertCustomerData;
 using DA_Angebotserstellungssoftware.InsertLVs;
+using Radzen;
+using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddBlazoredModal();
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddRadzenComponents();
 builder.Services.AddScoped<MySqlConnectionManager>(provider =>
 {
     var configuration = provider.GetRequiredService<IConfiguration>();

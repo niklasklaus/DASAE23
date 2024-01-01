@@ -1,0 +1,26 @@
+﻿<link href="/css/popUpCard_style.css" rel="stylesheet"/>
+
+<div class="content-container-popup">
+    <div class="popup-header1"><h1>Schwierigkeitsgrad:</h1></div>
+    <div class="popup-slider">
+        <RadzenSlider @bind-Value="@value" TValue="double" Min="0" Max="5" Step="0.1"/>
+        <input type="text" class="popup-input" value="@value" @oninput="UpdateSliderValue"/>
+    </div>
+    <div class="popup-header2"><h1>Preisnachlass:</h1></div>
+    <div class="price-input-container"><input type="text" class="price-input" value="@value" @oninput="UpdateSliderValue"/></div>
+    <div class="btn-confirm-position"><button class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Bestätigen</button></div>
+</div>
+
+@code
+{
+    double value = 2.50;
+    double price = 0.0;
+    
+    private void UpdateSliderValue(ChangeEventArgs args)
+    {
+        if (double.TryParse(args.Value.ToString(), out double inputValue))
+        {
+            value = inputValue;
+        }
+    }
+}

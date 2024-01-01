@@ -1,4 +1,5 @@
 ﻿@page "/ListOfLV"
+@inject IModalService Modal
 
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
@@ -58,7 +59,7 @@
         
         <div class="button-position-div">
             <a class="button-position-properties button-position-add"><img class="img-size" src="css/images_login_page/Add_Icon.png"/></a>
-            <a class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
+            <a @onclick="@(()=>Modal.Show<Modal>("Einstellungen"))" class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
             <button class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
             <button class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
         </div>

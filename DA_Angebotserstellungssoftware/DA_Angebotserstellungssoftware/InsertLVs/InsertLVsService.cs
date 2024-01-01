@@ -12,7 +12,7 @@ public class InsertLVsService
         this.connection = connectionManager;
     }
     
-    public void InsertLVs(string filepath)
+    public void InsertLVs(string filepath, int id)
     {
           // Verbindung zur MySQL-Datenbank herstellen
         string connectionString = "Server=localhost;Database=da_dbschema;User Id=root;Password=root;";
@@ -24,8 +24,8 @@ public class InsertLVsService
         // Öffne die Verbindung
         connection.Open();
 
-        Random rand = new Random();
-        int id = rand.Next(1, 5000001);
+        //Random rand = new Random();
+        //int id = rand.Next(1, 5000001);
         commandA.CommandText =
             $"INSERT INTO PROPOSALS (proposal_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{id}', null, null, null, null, null, null, null, DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'), null)";
         commandA.ExecuteNonQuery();

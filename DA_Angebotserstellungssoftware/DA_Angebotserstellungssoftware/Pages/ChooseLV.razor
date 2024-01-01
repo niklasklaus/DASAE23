@@ -1,4 +1,4 @@
-﻿@page "/ChooseLV"
+﻿@page "/ChooseLV/{id}"
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/chooseLV_style.css" rel="stylesheet"/>
@@ -72,6 +72,29 @@
 </div>
 
 @code {
+    
+    [Parameter]
+    public string id { get; set; }
+
+    protected override void OnInitialized()
+    {
+        int parsedId;
+        if (int.TryParse(id, out parsedId))
+        {
+    // Der id-Wert wurde erfolgreich als Integer geparst
+    // Du kannst ihn nun verwenden, z.B. um Daten aus der Datenbank basierend auf dieser id abzurufen
+    // Zum Beispiel: Hier könntest du eine Methode aufrufen, die Daten basierend auf dieser id aus der Datenbank abruft
+            LoadDataFromDatabase(parsedId);
+        }
+    }
+    
+    private void LoadDataFromDatabase(int parsedId)
+    {
+    // Hier könntest du Logik einfügen, um Daten aus der Datenbank basierend auf der id zu laden
+    // Z.B. du könntest eine Methode aufrufen, die die Daten aus der Datenbank lädt
+    }
+    
+    
     public ChooseLVModel _ChooseLv { get; set; } = new();
     
     public class ChooseLVModel

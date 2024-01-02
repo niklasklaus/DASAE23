@@ -1,7 +1,7 @@
 ﻿using MySqlConnector;
 using OfficeOpenXml;
 
-namespace DA_Angebotserstellungssoftware.InsertLVs;
+namespace DA_Angebotserstellungssoftware;
 
 public class InsertLVsService
 {

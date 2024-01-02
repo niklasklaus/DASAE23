@@ -1,5 +1,6 @@
-﻿@page "/ListOfLV"
+﻿@page "/ListOfLVs/{id}"
 @inject IModalService Modal
+@inject SharedService _srvice
 
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
@@ -70,5 +71,33 @@
 </div>
 
 @code {
+    [Parameter]
+    public string id { get; set; }
+
+   
+    protected override void OnInitialized()
+    {
+        _srvice.IdFromURL = id;
+    }
     
+    
+    /*private void LoadDataFromDatabase(int parsedId)
+    {
+    // Hier könntest du Logik einfügen, um Daten aus der Datenbank basierend auf der id zu laden
+    // Z.B. du könntest eine Methode aufrufen, die die Daten aus der Datenbank lädt
+    }*/
+    
+    
+    public ChooseLVModel _ChooseLv { get; set; } = new();
+    
+    public class ChooseLVModel
+    {
+        public string MainLV { get; set; }
+        public string SubLV { get; set; }
+    }
+
+    public void ExecuteConfirm()
+    {
+        _ChooseLv = new ChooseLVModel();
+    }
 }

@@ -1,6 +1,6 @@
 ﻿@page "/customer"
 @using DA_Angebotserstellungssoftware.InsertCustomerData
-@using DA_Angebotserstellungssoftware.InsertLVs
+@using DA_Angebotserstellungssoftware
 @inject InsertCustomerDataService insertCustomer
 @inject InsertLVsService lvs
 @inject NavigationManager navigationManager
@@ -80,6 +80,6 @@
         string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
         lvs.InsertLVs(filePath, id);
         Msg = $"Der Kunde wurde erfolgriech hinzugefügt";
-        navigationManager.NavigateTo($"/ChooseLV/{id.ToString()}");
+        navigationManager.NavigateTo($"/ListOfLVs/{id.ToString()}");
     }
 }

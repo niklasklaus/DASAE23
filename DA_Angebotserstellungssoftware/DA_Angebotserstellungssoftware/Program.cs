@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components.Web;
 using DA_Angebotserstellungssoftware.Data;
 using DA_Angebotserstellungssoftware.InsertCustomerData;
 using DA_Angebotserstellungssoftware;
+using DA_Angebotserstellungssoftware.Proposals;
 using Radzen;
 using Syncfusion.Blazor;
 
@@ -28,6 +29,7 @@ builder.Services.AddScoped<InsertCustomerDataService>();
 builder.Services.AddScoped<InsertLVsService>();
 builder.Services.AddScoped<InsertEffortAndDiscountService>();
 builder.Services.AddScoped<SharedService>();
+builder.Services.AddScoped<InsertPaymentTermService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

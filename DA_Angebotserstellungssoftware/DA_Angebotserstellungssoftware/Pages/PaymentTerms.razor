@@ -1,5 +1,8 @@
-﻿@page "/PaymentTerms"
+﻿@page "/PaymentTerms/{id}"
 @using Microsoft.AspNetCore.Mvc.Filters
+@using DA_Angebotserstellungssoftware.Proposals
+@inject NavigationManager navigationManager
+@inject InsertPaymentTermService insertPaymentTermService
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/payment_terms_style.css" rel="stylesheet"/>
@@ -61,12 +64,23 @@
         </div>
     </div>
     
+     @if (!string.IsNullOrEmpty(Msg))
+        {
+            <div class="alert alert-info">
+                <p>@Msg</p>
+            </div>
+        }
     <!-- Blazor Footer Component -->
     <Footer_Basic />
     
 </div>
 
 @code {
+    [Parameter]
+    public string id { get; set; }
+
+    public string Msg;
+    
     public PaymentModel _paymentModel { get; set; } = new();
     
     public class PaymentModel
@@ -79,6 +93,8 @@
 
     public void ExecuteConfirm()
     {
-        _paymentModel = new PaymentModel();
+        int convertedNumber = Int32.Parse(id);
+        insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumber);
+        Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
     }
 }

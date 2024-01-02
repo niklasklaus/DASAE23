@@ -12,12 +12,12 @@
     <div class="popup-header2"><h1>Preisnachlass:</h1></div>
     <div class="price-input-container"><input type="text" class="price-input" @bind="@price"/></div>
     <div class="btn-confirm-position"><button @onclick="ExecuteUpdate"  class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Bestätigen</button></div>
-      @if (!string.IsNullOrEmpty(Msg))
-        {
-            <div class="alert alert-info">
-                <p>@Msg</p>
-            </div>
-        }
+    @if (!string.IsNullOrEmpty(Msg))
+    {
+        <div class="alert alert-info">
+            <p>@Msg</p>
+        </div>
+    }
 </div>
 
 @code
@@ -27,7 +27,7 @@
     
     protected override void OnInitialized()
     {
-       id = _srvice.IdFromURL;
+        id = _srvice.IdFromURL;
     }
 
 
@@ -46,9 +46,8 @@
     public void ExecuteUpdate()
     {
         int convertedNumber = Int32.Parse(id);
-       
         insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumber);
-
+        navigationManager.NavigateTo($"/PaymentTerms/{id.ToString()}");
         Msg = $"Die betroffenen Leistungsverezcinisse wurden geändert";
     }
 }

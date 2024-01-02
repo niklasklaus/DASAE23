@@ -130,6 +130,15 @@ p{
         font-size: 1em;
         color: #000000;
     }
+
+    .primary-btn-login{
+        background-color: #E92020;
+        color: #ffffff;
+        border: none;
+        height: 30px;
+        width: 120px;
+        border-radius: 10px;
+    }
 }
 
 .img-size{

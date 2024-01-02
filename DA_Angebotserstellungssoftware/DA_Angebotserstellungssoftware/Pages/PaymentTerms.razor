@@ -1,0 +1,84 @@
+﻿@page "/PaymentTerms"
+@using Microsoft.AspNetCore.Mvc.Filters
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/payment_terms_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-payment">
+        <div class="payment-header"><h1>Zahlungsziel eingeben</h1></div>
+        <!--<div class="totalDays-header"><p>Zahlungsziel:</p></div>
+        <div class="totalDays-input">
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>-->
+        <div class="totalDays-container">
+            <label class="primary-label-text totalDays-header" for="subChoice">Zahlungsziel:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="totalDays-input">
+                <InputSelect class="totalDays-input" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        
+        <div class="skonto-container">
+            <label class="primary-label-text skonto-header" for="subChoice">Skonto:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="skonto-input1">
+                <InputNumber class="skonto-input1" id="CustomerAnrede" @bind-Value="@_paymentModel.SkontoValue"></InputNumber>
+            </EditForm>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="skonto-input2">
+                <InputSelect class="skonto-input2" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        
+        <div class="name-container">
+            <label class="primary-label-text name-header" for="subChoice">Angebot gilt für folgendes Projekt:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="name-input">
+                <InputText class="name-input" type="text" id="CustomerAnrede" @bind-Value="@_paymentModel.ProjectName"></InputText>
+            </EditForm>
+        </div>
+        
+        <div class="btn-container">
+            <button  @onclick="ExecuteConfirm" class="primary-btn-login" type="submit" id="loginBtn">WEITER</button>
+        </div>
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+@code {
+    public PaymentModel _paymentModel { get; set; } = new();
+    
+    public class PaymentModel
+    {
+        public int TotalDays { get; set; }
+        public int LimitDays { get; set; }
+        public double SkontoValue { get; set; }
+        public string ProjectName { get; set; }
+    }
+
+    public void ExecuteConfirm()
+    {
+        _paymentModel = new PaymentModel();
+    }
+}

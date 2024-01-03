@@ -1,6 +1,7 @@
 ﻿@page "/PaymentTerms/{id}"
 @using Microsoft.AspNetCore.Mvc.Filters
 @using DA_Angebotserstellungssoftware.Proposals
+@using Microsoft.AspNetCore.Components
 @inject NavigationManager navigationManager
 @inject InsertPaymentTermService insertPaymentTermService
 
@@ -78,11 +79,21 @@
 @code {
     [Parameter]
     public string id { get; set; }
+    public PaymentModel _paymentModel { get; set; } = new();
 
     public string Msg;
+    int convertedNumber;
     
-    public PaymentModel _paymentModel { get; set; } = new();
-    
+    protected override async Task OnInitializedAsync()
+    {
+        convertedNumber = Int32.Parse(id);
+         _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumber);
+        _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumber);
+        _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumber);
+        _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumber);
+
+    }
+
     public class PaymentModel
     {
         public int TotalDays { get; set; }
@@ -93,7 +104,6 @@
 
     public void ExecuteConfirm()
     {
-        int convertedNumber = Int32.Parse(id);
         insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumber);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
     }

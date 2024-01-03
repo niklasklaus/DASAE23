@@ -24,16 +24,22 @@
 {
 
     public string id;
+    double value;
+    double price;
+    int convertedNumber;
     
-    protected override void OnInitialized()
+    
+    protected override async Task OnInitializedAsync()
     {
         id = _srvice.IdFromURL;
+        convertedNumber = Int32.Parse(id);
+        value = await insertEffortAndDiscountService.ReturnEffort(convertedNumber);
+        price = await insertEffortAndDiscountService.ReturnDiscount(convertedNumber);
     }
 
 
     string Msg;
-    double value = 2.50;
-    double price = 2.50;
+   
     
     private void UpdateSliderValue(ChangeEventArgs args)
     {
@@ -45,7 +51,7 @@
 
     public void ExecuteUpdate()
     {
-        int convertedNumber = Int32.Parse(id);
+        
         insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumber);
         navigationManager.NavigateTo($"/PaymentTerms/{id.ToString()}");
         Msg = $"Die betroffenen Leistungsverezcinisse wurden geändert";

@@ -4,6 +4,8 @@ namespace DA_Angebotserstellungssoftware;
 
 public class InsertEffortAndDiscountService
 {
+    private List<double> resultsEffort = new List<double>(); // Variable to store the results
+    private List<double> resultsDiscount = new List<double>(); // Variable to store the results
     private readonly MySqlConnectionManager connection;
     
     public InsertEffortAndDiscountService(MySqlConnectionManager connectionManager)
@@ -11,6 +13,70 @@ public class InsertEffortAndDiscountService
         this.connection = connectionManager;
     }
 
+    public async Task SelectEffort(int pid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+
+            mysqlconnection.Open();
+            string selectLV = $"SELECT effort_factor FROM LVS WHERE proposal_id = '{pid}'";
+            MySqlCommand command1 = new MySqlCommand(selectLV, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("effort_factor")))
+                    {
+                        // Assuming the column name is 'column_name', change it accordingly
+                        double value = reader.GetDouble("effort_factor");
+                        resultsEffort.Add(value); // Store the retrieved value into the results list    
+                    }
+                }
+            }
+        }
+    }
+
+    public async Task<double> ReturnEffort(int pid)
+    {
+        await SelectEffort(pid);
+        return resultsEffort.Count > 0 ? resultsEffort[0] : 1.0;
+    }
+    
+    public async Task SelectDiscount(int pid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+
+            mysqlconnection.Open();
+            string selectProposal = $"SELECT discount FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("discount")))
+                    {
+                        // Assuming the column name is 'discount', change it accordingly
+                        double discount = reader.GetDouble("discount");
+                        resultsDiscount.Add(discount); // Add the retrieved value to the list
+                    }
+                   
+                }
+            }
+        }
+    }
+
+    public async Task<double> ReturnDiscount(int pid)
+    {
+        await SelectDiscount(pid);
+        return resultsDiscount.Count > 0 ? resultsDiscount[0] : 0.0; // Return the first value if available, otherwise return a default value
+    }
+    
+    
     public void InsertEffortAndDiscount(double effort, double discount, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())

@@ -30,6 +30,7 @@ builder.Services.AddScoped<InsertLVsService>();
 builder.Services.AddScoped<InsertEffortAndDiscountService>();
 builder.Services.AddScoped<SharedService>();
 builder.Services.AddScoped<InsertPaymentTermService>();
+builder.Services.AddScoped<SearchProposalService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

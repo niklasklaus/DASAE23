@@ -1,4 +1,6 @@
 ﻿@page "/ProjectSearch"
+@using DA_Angebotserstellungssoftware.Proposals
+@inject SearchProposalService searchProposalService 
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/projectSearch_style.css" rel="stylesheet"/>
@@ -13,42 +15,68 @@
         <div class="item-grid item-ProjectInput">
             <label class="primary-label-text kind-item-label-choose" for="ProjectChoice">Projekt:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
-                <InputSelect class="kind-item-input-choose" id="ProjectInputSelect" @bind-Value="_searchProject.Project">
-                    @for (int i = 0; i < 5; i++)
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedProjectName" @onchange="HandleProjectSelection">
+                    
+                    @if (_searchProject.Project != null)
                     {
-                        <option value="Test">Projekt @i</option>
+                        <option>Projektname auswählen</option>
+                        @for (int i = 0; i < _searchProject.Project.Count; i++)
+                        {
+                            <option>@_searchProject.Project[i]</option>
+                        }
                     }
                 </InputSelect>
             </EditForm>
         </div>
+        
         <div class="item-grid item-OfferNumberInput">
             <label class="primary-label-text kind-item-label-choose" for="OfferNumberChoice">Angebot-Nummer:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
-                <InputSelect class="kind-item-input-choose" id="OfferNumberInputSelect" @bind-Value="_searchProject.OfferNumber">
-                    @for (int i = 0; i < 5; i++)
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedProposalName" @onchange="HandleProposalSelection">
+                    @if (_searchProject.OfferNumber != null)
                     {
-                        <option value="Test">Angebot @i</option>
+                        <option>Angebotsname auswählen</option>
+                        @for (int i = 0; i < _searchProject.OfferNumber.Count; i++)
+                        {
+                            <option>@_searchProject.OfferNumber[i]</option>
+                        }
                     }
                 </InputSelect>
             </EditForm>
         </div>
+        
         <div class="item-grid item-Customer">
             <label class="primary-label-text kind-item-label-choose" for="CustomerChoice">Kunde:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
-                <InputSelect class="kind-item-input-choose" id="OfferNumberInputSelect" @bind-Value="_searchProject.Customer">
-                    @for (int i = 0; i < 5; i++)
-                    {
-                        <option value="Test">Kunde @i</option>
-                    }
-                </InputSelect>
+               <InputSelect class="kind-item-input-choose" @bind-Value="selectedCustomer" @onchange="HandleCustomerSelection">
+                   @if (_searchProject.Customer != null)
+                   {
+                       <option>Kundenname auswählen</option>
+                       @for (int i = 0; i < _searchProject.Customer.Count; i++)
+                       {
+                           <option>@_searchProject.Customer[i]</option>
+                       }
+                   }
+               </InputSelect>
             </EditForm>
-        </div>
+            </div> 
+       
+       
         <div class="item-input-ButtonSearch">
             <button  @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
         </div>
         <div class="item-grid item-result">
             <label class="primary-label-text kind-item-label-choose">Treffer:</label>
-            <p class="kind-item-input-choose">Link(s) zu (den) gefundenen Angebot(en)</p>
+            <p class="kind-item-input-choose"> @if (!string.IsNullOrEmpty(resultProposal))
+                                               {
+
+                                                   <p>@resultProposal</p>
+                                               }
+                                               else
+                                               {
+                                                   <p>Keine Ergebnisse gefunden</p>
+                                               }
+            </p>
         </div>
     </div>
 
@@ -59,17 +87,59 @@
 
 
 @code {
-    public SearchProjectModel _searchProject { get; set; } = new();
+    public SearchProjectModel _searchProject { get; set; }
+
+    public string selectedProjectName;
+    public string selectedCustomer;
+    public string selectedProposalName;
+
+    public string resultProposal;
+    public int cid;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _searchProject = new();
+        _searchProject.Project = await searchProposalService.ReturnProjectNames();
+        _searchProject.Customer = await searchProposalService.ReturnCustomers();
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShort();
+    }
     
     public class SearchProjectModel
     {
-        public string Project { get; set; }
-        public string OfferNumber { get; set; }
-        public string Customer { get; set; }
+        public List<string> Project { get; set; }
+        public List<string> OfferNumber { get; set; }
+        public List<string> Customer { get; set; }
+    }
+    
+    public void HandleProjectSelection(ChangeEventArgs e)
+    {
+        selectedProjectName = e.Value.ToString();
+    }
+    
+    
+    public void HandleCustomerSelection(ChangeEventArgs e)
+    {
+        selectedCustomer = e.Value.ToString();
+    }
+    
+    
+    public void HandleProposalSelection(ChangeEventArgs e)
+    {
+        selectedProposalName = e.Value.ToString();
     }
 
-    public void ExecuteSearch()
+    public async Task ExecuteSearch()
     {
-        _searchProject = new SearchProjectModel();
+        /*if (string.IsNullOrEmpty(selectedCustomer) || string.IsNullOrEmpty(selectedProjectName) || !string.IsNullOrEmpty(selectedProposalName))
+        {
+            cid = await searchProposalService.ReturnCustomerNameToID(_searchProject.Customer[0]);
+            resultProposal = await searchProposalService.ReturnFoundProposal(_searchProject.Project[0], 585547, _searchProject.OfferNumber[0]);
+        }*/
+        
+       // else
+        //{
+            cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
+            resultProposal = await searchProposalService.ReturnFoundProposal(selectedProjectName, cid, selectedProposalName);
+        //}
     }
 }

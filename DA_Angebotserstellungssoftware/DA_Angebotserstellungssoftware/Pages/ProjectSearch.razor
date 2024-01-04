@@ -1,0 +1,75 @@
+﻿@page "/ProjectSearch"
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/projectSearch_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-projectSearch">
+        <div class="header-projectSearch"><h1>Angebot suchen</h1></div>
+        <div class="item-grid item-ProjectInput">
+            <label class="primary-label-text kind-item-label-choose" for="ProjectChoice">Projekt:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" id="ProjectInputSelect" @bind-Value="_searchProject.Project">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <option value="Test">Projekt @i</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        <div class="item-grid item-OfferNumberInput">
+            <label class="primary-label-text kind-item-label-choose" for="OfferNumberChoice">Angebot-Nummer:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" id="OfferNumberInputSelect" @bind-Value="_searchProject.OfferNumber">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <option value="Test">Angebot @i</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        <div class="item-grid item-Customer">
+            <label class="primary-label-text kind-item-label-choose" for="CustomerChoice">Kunde:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" id="OfferNumberInputSelect" @bind-Value="_searchProject.Customer">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <option value="Test">Kunde @i</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        <div class="item-input-ButtonSearch">
+            <button  @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
+        </div>
+        <div class="item-grid item-result">
+            <label class="primary-label-text kind-item-label-choose">Treffer:</label>
+            <p class="kind-item-input-choose">Link(s) zu (den) gefundenen Angebot(en)</p>
+        </div>
+    </div>
+
+    <!-- Blazor Footer Component -->
+    <Footer_Basic/>
+
+</div>
+
+
+@code {
+    public SearchProjectModel _searchProject { get; set; } = new();
+    
+    public class SearchProjectModel
+    {
+        public string Project { get; set; }
+        public string OfferNumber { get; set; }
+        public string Customer { get; set; }
+    }
+
+    public void ExecuteSearch()
+    {
+        _searchProject = new SearchProjectModel();
+    }
+}

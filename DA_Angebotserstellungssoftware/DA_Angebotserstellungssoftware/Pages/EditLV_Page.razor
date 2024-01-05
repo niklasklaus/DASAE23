@@ -1,0 +1,59 @@
+﻿@page "/EditLV_Page"
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/editLV_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-editLV">
+        <div class="header-editLV"><h1>Leistungsverzeichnis bearbeiten</h1></div>
+        <div class="table_lv">
+            <table class="table-properties">
+                <thead>
+                <tr>
+                    <th>OZ</th>
+                    <th>PA</th>
+                    <th>Kurztext</th>
+                    <th>Langtext</th>
+                    <th>LV Menge</th>
+                    <th>ME</th>
+                    <th>EP</th>
+                    <th>WE</th>
+                    <th>GB</th>
+                    <th>WE</th>
+                </tr>
+                </thead>
+                <tbody>
+                @for (int i = 1; i <= 40; i++)
+                {
+                    <tr>
+                        <td contenteditable="true">0 @i.</td>
+                        <td contenteditable="true">-</td>
+                        <td contenteditable="true">Kurztext @i</td>
+                        <td contenteditable="true">Langtext @i</td>
+                        <td contenteditable="true">0,000</td>
+                        <td contenteditable="true">Stk</td>
+                        <td contenteditable="true">@i 0,00</td>
+                        <td contenteditable="true">EUR</td>
+                        <td contenteditable="true">@i 0,00</td>
+                        <td contenteditable="true">EUR</td>
+                    </tr>  
+                }
+                </tbody>
+            </table>
+        </div>
+        <div class="item-input-ButtonSave"><button class="primary-btn-login" type="submit" id="SaveBtn">SPEICHERN</button></div>
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+
+</div>
+
+
+@code {
+    
+}

@@ -99,11 +99,11 @@ table{
     
 }
 
-td{
+.product_table td{
     border: 3px solid #F2F3F3;
 }
 
-th{
+.product_table th{
     border: 3px solid #F2F3F3;
     width: 100%;
 }

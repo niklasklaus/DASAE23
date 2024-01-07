@@ -105,6 +105,6 @@
     {
         insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumber);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
-        navigationManager.NavigateTo("/ProjectSearch");
+        navigationManager.NavigateTo($"/EditLV_Page/{id.ToString()}");
     }
 }

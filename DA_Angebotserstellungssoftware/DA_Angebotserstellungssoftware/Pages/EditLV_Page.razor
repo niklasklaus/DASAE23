@@ -1,4 +1,7 @@
-﻿@page "/EditLV_Page"
+﻿@page "/EditLV_Page/{id}"
+@inject UpdateLVService _updateLvService
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/editLV_style.css" rel="stylesheet"/>
@@ -14,38 +17,31 @@
             <table class="table-properties">
                 <thead>
                 <tr>
-                    <th>OZ</th>
-                    <th>PA</th>
                     <th>Kurztext</th>
-                    <th>Langtext</th>
                     <th>LV Menge</th>
                     <th>ME</th>
-                    <th>EP</th>
-                    <th>WE</th>
-                    <th>GB</th>
-                    <th>WE</th>
                 </tr>
                 </thead>
                 <tbody>
-                @for (int i = 1; i <= 40; i++)
+                @for (int i = 0; i < lvAmount.Count; i++)
                 {
+                    int currentIndex = i;
                     <tr>
-                        <td contenteditable="true">0 @i.</td>
-                        <td contenteditable="true">-</td>
-                        <td contenteditable="true">Kurztext @i</td>
-                        <td contenteditable="true">Langtext @i</td>
-                        <td contenteditable="true">0,000</td>
-                        <td contenteditable="true">Stk</td>
-                        <td contenteditable="true">@i 0,00</td>
-                        <td contenteditable="true">EUR</td>
-                        <td contenteditable="true">@i 0,00</td>
-                        <td contenteditable="true">EUR</td>
-                    </tr>  
+                        <td>
+                            <p>@shortText[i]</p>
+                        </td>
+                        <td>
+                            <input value="@lvAmount[i]" @onchange="e => UpdateLvAmount(e, currentIndex)" class="input-field" style="width: 80px;"/>
+                        </td>
+                        <td>
+                            <p>@lvAmountUnit[i]</p>
+                        </td>
+                    </tr>
                 }
                 </tbody>
             </table>
         </div>
-        <div class="item-input-ButtonSave"><button class="primary-btn-login" type="submit" id="SaveBtn">SPEICHERN</button></div>
+        <div class="item-input-ButtonSave"><button @onclick="ExecuteSave" class="primary-btn-login" type="submit" id="SaveBtn">SPEICHERN</button></div>
     </div>
     
     <!-- Blazor Footer Component -->
@@ -55,5 +51,40 @@
 
 
 @code {
+    [Parameter] 
+    public string id { get; set; }
+    public double val = 0;
+    public List<string> ShortName = new List<string>();
+    public List<string> shortText = new List<string>();
+    public List<double> lvAmount = new List<double>();
+    public List<string> lvAmountUnit = new List<string>();
+    int convertedNumber;
     
+    protected override async Task OnInitializedAsync()
+    {
+        convertedNumber = Int32.Parse(id);
+        shortText = await _updateLvService.ReturnLVShortText(convertedNumber);
+        lvAmount = await _updateLvService.ReturnLVAmount(convertedNumber);
+        lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumber);
+        ShortName = shortText.ToList();
+    }
+    
+    void UpdateLvAmount(ChangeEventArgs e, int index)
+    {
+        if (index >= 0 && index < lvAmount.Count && index < shortText.Count)
+        {
+            double parsedValue = Double.Parse(e.Value.ToString());
+            lvAmount[index] = parsedValue;
+        }
+
+    }
+
+    public async Task ExecuteSave()
+    {
+        for (int i = 0; i < lvAmount.Count; i++)
+        {
+            await _updateLvService.UpdateLV(convertedNumber, lvAmount[i], ShortName[i]);
+        }
+        navigationManager.NavigateTo("/ProjectSearch");
+    }
 }

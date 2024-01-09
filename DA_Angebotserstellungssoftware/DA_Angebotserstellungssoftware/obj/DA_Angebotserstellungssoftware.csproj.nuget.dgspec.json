@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj": {}
+    "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj": {
+    "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
+        "projectUniqueName": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
         "projectName": "DA_Angebotserstellungssoftware",
-        "projectPath": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
-        "packagesPath": "C:\\Users\\Niklas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\",
+        "projectPath": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
+        "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+        "outputPath": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Niklas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

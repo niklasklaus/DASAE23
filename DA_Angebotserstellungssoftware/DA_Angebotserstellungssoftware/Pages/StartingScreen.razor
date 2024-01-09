@@ -1,0 +1,60 @@
+﻿@page "/StartingScreen"
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/startingScreen_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-startingScreen">
+        <div class="header-startingScreen"><h1>Willkommen ...!</h1></div>
+        <div class="links-container">
+            <div class="Create-img-div"></div>
+            <button class="Create-btn">Angebot erstellen</button>
+            <div class="Edit-img-div"></div>
+            <button class="Edit-btn">Leistungsverzeichnis bearbeiten</button>
+            <div class="Show-img-div"></div>
+            <button class="Show-btn">Angebot anzeigen</button>
+        </div>
+        <div class="list-body-container">
+            <label class="primary-label-text kind-item-label-choose">Letzte Angebote:</label>
+            <div class="item-list-container">
+                <div class="item-container item1">
+                    <p class="name-text">Name von Angebot</p>
+                    <p class="date-text">dd-mm-yyyy</p>
+                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
+                </div>
+                <div class="item-container item2">
+                    <p class="name-text">Name von Angebot</p>
+                    <p class="date-text">dd-mm-yyyy</p>
+                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
+                </div>
+                <div class="item-container item3">
+                    <p class="name-text">Name von Angebot</p>
+                    <p class="date-text">dd-mm-yyyy</p>
+                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
+                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
+                </div>
+                <a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+@code {
+    
+}

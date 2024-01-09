@@ -1,8 +1,7 @@
-﻿@page "/customer"
+﻿@page "/customer/{id}"
 @using DA_Angebotserstellungssoftware.InsertCustomerData
 @using DA_Angebotserstellungssoftware
 @inject InsertCustomerDataService insertCustomer
-@inject InsertLVsService lvs
 @inject NavigationManager navigationManager
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/customerData.css" rel="stylesheet"/>
@@ -60,8 +59,27 @@
 </div>
 
 @code {
+    [Parameter] 
+    public string id { get; set; }
     public CustomerModel _customer { get; set; } = new();
     public string Msg;
+    public int customer_idd;
+    public int proposal_id;
+    public int customer_id;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Random rand = new Random();
+        customer_id = rand.Next(1, 9000001);
+        proposal_id = Int32.Parse(id);
+        customer_idd = await insertCustomer.ReturnUserIdForProposal(proposal_id); // Dort kommt dann die ID aus der Url rein (später)
+        _customer.Anrede = await insertCustomer.ReturnSalutation(customer_idd);
+        _customer.FirstName = await insertCustomer.ReturnFirstName(customer_idd);
+        _customer.LastName = await insertCustomer.ReturnLastName(customer_idd);
+        _customer.Address = await insertCustomer.ReturnAddress(customer_idd);
+        _customer.UIDNumber = await insertCustomer.ReturnUID(customer_idd);
+
+    }
     
     public class CustomerModel
     {
@@ -74,11 +92,6 @@
 
     public void ExecuteNext()
     {
-        Random rand = new Random();
-        int proposal_id = rand.Next(1, 9000001);
-        int customer_id = rand.Next(1, 9000001);
-        string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
-        lvs.InsertLVs(filePath, proposal_id);
         insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, proposal_id, customer_id);
         Msg = $"Der Kunde wurde erfolgriech hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{proposal_id.ToString()}");

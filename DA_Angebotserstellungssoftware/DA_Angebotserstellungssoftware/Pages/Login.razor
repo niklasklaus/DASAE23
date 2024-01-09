@@ -1,5 +1,6 @@
 ﻿@inject LoginService loginService
 @inject NavigationManager navigationManager
+@inject InsertLVsService lvs
 @page "/"
 
 <title>Login</title>
@@ -58,6 +59,13 @@
 
     public LoginModel _loginModel = new();
     public static string Msg;
+    public int proposal_id;
+
+    protected override void OnInitialized()
+    {
+        Random rand = new Random();
+        proposal_id = rand.Next(1, 9000001);
+    }
 
     public class LoginModel
     {
@@ -72,10 +80,11 @@
     public void ExecuteLogin()
     {
         bool isAuthenticated = loginService.Authenticate(_loginModel.Username, _loginModel.Password);
-            
+        string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        lvs.InsertLVs(filePath, proposal_id);
         if (isAuthenticated)
         {
-            navigationManager.NavigateTo("/customer");
+            navigationManager.NavigateTo($"/customer/{proposal_id.ToString()}");
                 
         }
 

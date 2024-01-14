@@ -1,7 +1,8 @@
 ﻿@inject LoginService loginService
 @inject NavigationManager navigationManager
-@inject InsertLVsService lvs
+@inject SelectUserIdService _SelectUserIdService
 @page "/"
+@using DA_Angebotserstellungssoftware.Users
 
 <title>Login</title>
 
@@ -59,13 +60,7 @@
 
     public LoginModel _loginModel = new();
     public static string Msg;
-    public int proposal_id;
-
-    protected override void OnInitialized()
-    {
-        Random rand = new Random();
-        proposal_id = rand.Next(1, 9000001);
-    }
+    public int userid;
 
     public class LoginModel
     {
@@ -77,14 +72,13 @@
     
    
 
-    public void ExecuteLogin()
+    public async Task ExecuteLogin()
     {
+        userid = await _SelectUserIdService.ReturnUserId(_loginModel.Username, _loginModel.Password);
         bool isAuthenticated = loginService.Authenticate(_loginModel.Username, _loginModel.Password);
-        string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
-        lvs.InsertLVs(filePath, proposal_id);
         if (isAuthenticated)
         {
-            navigationManager.NavigateTo($"/customer/{proposal_id.ToString()}");
+            navigationManager.NavigateTo($"/StartingScreen/{userid.ToString()}");
                 
         }
 

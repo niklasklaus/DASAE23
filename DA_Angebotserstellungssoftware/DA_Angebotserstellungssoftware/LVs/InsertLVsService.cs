@@ -12,7 +12,7 @@ public class InsertLVsService
         this.connection = connectionManager;
     }
     
-    public void InsertLVs(string filepath, int id)
+    public void InsertLVs(string filepath, int pid, int uid)
     {
           // Verbindung zur MySQL-Datenbank herstellen
         string connectionString = "Server=localhost;Database=da_dbschema;User Id=root;Password=root;";
@@ -27,7 +27,7 @@ public class InsertLVsService
         //Random rand = new Random();
         //int id = rand.Next(1, 5000001);
         commandA.CommandText =
-            $"INSERT INTO PROPOSALS (proposal_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{id}', null, null, null, null, null, null, null, DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'), null)";
+            $"INSERT INTO PROPOSALS (proposal_id, customer_id, user_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{pid}', null, '{uid}', null, null, null, null, null, null, DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'), null)";
         commandA.ExecuteNonQuery();
         commandA.Parameters.Clear();
         
@@ -82,7 +82,7 @@ public class InsertLVsService
                 {
                     command.CommandText = "INSERT INTO LVS (proposal_id, oz, pa, short_text, long_text, lv_amount, lv_amount_unit, basic_ep, calculated_ep, ep_currency, basic_gb, calculated_gb, gb_currency, effort_factor) " +
                                           "VALUES (@ValueA, @ValueB, @ValueC, @ValueD, @ValueE, @ValueF, @ValueG, @ValueH, @ValueI, @ValueJ, @ValueK, @ValueL, @ValueM, @ValueN)";
-                    command.Parameters.AddWithValue("@ValueA", id);
+                    command.Parameters.AddWithValue("@ValueA", pid);
                     command.Parameters.AddWithValue("@ValueB", dbValueA);
                     command.Parameters.AddWithValue("@ValueC", DBNull.Value);
                     command.Parameters.AddWithValue("@ValueD", dbValueC);

@@ -6,6 +6,7 @@ using DA_Angebotserstellungssoftware.Data;
 using DA_Angebotserstellungssoftware.InsertCustomerData;
 using DA_Angebotserstellungssoftware;
 using DA_Angebotserstellungssoftware.Proposals;
+using DA_Angebotserstellungssoftware.Users;
 using Radzen;
 using Syncfusion.Blazor;
 
@@ -33,6 +34,8 @@ builder.Services.AddScoped<InsertPaymentTermService>();
 builder.Services.AddScoped<SearchProposalService>();
 builder.Services.AddScoped<UpdateLVService>();
 builder.Services.AddScoped<UpdateShortNameService>();
+builder.Services.AddScoped<SelectUserIdService>();
+builder.Services.AddScoped<DeleteProposalService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

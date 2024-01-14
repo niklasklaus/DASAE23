@@ -1,5 +1,11 @@
-﻿@page "/StartingScreen"
-
+﻿@page "/StartingScreen/{id}"
+@using DA_Angebotserstellungssoftware.Users
+@using DA_Angebotserstellungssoftware.Proposals
+@inject InsertLVsService lvs
+@inject SelectUserIdService _SelectUserIdService
+@inject NavigationManager navigationManager
+@inject SearchProposalService searchProposalService 
+@inject DeleteProposalService deleteProposalService
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/startingScreen_style.css" rel="stylesheet"/>
 
@@ -9,45 +15,44 @@
     <Navbar_Basic />
     
     <div class="concrete-content-container-startingScreen">
-        <div class="header-startingScreen"><h1>Willkommen ...!</h1></div>
+        <div class="header-startingScreen"><h1>Willkommen @userName</h1></div>
         <div class="links-container">
             <div class="Create-img-div"></div>
-            <button class="Create-btn">Angebot erstellen</button>
+            <button @onclick="ExecuteCreate" class="Create-btn">Angebot erstellen</button>
             <div class="Edit-img-div"></div>
             <button class="Edit-btn">Leistungsverzeichnis bearbeiten</button>
             <div class="Show-img-div"></div>
             <button class="Show-btn">Angebot anzeigen</button>
         </div>
+        
         <div class="list-body-container">
             <label class="primary-label-text kind-item-label-choose">Letzte Angebote:</label>
             <div class="item-list-container">
-                <div class="item-container item1">
-                    <p class="name-text">Name von Angebot</p>
-                    <p class="date-text">dd-mm-yyyy</p>
-                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
-                </div>
-                <div class="item-container item2">
-                    <p class="name-text">Name von Angebot</p>
-                    <p class="date-text">dd-mm-yyyy</p>
-                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
-                </div>
-                <div class="item-container item3">
-                    <p class="name-text">Name von Angebot</p>
-                    <p class="date-text">dd-mm-yyyy</p>
-                    <a class="button-position-properties-startingScreen button-position-delete-startingScreen"><img class="img-size" src="css/images_login_page/Delete_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-edit-startingScreen"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-max-startingScreen"><img class="img-size" src="css/images_login_page/Max_Icon.png"/></a>
-                    <a class="button-position-properties-startingScreen button-position-download-startingScreen"><img class="img-size" src="css/images_login_page/Download_Icon.png"/></a>
-                </div>
+                @for (int i = 0; i < proposalNames.Count; i++)
+                {
+                    int currentIndex = i;
+                    <div class="item-container item@(i + 1)">
+                        <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                        <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy")</p>
+                        <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                            <img class="img-size" src="css/images_login_page/Delete_Icon.png" />
+                        </button>
+                        <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                            <img class="img-size" src="css/images_login_page/Edit_Icon.png" />
+                        </button>
+                        <button class="button-position-properties-startingScreen button-position-max-startingScreen">
+                            <img class="img-size" src="css/images_login_page/Max_Icon.png" />
+                        </button>
+                        <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                            <img class="img-size" src="css/images_login_page/Download_Icon.png" />
+                        </button>
+                    </div>
+                }
                 <a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>
             </div>
         </div>
+
+      
     </div>
     
     <!-- Blazor Footer Component -->
@@ -56,5 +61,42 @@
 </div>
 
 @code {
+    [Parameter]
+    public string id { get; set; } //User-Id
+    public int proposal_id;
+    public int convertedNumber; // Konvertierte User-Id
+    public string userName;
+    public List<string> proposalNames = new List<string>();
+    public List<int> proposalIds = new List<int>();
+    public List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Random rand = new Random();
+        proposal_id = rand.Next(1, 9000001);
+        convertedNumber = Int32.Parse(id);
+        userName = await _SelectUserIdService.ReturnUserName(convertedNumber);
+        proposalNames = await searchProposalService.ReturnProposalShortList();
+        proposalIds = await searchProposalService.ReturnProposalIdList(convertedNumber);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumber);
+    }
     
+    public void ExecuteCreate()
+    {
+        string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        lvs.InsertLVs(filePath, proposal_id, convertedNumber);
+        navigationManager.NavigateTo($"/customer/{proposal_id.ToString()}");
+    }
+    
+     
+    public void ExecuteEdit(int pid)
+    {
+        navigationManager.NavigateTo($"/customer/{pid.ToString()}");
+    }
+    
+    public void ExecuteDelete(int pid)
+    {
+        deleteProposalService.DeleteProposal(pid, convertedNumber);
+        navigationManager.NavigateTo($"/StartingScreen/{id.ToString()}", forceLoad: true);
+    }
 }

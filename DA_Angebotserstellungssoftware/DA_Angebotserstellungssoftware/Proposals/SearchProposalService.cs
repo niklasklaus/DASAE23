@@ -11,6 +11,8 @@ public class SearchProposalService
     public List<string> resultProposals = new List<string>();
     private List<string> resultFoundProposals = new List<string>();
     private List<int> resultCustomerNameToID = new List<int>();
+    private List<DateTime> resultProposalLastUpdatedAt = new List<DateTime>();
+    private List<int> resultProposalId = new List<int>();
 
     public SearchProposalService(MySqlConnectionManager connectionManager)
     {
@@ -42,7 +44,7 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnProjectNames()
+    public async Task<List<string>> ReturnProjectNamesList()
     {
         await SelectProjectNames();
         return  resultProjects.Count > 0 ? resultProjects : new List<string>(); // Return the first value if available, otherwise return a default value
@@ -75,7 +77,7 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnCustomers()
+    public async Task<List<string>> ReturnCustomersList()
     {
         await SelectCustomers();
         return  resultCustomers.Count > 0 ? resultCustomers : new List<string>(); // Return the first value if available, otherwise return a default value
@@ -106,7 +108,7 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnProposalShort()
+    public async Task<List<string>> ReturnProposalShortList()
     {
         await SelectProposalShort();
         return resultProposals.Count > 0 ? resultProposals : new List<string>(); // Return the first value if available, otherwise return a default value
@@ -177,5 +179,71 @@ public class SearchProposalService
     {
         await SearchProposal(projectname, customer_id, proposal_short);
         return resultFoundProposals.Count > 0 ? resultFoundProposals[0] : ""; // Return the first value if available, otherwise return a default value
+    }
+    
+    public async Task SearchProposalLastUpdatedAt(int userid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+
+            mysqlconnection.Open();
+            string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}'";
+            MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("updated_at")))
+                    {
+                        DateTime val = reader.GetDateTime("updated_at");
+                        resultProposalLastUpdatedAt.Add(val); // Füge den kombinierten Wert zur Liste hinzu
+                    }
+
+                    else if (!reader.IsDBNull(reader.GetOrdinal("created_at")))
+                    {
+                        DateTime val = reader.GetDateTime("created_at");
+                        resultProposalLastUpdatedAt.Add(val); 
+                    }
+                }
+            }
+        }
+    }
+
+    public async Task<List<DateTime>> ReturnProposalLastUpdatedAtList(int userid)
+    {
+        await SearchProposalLastUpdatedAt(userid);
+        return resultProposalLastUpdatedAt.Count > 0 ? resultProposalLastUpdatedAt : new List<DateTime>(); // Return the first value if available, otherwise return a default value
+    }
+    
+    public async Task SearchProposalId(int userid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+
+            mysqlconnection.Open();
+            string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}'";
+            MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("proposal_id")))
+                    {
+                        int val = reader.GetInt32("proposal_id");
+                        resultProposalId.Add(val); // Füge den kombinierten Wert zur Liste hinzu
+                    }
+                }
+            }
+        }
+    }
+
+    public async Task<List<int>> ReturnProposalIdList(int userid)
+    {
+        await SearchProposalId(userid);
+        return resultProposalId.Count > 0 ? resultProposalId : new List<int>(); // Return the first value if available, otherwise return a default value
     }
 }

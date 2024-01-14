@@ -99,9 +99,9 @@
     protected override async Task OnInitializedAsync()
     {
         _searchProject = new();
-        _searchProject.Project = await searchProposalService.ReturnProjectNames();
-        _searchProject.Customer = await searchProposalService.ReturnCustomers();
-        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShort();
+        _searchProject.Project = await searchProposalService.ReturnProjectNamesList();
+        _searchProject.Customer = await searchProposalService.ReturnCustomersList();
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList();
     }
     
     public class SearchProjectModel

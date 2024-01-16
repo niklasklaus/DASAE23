@@ -1,4 +1,4 @@
-﻿@page "/PaymentTerms/{id}"
+﻿@page "/PaymentTerms/{uid}/{pid}"
 @using Microsoft.AspNetCore.Mvc.Filters
 @using DA_Angebotserstellungssoftware.Proposals
 @using Microsoft.AspNetCore.Components
@@ -77,20 +77,25 @@
 </div>
 
 @code {
-    [Parameter]
-    public string id { get; set; }
+    [Parameter] 
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
     public PaymentModel _paymentModel { get; set; } = new();
 
     public string Msg;
-    int convertedNumber;
+    int convertedNumberUser;
+    int convertedNumberProposal;
     
     protected override async Task OnInitializedAsync()
     {
-        convertedNumber = Int32.Parse(id);
-         _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumber);
-        _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumber);
-        _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumber);
-        _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumber);
+        convertedNumberProposal = Int32.Parse(pid);
+        convertedNumberUser = int.Parse(uid);
+         _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumberUser, convertedNumberProposal);
     }
 
     public class PaymentModel
@@ -103,8 +108,8 @@
 
     public void ExecuteConfirm()
     {
-        insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumber);
+        insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
-        navigationManager.NavigateTo($"/EditLV_Page/{id.ToString()}");
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}");
     }
 }

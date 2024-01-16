@@ -79,7 +79,7 @@
         int customer_id = rand.Next(1, 9000001);
         string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
         //lvs.InsertLVs(filePath, proposal_id);
-        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, proposal_id, customer_id);
+        //insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, proposal_id, customer_id);
         Msg = $"Der Kunde wurde erfolgriech hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{proposal_id.ToString()}");
     }

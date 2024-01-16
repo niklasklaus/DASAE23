@@ -12,7 +12,7 @@ public class UpdateShortNameService
         this.connection = connectionManager;
     }
 
-    public void UpdateProposalShortName(string lv_name, string customer_name, int pid)
+    public void UpdateProposalShortName(string lv_name, string customer_name, int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
@@ -22,19 +22,19 @@ public class UpdateShortNameService
             int number = rand.Next(1, 11);
             mysqlconnection.Open();
             
-            string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}' WHERE proposal_id = '{pid}'";
+            string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}' WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(updateShortName, mysqlconnection);
             command1.ExecuteNonQuery();
         }
     }
     
-    public async Task SelectLVNames(int pid)
+    public async Task SelectLVNames(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT short_text FROM LVS WHERE proposal_id = '{pid}' and oz = '01'";
+            string selectProposal = $"SELECT short_text FROM LVS WHERE proposal_id = '{pid}' and user_id = '{uid}' and oz = '01'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -53,9 +53,9 @@ public class UpdateShortNameService
         }
     }
 
-    public async Task<string> ReturnLVName(int pid)
+    public async Task<string> ReturnLVName(int uid, int pid)
     {
-        await SelectLVNames(pid);
+        await SelectLVNames(uid, pid);
         return  resultLvName.Count > 0 ? resultLvName[0] : ""; // Return the first value if available, otherwise return a default value
     }
 }

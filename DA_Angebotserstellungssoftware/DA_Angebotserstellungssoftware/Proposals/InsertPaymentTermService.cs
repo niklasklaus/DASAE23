@@ -15,13 +15,13 @@ public class InsertPaymentTermService
         this.connection = connectionManager;
     }
     
-    public async Task SelectPaymentTerm(int pid)
+    public async Task SelectPaymentTerm(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT payment_term FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT payment_term FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -40,20 +40,20 @@ public class InsertPaymentTermService
         }
     }
 
-    public async Task<int> ReturnPaymentTerm(int pid)
+    public async Task<int> ReturnPaymentTerm(int uid, int pid)
     {
-        await SelectPaymentTerm(pid);
+        await SelectPaymentTerm(uid, pid);
         return resultsPaymentTerm.Count > 0 ? resultsPaymentTerm[0] : 0; // Return the first value if available, otherwise return a default value
     }
     
     
-    public async Task SelectSkontoPercent(int pid)
+    public async Task SelectSkontoPercent(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT skonto_percent FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT skonto_percent FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -72,19 +72,19 @@ public class InsertPaymentTermService
         }
     }
 
-    public async Task<double> ReturnSkontoPercent(int pid)
+    public async Task<double> ReturnSkontoPercent(int uid, int pid)
     {
-        await SelectSkontoPercent(pid);
+        await SelectSkontoPercent(uid, pid);
         return resultsSkontoPercent.Count > 0 ? resultsSkontoPercent[0] : 0.0; // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SelectSkontoDays(int pid)
+    public async Task SelectSkontoDays(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT skonto_days FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT skonto_days FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -104,19 +104,19 @@ public class InsertPaymentTermService
         }
     }
 
-    public async Task<int> ReturnSkontoDays(int pid)
+    public async Task<int> ReturnSkontoDays(int uid, int pid)
     {
-        await SelectSkontoDays(pid);
+        await SelectSkontoDays(uid, pid);
         return resultsSkontoDays.Count > 0 ? resultsSkontoDays[0] : 0; // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SelectProjectName(int pid)
+    public async Task SelectProjectName(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT project_name FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT project_name FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -135,20 +135,20 @@ public class InsertPaymentTermService
         }
     }
 
-    public async Task<string> ReturnProjectName(int pid)
+    public async Task<string> ReturnProjectName(int uid, int pid)
     {
-        await SelectProjectName(pid);
+        await SelectProjectName(uid, pid);
         return resultsProjectName.Count > 0 ? resultsProjectName[0] : ""; // Return the first value if available, otherwise return a default value
     }
 
     
-    public void InsertPaymentTerms(int payment_term, double skonto_percent, int skonto_days, string project_name, int pid)
+    public void InsertPaymentTerms(int payment_term, double skonto_percent, int skonto_days, string project_name, int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string updateProposal = $"UPDATE PROPOSALS SET payment_term = '{payment_term}', skonto_percent = CAST(REPLACE('{skonto_percent}', ',', '.') AS DECIMAL(10,2)), skonto_days = '{skonto_days}', project_name = '{project_name}', updated_at = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s') WHERE proposal_id = '{pid}'";
+            string updateProposal = $"UPDATE PROPOSALS SET payment_term = '{payment_term}', skonto_percent = CAST(REPLACE('{skonto_percent}', ',', '.') AS DECIMAL(10,2)), skonto_days = '{skonto_days}', project_name = '{project_name}', updated_at = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s') WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(updateProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             

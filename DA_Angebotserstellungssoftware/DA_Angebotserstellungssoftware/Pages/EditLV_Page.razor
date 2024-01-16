@@ -1,4 +1,4 @@
-﻿@page "/EditLV_Page/{id}"
+﻿@page "/EditLV_Page/{uid}/{pid}"
 @inject UpdateLVService _updateLvService
 @inject IJSRuntime JSRuntime
 @inject NavigationManager navigationManager
@@ -52,20 +52,25 @@
 
 @code {
     [Parameter] 
-    public string id { get; set; }
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
     public double val = 0;
     public List<string> ShortName = new List<string>();
     public List<string> shortText = new List<string>();
     public List<double> lvAmount = new List<double>();
     public List<string> lvAmountUnit = new List<string>();
-    int convertedNumber;
+    int convertedNumberUser;
+    int convertedNumberProposal;
     
     protected override async Task OnInitializedAsync()
     {
-        convertedNumber = Int32.Parse(id);
-        shortText = await _updateLvService.ReturnLVShortText(convertedNumber);
-        lvAmount = await _updateLvService.ReturnLVAmount(convertedNumber);
-        lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumber);
+        convertedNumberProposal = Int32.Parse(pid);
+        convertedNumberUser = Int32.Parse(uid);
+        shortText = await _updateLvService.ReturnLVShortText(convertedNumberUser, convertedNumberProposal);
+        lvAmount = await _updateLvService.ReturnLVAmount(convertedNumberUser, convertedNumberProposal);
+        lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumberUser, convertedNumberProposal);
         ShortName = shortText.ToList();
     }
     
@@ -83,8 +88,8 @@
     {
         for (int i = 0; i < lvAmount.Count; i++)
         {
-            await _updateLvService.UpdateLV(convertedNumber, lvAmount[i], ShortName[i]);
+            await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, lvAmount[i], ShortName[i]);
         }
-        navigationManager.NavigateTo("/ProjectSearch");
+        navigationManager.NavigateTo($"/ProjectSearch/{uid.ToString()}");
     }
 }

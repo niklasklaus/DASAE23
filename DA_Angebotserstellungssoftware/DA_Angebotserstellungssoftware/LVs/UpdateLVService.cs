@@ -13,12 +13,12 @@ public class UpdateLVService
         this.connection = connectionManager;
     }
 
-    public async Task SelectShortText(int pid)
+    public async Task SelectShortText(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectProposal = $"SELECT short_text FROM LVS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT short_text FROM LVS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -37,18 +37,18 @@ public class UpdateLVService
         }
     }
     
-    public async Task<List<string>> ReturnLVShortText(int pid)
+    public async Task<List<string>> ReturnLVShortText(int uid, int pid)
     {
-        await SelectShortText(pid);
+        await SelectShortText(uid, pid);
         return resultsshortText.Count > 0 ? resultsshortText : new List<string>(); // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SelectLVAmount(int pid)
+    public async Task SelectLVAmount(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectProposal = $"SELECT lv_amount FROM LVS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT lv_amount FROM LVS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -73,18 +73,18 @@ public class UpdateLVService
         }
     }
     
-    public async Task<List<double>> ReturnLVAmount(int pid)
+    public async Task<List<double>> ReturnLVAmount(int uid, int pid)
     {
-        await SelectLVAmount(pid);
+        await SelectLVAmount(uid, pid);
         return resultsLVamount.Count > 0 ? resultsLVamount : new List<double>(); // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SelectLVAmountUnit(int pid)
+    public async Task SelectLVAmountUnit(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectProposal = $"SELECT lv_amount_unit FROM LVS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT lv_amount_unit FROM LVS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -108,21 +108,21 @@ public class UpdateLVService
         }
     }
     
-    public async Task<List<string>> ReturnLVAmountUnit(int pid)
+    public async Task<List<string>> ReturnLVAmountUnit(int uid, int pid)
     {
-        await SelectLVAmountUnit(pid);
+        await SelectLVAmountUnit(uid, pid);
         return resultsLVAmountUnit.Count > 0 ? resultsLVAmountUnit : new List<string>(); // Return the first value if available, otherwise return a default value
     }
     
 
-    public async Task UpdateLV(int pid, double lvAmount, string lvshort)
+    public async Task UpdateLV(int uid, int pid, double lvAmount, string lvshort)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
             
-            string updateLV1 = "UPDATE LVS SET lv_amount = @LvAmount, calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST";
+            string updateLV1 = $"UPDATE LVS SET lv_amount = @LvAmount, calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST  and user_id = '{uid}'";
             MySqlCommand command = new MySqlCommand(updateLV1, mysqlconnection);
             command.Parameters.AddWithValue("@LvAmount", lvAmount);
             command.Parameters.AddWithValue("@Pid", pid);

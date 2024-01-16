@@ -19,13 +19,13 @@ public class SearchProposalService
         this.connection = connectionManager;
     }
     
-    public async Task SelectProjectNames()
+    public async Task SelectProjectNames(int uid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT project_name FROM PROPOSALS";
+            string selectProposal = $"SELECT project_name FROM PROPOSALS where user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -44,9 +44,9 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnProjectNamesList()
+    public async Task<List<string>> ReturnProjectNamesList(int uid)
     {
-        await SelectProjectNames();
+        await SelectProjectNames(uid);
         return  resultProjects.Count > 0 ? resultProjects : new List<string>(); // Return the first value if available, otherwise return a default value
     }
     
@@ -57,7 +57,7 @@ public class SearchProposalService
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT first_name, last_name FROM CUSTOMERS";
+            string selectProposal = $"SELECT first_name, last_name FROM CUSTOMERS ";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -84,13 +84,13 @@ public class SearchProposalService
     }
     
     
-    public async Task SelectProposalShort()
+    public async Task SelectProposalShort(int uid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT proposal_short FROM PROPOSALS";
+            string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -108,9 +108,9 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnProposalShortList()
+    public async Task<List<string>> ReturnProposalShortList(int uid)
     {
-        await SelectProposalShort();
+        await SelectProposalShort(uid);
         return resultProposals.Count > 0 ? resultProposals : new List<string>(); // Return the first value if available, otherwise return a default value
     }
     

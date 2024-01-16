@@ -1,4 +1,4 @@
-﻿@page "/ListOfLVs/{id}"
+﻿@page "/ListOfLVs/{uid}/{pid}"
 @inject IModalService Modal
 @inject SharedService _srvice
 
@@ -71,13 +71,17 @@
 </div>
 
 @code {
-    [Parameter]
-    public string id { get; set; }
+    [Parameter] 
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
 
    
     protected override void OnInitialized()
     {
-        _srvice.IdFromURL = id;
+        _srvice.proposalId = pid;
+        _srvice.userId = uid;
     }
     
     

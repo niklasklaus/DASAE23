@@ -76,7 +76,7 @@
         proposal_id = rand.Next(1, 9000001);
         convertedNumber = Int32.Parse(id);
         userName = await _SelectUserIdService.ReturnUserName(convertedNumber);
-        proposalNames = await searchProposalService.ReturnProposalShortList();
+        proposalNames = await searchProposalService.ReturnProposalShortList(convertedNumber);
         proposalIds = await searchProposalService.ReturnProposalIdList(convertedNumber);
         proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumber);
     }
@@ -85,13 +85,13 @@
     {
         string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
         lvs.InsertLVs(filePath, proposal_id, convertedNumber);
-        navigationManager.NavigateTo($"/customer/{proposal_id.ToString()}");
+        navigationManager.NavigateTo($"/customer/{id.ToString()}/{proposal_id.ToString()}");
     }
     
      
     public void ExecuteEdit(int pid)
     {
-        navigationManager.NavigateTo($"/customer/{pid.ToString()}");
+        navigationManager.NavigateTo($"/customer/{id.ToString()}/{pid.ToString()}");
     }
     
     public void ExecuteDelete(int pid)

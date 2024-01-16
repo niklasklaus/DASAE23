@@ -10,6 +10,7 @@ public class InsertCustomerDataService
     private List<string> resultLastName = new List<string>();
     private List<string> resultAddress = new List<string>();
     private List<string> resultUid = new List<string>();
+    private List<int> resultCheckIfUserExists = new List<int>();
     private readonly MySqlConnectionManager connection;
     
     public InsertCustomerDataService(MySqlConnectionManager connectionManager)
@@ -17,39 +18,60 @@ public class InsertCustomerDataService
         this.connection = connectionManager;
     }
 
-    public void InsertCustomerData(string salutation, string firstname, string lastname, string address, string uid, int pid, int customerid)
+    public void InsertCustomerData(string salutation, string firstname, string lastname, string address, string uid, int uid1, int pid, int customerid, int checkIfUserExists)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             string insertQuery;
             string updateQuery;
             mysqlconnection.Open();
-            if (uid == null || uid == "")
-            {
-                insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}', '{salutation}', '{firstname}', '{lastname}', '{address}', NULL)";
-                updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}'  WHERE proposal_id = '{pid}'";
 
+            if (checkIfUserExists != 0)
+            {
+                if (uid == null || uid == "")
+                {
+                    updateQuery =
+                        $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr =  NULL WHERE customer_id = '{customerid}'";
+                }
+
+                else
+                {
+                    updateQuery =
+                        $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr = '{uid}' WHERE customer_id = '{customerid}'";
+                }
+                MySqlCommand command1 = new MySqlCommand(updateQuery, mysqlconnection);
+                command1.ExecuteNonQuery();
             }
 
             else
             {
-                insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}','{salutation}', '{firstname}', '{lastname}', '{address}', '{uid}')";
-                updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}'  WHERE proposal_id = '{pid}'";
+                if (uid == null || uid == "")
+                {
+                    insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}', '{salutation}', '{firstname}', '{lastname}', '{address}', NULL)";
+                    updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}' WHERE proposal_id = '{pid}' and user_id = '{uid1}'";
+
+                }
+
+                else
+                {
+                    insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}','{salutation}', '{firstname}', '{lastname}', '{address}', '{uid}')";
+                    updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}'  WHERE proposal_id = '{pid}'  and user_id = '{uid1}'";
+                }
+                MySqlCommand command1 = new MySqlCommand(insertQuery, mysqlconnection);
+                command1.ExecuteNonQuery();
+                MySqlCommand command2 = new MySqlCommand(updateQuery, mysqlconnection);
+                command2.ExecuteNonQuery();
             }
-           
-            MySqlCommand command1 = new MySqlCommand(insertQuery, mysqlconnection);
-            command1.ExecuteNonQuery();
-            MySqlCommand command2 = new MySqlCommand(updateQuery, mysqlconnection);
-            command2.ExecuteNonQuery();
+            
         }
     }
     
-    public async Task SelectCustomerIdFromProposal(int pid)
+    public async Task SelectCustomerIdFromProposal(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectProposal = $"SELECT customer_id FROM PROPOSALS WHERE proposal_id = '{pid}'";
+            string selectProposal = $"SELECT customer_id FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -74,9 +96,9 @@ public class InsertCustomerDataService
         }
     }
     
-    public async Task<int> ReturnUserIdForProposal(int pid)
+    public async Task<int> ReturnUserIdForProposal(int uid, int pid)
     {
-        await SelectCustomerIdFromProposal(pid);
+        await SelectCustomerIdFromProposal(uid, pid);
         return resultCustomerId.Count > 0 ? resultCustomerId[0] : 0; // Return the first value if available, otherwise return a default value
     }
     
@@ -262,6 +284,41 @@ public class InsertCustomerDataService
         return resultUid.Count > 0 ? resultUid[0] : ""; // Return the first value if available, otherwise return a default value
     }
     
+    public async Task CheckIfCustomerExists(string salutation, string fname, string lname, string address)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+            mysqlconnection.Open();
+            string selectCustomer = $"SELECT customer_id FROM CUSTOMERS WHERE salutation = '{salutation}' and first_name = '{fname}' and last_name = '{lname}' and address = '{address}'";
+            MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("customer_id")))
+                    {
+                        // Assuming the column name is 'discount', change it accordingly
+                        int val = reader.GetInt32("customer_id");
+                        resultCheckIfUserExists.Add(val); // Add the retrieved value to the list
+                    }
+
+                    else
+                    {
+                        int val = 0;
+                        resultCheckIfUserExists.Add(val);
+                    }
+                }
+            }
+        }
+    }
     
+    public async Task<int> ReturnCheckIfUserExists(string salutation, string fname, string lname, string address)
+    {
+        await CheckIfCustomerExists(salutation, fname, lname, address);
+        return resultCheckIfUserExists.Count > 0 ? resultCheckIfUserExists[0] : 0; // Return the first value if available, otherwise return a default value
+    }
+
     
 }

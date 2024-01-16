@@ -2,5 +2,7 @@
 
 public class SharedService
 {
-    public string IdFromURL { get; set; }
+    public string userId { get; set; }
+    
+    public string proposalId { get; set; }
 }

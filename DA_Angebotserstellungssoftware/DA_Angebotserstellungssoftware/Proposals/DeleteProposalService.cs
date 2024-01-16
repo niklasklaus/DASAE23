@@ -18,7 +18,7 @@ public class DeleteProposalService
 
             mysqlconnection.Open();
             
-            string deleteLV = $"DELETE FROM LVS WHERE proposal_id = '{proposal_id}'";
+            string deleteLV = $"DELETE FROM LVS WHERE proposal_id = '{proposal_id}' and user_id = '{user_id}'";
             string deleteProposal = $"DELETE FROM PROPOSALS WHERE proposal_id = '{proposal_id}' and user_id = '{user_id}'";
             
             MySqlCommand command1 = new MySqlCommand(deleteLV, mysqlconnection);

@@ -1,4 +1,4 @@
-﻿@page "/ProjectSearch"
+﻿@page "/ProjectSearch/{uid}"
 @using DA_Angebotserstellungssoftware.Proposals
 @inject SearchProposalService searchProposalService 
 
@@ -89,19 +89,24 @@
 @code {
     public SearchProjectModel _searchProject { get; set; }
 
+    [Parameter] 
+    public string uid { get; set; }
+    
     public string selectedProjectName;
     public string selectedCustomer;
     public string selectedProposalName;
 
     public string resultProposal;
     public int cid;
+    public int convertedNumberUser;
     
     protected override async Task OnInitializedAsync()
     {
+        convertedNumberUser = Int32.Parse(uid);
         _searchProject = new();
-        _searchProject.Project = await searchProposalService.ReturnProjectNamesList();
+        _searchProject.Project = await searchProposalService.ReturnProjectNamesList(convertedNumberUser);
         _searchProject.Customer = await searchProposalService.ReturnCustomersList();
-        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList();
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList(convertedNumberUser);
     }
     
     public class SearchProjectModel

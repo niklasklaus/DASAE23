@@ -1,31 +1,41 @@
-﻿.concrete-content-container-startingScreen{
+﻿.concrete-content-container-startingScreen {
     overflow: auto;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 4fr 0.5fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0fr 4fr 0.5fr 4fr 1fr;
 }
 
-.header-startingScreen{
+.header-startingScreen {
     grid-column: 2;
     grid-row: 2;
 }
 
-.header-startingScreen h1{
+.div-operation-header {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.header-startingScreen h1 {
     color: #D72622;
 }
 
-.links-container{
+.links-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr 1fr;
-    grid-template-rows: 10fr 4fr;
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 2;
+    justify-items: center;
 }
 
-.list-body-container{
+.list-body-container {
     display: grid;
     grid-template-rows: 2fr 0.5fr 8fr 0.5fr 2fr;
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 2;
 }
 
@@ -34,31 +44,79 @@
     align-self: end;
 }
 
-.Create-img-div{
+.Create-img-div {
     background-color: white;
-    height: 100%;
-    width: 100%;
-    grid-row: 1;
     grid-column: 2;
+    width: 75%;
+    height: 100%;
+    border-radius: 18%;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr 1fr;
 }
 
-.Edit-img-div{
+.Create-img-div p{
+    grid-row: 3;
+    text-align: center;
+    margin-bottom: 0;
+    align-self: end;
+}
+
+.Create-img-div img {
+    grid-row: 2;
+    height: 120px;
+    width: 120px;
+    justify-self: center;
+}
+
+.Edit-img-div img {
+    grid-row: 2;
+    height: 120px;
+    width: 120px;
+    justify-self: center;
+}
+
+.Show-img-div img {
+    grid-row: 2;
+    height: 120px;
+    width: 120px;
+    justify-self: center;
+}
+
+.Edit-img-div {
     background-color: white;
+    width: 75%;
     height: 100%;
-    width: 100%;
-    grid-row: 1;
     grid-column: 4;
+    border-radius: 18%;
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
 }
 
-.Show-img-div{
+.Edit-img-div p{
+    grid-row: 3;
+    text-align: center;
+    margin-bottom: 0;
+    align-self: end;
+}
+
+.Show-img-div {
     background-color: white;
+    width: 75%;
     height: 100%;
-    width: 100%;
-    grid-row: 1;
     grid-column: 6;
+    border-radius: 18%;
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
 }
 
-.Create-btn{
+.Show-img-div p{
+    grid-row: 3;
+    text-align: center;
+    margin-bottom: 0;
+    align-self: end;
+}
+
+.Create-btn {
     width: 100%;
     height: 100%;
     grid-row: 2;
@@ -68,7 +126,7 @@
     border: none;
 }
 
-.Edit-btn{
+.Edit-btn {
     width: 100%;
     height: 100%;
     grid-row: 2;
@@ -78,7 +136,7 @@
     border: none;
 }
 
-.Show-btn{
+.Show-btn {
     width: 100%;
     height: 100%;
     grid-row: 2;
@@ -88,81 +146,135 @@
     border: none;
 }
 
-.item-list-container{
+.item-list-container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     height: 100%;
     width: 100%;
     grid-row: 3;
+    overflow-x: auto;
 }
 
-.item-container{
+.item-container {
     display: grid;
     height: 90%;
     width: 100%;
     grid-template-columns: 10fr 10fr repeat(4, 1fr);
     background-color: #ffffff;
     align-items: center;
+    padding-right: 5px;
+    position: relative; /* Position relativ für die Pseudo-Elemente */
 }
 
-.item1{
-    grid-row: 1;
+.item-container::before,
+.item-container::after {
+    content: ""; /* Pseudo-Elemente für die Schatten */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Breite des Schattens */
+    pointer-events: none;
 }
 
-.item2{
-    grid-row: 2;
+.item-container::before {
+    left: 0;
+    background: linear-gradient(to left, white, transparent);
 }
 
-.item3{
-    grid-row: 3;
+.item-container::after {
+    right: 0;
+    background: linear-gradient(to right, white, transparent);
 }
 
-.name-text{
+.name-text {
     grid-column: 1;
     margin: 0 0 0 0;
     align-self: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Zeigt "..." am Ende, wenn der Text zu lang ist */
 }
 
-.date-text{
+.date-text {
     grid-column: 2;
     margin: 0 0 0 0;
     align-self: center;
 }
 
-.button-position-properties-startingScreen{
+.button-position-properties-startingScreen {
     object-fit: contain;
     height: 40px;
     width: 40px;
-    
+    border: none;
+    background-color: #ffffff;
 }
 
-.button-position-delete-startingScreen{
+.button-position-delete-startingScreen {
     grid-column: 6;
     grid-row: 1;
 }
 
-.button-position-edit-startingScreen{
+.button-position-edit-startingScreen {
     grid-column: 5;
     grid-row: 1;
 }
 
-.button-position-max-startingScreen{
+.button-position-max-startingScreen {
     grid-column: 4;
     grid-row: 1;
 }
 
-.button-position-download-startingScreen{
+.button-position-download-startingScreen {
     grid-column: 3;
     grid-row: 1;
 }
 
-.Show-All-Offer-Link{
-    grid-row: 5;
+.img-size-starting {
+    height: 100%;
+}
+
+.Show-All-Offer-Link {
+    grid-row: 6;
     justify-self: center;
     align-self: center;
     color: #E92020;
 }
 
-.Show-All-Offer-Link:hover{
+.Show-All-Offer-Link:hover {
     color: #E92020;
+}
+
+@media only screen and (max-height: 1000px) {
+    .button-position-properties-startingScreen {
+        object-fit: contain;
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+        border: none;
+        background-color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .item-container {
+        display: grid;
+        height: 90%;
+        width: 100%;
+        grid-template-columns: 5fr 5fr repeat(4, 1fr);
+        background-color: #ffffff;
+        align-items: center;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .item-container {
+        display: grid;
+        height: 90%;
+        width: 150%;
+        grid-template-columns: 10fr 10fr repeat(4, 1fr);
+        background-color: #ffffff;
+        align-items: center;
+        overflow-x: auto;
+    }
 }

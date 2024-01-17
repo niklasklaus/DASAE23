@@ -2541,19 +2541,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Niklas\\.nuget\\packages\\": {}
+    "C:\\Users\\Lukas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
+      "projectUniqueName": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
       "projectName": "DA_Angebotserstellungssoftware",
-      "projectPath": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
-      "packagesPath": "C:\\Users\\Niklas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\",
+      "projectPath": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware.csproj",
+      "packagesPath": "C:\\Users\\Lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Niklas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2624,7 +2624,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

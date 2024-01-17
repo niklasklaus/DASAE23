@@ -17,12 +17,25 @@
     <div class="concrete-content-container-startingScreen">
         <div class="header-startingScreen"><h1>Willkommen @userName</h1></div>
         <div class="links-container">
-            <div class="Create-img-div"></div>
+            <!--<div class="Create-img-div"></div>
             <button @onclick="ExecuteCreate" class="Create-btn">Angebot erstellen</button>
             <div class="Edit-img-div"></div>
             <button class="Edit-btn">Leistungsverzeichnis bearbeiten</button>
             <div class="Show-img-div"></div>
-            <button class="Show-btn">Angebot anzeigen</button>
+            <button class="Show-btn">Angebot anzeigen</button>-->
+                    
+            <div class="Create-img-div">
+                <p>Erstellen</p>
+                <img src="css/images_login_page/CreateOffer.png" />
+            </div>
+            <div class="Edit-img-div">
+                <p>Bearbeiten</p>
+                <img src="css/images_login_page/CreateOffer.png" />
+            </div>
+            <div class="Show-img-div">
+                <p>Anzeigen</p>   
+                <img src="css/images_login_page/CreateOffer.png" />
+            </div>
         </div>
         
         <div class="list-body-container">
@@ -35,21 +48,22 @@
                         <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
                         <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy")</p>
                         <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
-                            <img class="img-size" src="css/images_login_page/Delete_Icon.png" />
+                            <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" />
                         </button>
                         <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
-                            <img class="img-size" src="css/images_login_page/Edit_Icon.png" />
+                            <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
                         </button>
                         <button class="button-position-properties-startingScreen button-position-max-startingScreen">
-                            <img class="img-size" src="css/images_login_page/Max_Icon.png" />
+                            <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
                         </button>
                         <button class="button-position-properties-startingScreen button-position-download-startingScreen">
-                            <img class="img-size" src="css/images_login_page/Download_Icon.png" />
+                            <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
                         </button>
                     </div>
                 }
-                <a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>
+                
             </div>
+            <a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>
         </div>
 
       

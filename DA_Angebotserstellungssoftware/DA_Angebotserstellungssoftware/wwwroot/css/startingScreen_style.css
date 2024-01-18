@@ -47,11 +47,11 @@
 .Create-img-div {
     background-color: white;
     grid-column: 2;
-    width: 75%;
-    height: 100%;
+    width: 14vw;
+    height: 14vw;
     border-radius: 18%;
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
 }
 
 .Create-img-div p{
@@ -63,29 +63,29 @@
 
 .Create-img-div img {
     grid-row: 2;
-    height: 120px;
-    width: 120px;
+    height: 8vw;
+    width: 8vw;
     justify-self: center;
 }
 
 .Edit-img-div img {
     grid-row: 2;
-    height: 120px;
-    width: 120px;
+    height: 8vw;
+    width: 8vw;
     justify-self: center;
 }
 
 .Show-img-div img {
     grid-row: 2;
-    height: 120px;
-    width: 120px;
+    height: 8vw;
+    width: 8vw;
     justify-self: center;
 }
 
 .Edit-img-div {
     background-color: white;
-    width: 75%;
-    height: 100%;
+    width: 14vw;
+    height: 14vw;
     grid-column: 4;
     border-radius: 18%;
     display: grid;
@@ -101,8 +101,8 @@
 
 .Show-img-div {
     background-color: white;
-    width: 75%;
-    height: 100%;
+    width: 14vw;
+    height: 14vw;
     grid-column: 6;
     border-radius: 18%;
     display: grid;
@@ -244,6 +244,10 @@
     color: #E92020;
 }
 
+.Show-img-div button, .Edit-img-div button, .Create-img-div button{
+    display: none;
+}
+
 @media only screen and (max-height: 1000px) {
     .button-position-properties-startingScreen {
         object-fit: contain;
@@ -267,6 +271,59 @@
     }
 }
 
+@media only screen and (max-width: 850px){
+    .Show-img-div {
+        background-color: white;
+        width: 20vw;
+        height: 20vw;
+        grid-column: 6;
+        border-radius: 18%;
+        display: grid;
+        grid-template-rows: 1fr 4fr 2fr 1fr;
+    }
+
+    .Edit-img-div {
+        background-color: white;
+        width: 20vw;
+        height: 20vw;
+        grid-column: 4;
+        border-radius: 18%;
+        display: grid;
+        grid-template-rows: 1fr 4fr 2fr 1fr;
+    }
+
+    .Create-img-div {
+        background-color: white;
+        grid-column: 2;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 18%;
+        display: grid;
+        grid-template-rows: 1fr 4fr 2fr 1fr;
+    }
+
+    .Create-img-div img {
+        grid-row: 2;
+        height: 10vw;
+        width: 10vw;
+        justify-self: center;
+    }
+
+    .Edit-img-div img {
+        grid-row: 2;
+        height: 10vw;
+        width: 10vw;
+        justify-self: center;
+    }
+
+    .Show-img-div img {
+        grid-row: 2;
+        height: 10vw;
+        width: 10vw;
+        justify-self: center;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .item-container {
         display: grid;
@@ -276,5 +333,62 @@
         background-color: #ffffff;
         align-items: center;
         overflow-x: auto;
+    }
+    
+    .Create-img-div{
+        grid-template-rows: 1fr;
+        background-color: #F2F3F3;
+        grid-column: 1;
+        width: 100%;
+        height: 10vw;
+        margin-bottom: 5px;
+    }
+
+    .Show-img-div{
+        grid-template-rows: 1fr;
+        background-color: #F2F3F3;
+        grid-column: 1;
+        width: 100%;
+        height: 10vw;
+        margin-bottom: 5px;
+    }
+
+    .Edit-img-div{
+        grid-template-rows: 1fr;
+        background-color: #F2F3F3;
+        grid-column: 1;
+        width: 100%;
+        height: 10vw;
+        margin-bottom: 5px;
+    }
+
+    .Create-img-div img,
+    .Edit-img-div img,
+    .Show-img-div img {
+        display: none; /* Hide images when viewport width is less than 550px */
+    }
+
+    .Create-img-div p,
+    .Edit-img-div p,
+    .Show-img-div p {
+        display: none; /* Hide images when viewport width is less than 550px */
+    }
+
+    .Show-img-div button, .Edit-img-div button, .Create-img-div button{
+        background-color: #E92020;
+        display: flow;
+        height: 10vw;
+        width: 100%;
+        border-radius: 10px;
+        border: 0px;
+        color: white;
+    }
+
+    .links-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row: 5;
+        grid-column: 2;
+        justify-items: center;
     }
 }

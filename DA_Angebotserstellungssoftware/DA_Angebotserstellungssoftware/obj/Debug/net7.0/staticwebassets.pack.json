@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\css\\images_login_page\\Settings_Icon.png"
     },
     {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\ShowOffer.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\ShowOffer.png"
+    },
+    {
       "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
       "PackagePath": "staticwebassets\\css\\images_login_page\\Strabag_Logo.png"
     },
@@ -151,6 +155,10 @@
     {
       "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\Kleinangebote LV.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Kleinangebote LV.pdf"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DA_Angebotserstellungssoftware.Microsoft.AspNetCore.StaticWebAssets.props",

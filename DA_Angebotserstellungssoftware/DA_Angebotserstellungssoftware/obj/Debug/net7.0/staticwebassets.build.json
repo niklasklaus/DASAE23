@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "m0bzYB7Qv/uicOR5Vflk3AWvimQMg7VDOf509z8xa9w=",
+  "Hash": "Ty/FOjYPJBLm4f0FhOq5qIDhE2WHVyzFK+QWgupQTdU=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -1598,6 +1598,23 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Settings_Icon.png"
     },
     {
+      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\ShowOffer.png",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "css/images_login_page/ShowOffer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images_login_page\\ShowOffer.png"
+    },
+    {
       "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
@@ -1919,6 +1936,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\Kleinangebote LV.pdf",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "pdfs/Kleinangebote LV.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdfs\\Kleinangebote LV.pdf"
     }
   ]
 }

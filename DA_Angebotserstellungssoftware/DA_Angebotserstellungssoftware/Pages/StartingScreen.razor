@@ -2,6 +2,8 @@
 @using DA_Angebotserstellungssoftware.Users
 @using DA_Angebotserstellungssoftware.Proposals
 @inject InsertLVsService lvs
+@inject IModalService Modal
+@inject SharedService _srvice
 @inject SelectUserIdService _SelectUserIdService
 @inject NavigationManager navigationManager
 @inject SearchProposalService searchProposalService 
@@ -37,7 +39,7 @@
             <div class="Show-img-div">
                 <button>Anzeigen</button>
                 <p>Anzeigen</p>
-                <img src="css/images_login_page/CreateOffer.png"/>
+                <img src="css/images_login_page/ShowOffer.png"/>
             </div>
         </div>
         
@@ -56,7 +58,7 @@
                         <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
                         </button>
-                        <button class="button-position-properties-startingScreen button-position-max-startingScreen">
+                        <button @onclick="@(()=>Modal.Show<ModalPDF>("Einstellungen"))" class="button-position-properties-startingScreen button-position-max-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
                         </button>
                         <button class="button-position-properties-startingScreen button-position-download-startingScreen">

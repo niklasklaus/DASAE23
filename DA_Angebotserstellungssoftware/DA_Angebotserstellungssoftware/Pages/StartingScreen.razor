@@ -26,8 +26,8 @@
             <div class="Show-img-div"></div>
             <button class="Show-btn">Angebot anzeigen</button>-->
                     
-            <div class="Create-img-div">
-                <button>Erstellen</button>
+            <div @onclick="ExecuteCreate" class="Create-img-div">
+                <button @onclick="ExecuteCreate">Erstellen</button>
                 <p>Erstellen</p>
                 <img src="css/images_login_page/CreateOffer.png"/>
             </div>
@@ -58,7 +58,8 @@
                         <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
                         </button>
-                        <button @onclick="@(()=>Modal.Show<ModalPDF>("Einstellungen"))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                        <button @onclick="@(()=>Modal.Show<ModalPDF>(@proposalNames[currentIndex], new ModalOptions() { Size = ModalSize.Custom,
+                                              SizeCustomClass = "custom-modal"}))" class="button-position-properties-startingScreen button-position-max-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
                         </button>
                         <button class="button-position-properties-startingScreen button-position-download-startingScreen">

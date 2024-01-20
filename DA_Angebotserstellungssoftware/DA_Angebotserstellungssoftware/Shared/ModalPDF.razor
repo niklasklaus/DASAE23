@@ -1,21 +1,23 @@
 ﻿@inject InsertEffortAndDiscountService insertEffortAndDiscountService
 @inject SharedService _srvice
 @inject NavigationManager navigationManager
-<link href="/css/popUpCard_style.css" rel="stylesheet"/>
+<link href="/css/showPDF_style.css" rel="stylesheet"/>
 
 <style>
     #myPDF{
     width: 90%;
-    height: 900px;
+    height: 100%;
     }
 </style>
 
-<div class="content-container-popup">
-    <div class="popup-header1">
-        <embed id="myPDF" type="application/pdf" src="pdfs/Kleinangebote%20LV.pdf" frameborder="0">
-    </div>
+<!--<div class="default-container-pdf">
     
-</div>
+    <embed id="myPDF" type="application/pdf" class="pdf-show" src="pdfs/Kleinangebote%20LV.pdf" frameborder="0">
+    
+</div>-->
+
+<embed id="myPDF" type="application/pdf" class="pdf-show" src="pdfs/Kleinangebote%20LV.pdf" frameborder="0">
+
 
 @code {
     

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ty/FOjYPJBLm4f0FhOq5qIDhE2WHVyzFK+QWgupQTdU=",
+  "Hash": "W8A30p/Gi1LNC0s11VnvEePIGEegWr+i7QBWz2OYXbM=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -1885,6 +1885,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\projectSearch_style.css"
+    },
+    {
+      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "css/showPDF_style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\showPDF_style.css"
     },
     {
       "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",

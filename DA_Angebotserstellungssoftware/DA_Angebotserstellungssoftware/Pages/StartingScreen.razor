@@ -69,7 +69,7 @@
                 }
                 
             </div>
-            <a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>
+            <!--<a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>-->
         </div>
 
       
@@ -103,6 +103,7 @@
     
     public void ExecuteCreate()
     {
+        //string filePath = @"E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\PV-Kleinbaustellen_Ansichten.xlsm";
         string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
         lvs.InsertLVs(filePath, proposal_id, convertedNumber);
         navigationManager.NavigateTo($"/customer/{id.ToString()}/{proposal_id.ToString()}");

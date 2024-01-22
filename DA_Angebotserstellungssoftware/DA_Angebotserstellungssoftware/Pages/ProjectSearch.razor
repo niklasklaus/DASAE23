@@ -69,34 +69,35 @@
         <div class="item-input-ButtonSearch">
             <button @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
         </div>
-
-         <div class="item-grid item-result">
-                    <label class="primary-label-text kind-item-label-choose">Treffer:</label>
-                    <div class="kind-item-input-choose">
-                        @if (!string.IsNullOrEmpty(resultProposal))
-                        {
-                            <p>@resultProposal</p>
-                            <div class="icon-container">
-                                <button style="width: 30px; height: 30px" @onclick="() => ExecuteDelete()" class="button-position-properties-startingScreen button-position-delete-startingScreen">
-                                    <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" />
-                                </button>
-                                <button style="width: 30px; height: 30px" @onclick="() => ExecuteEdit()" class="button-position-properties-startingScreen button-position-edit-startingScreen">
-                                    <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
-                                </button>
-                                <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-startingScreen button-position-max-startingScreen">
-                                    <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
-                                </button>
-                                <button style="width: 30px; height: 30px" class="button-position-properties-startingScreen button-position-download-startingScreen">
-                                    <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
-                                </button>
-                            </div>
-                        }
-                        else
-                        {
-                            <p>Keine Ergebnisse gefunden</p>
-                        }
-                    </div>
-                </div>
+         
+         <div class="header-item-container">
+             <label class="primary-label-text kind-item-label-choose">Treffer:</label>
+             <div class="item-list-container">
+                 @if (!string.IsNullOrEmpty(resultProposal))
+                 {
+                     <div class="item-container">
+                         <p class="name-text">@resultProposal</p>
+                         <p class="date-text">dd-MM-yyyy</p>
+                         <button @onclick="() => ExecuteDelete()" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
+                         <button @onclick="() => ExecuteEdit()" class="button-position-properties-projectSearch button-position-edit-startingScreen">
+                            <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
+                         </button>
+                         <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-projectSearch button-position-max-startingScreen">
+                            <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
+                         </button>
+                         <button class="button-position-properties-projectSearch button-position-download-startingScreen">
+                            <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
+                         </button>
+                     </div>
+                 }
+                 else
+                 {
+                     <p>Keine Ergebnisse gefunden</p>
+                 }
+             </div>
+                 
+         </div>
+             
     </div>
 
     <!-- Blazor Footer Component -->

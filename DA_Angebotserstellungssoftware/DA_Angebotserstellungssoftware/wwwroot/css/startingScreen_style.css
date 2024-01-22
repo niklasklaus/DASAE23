@@ -34,7 +34,7 @@
 
 .list-body-container {
     display: grid;
-    grid-template-rows: 2fr 0.5fr 8fr 0.5fr 2fr;
+    grid-template-rows: 2fr 0.5fr 8fr;
     grid-row: 7;
     grid-column: 2;
 }

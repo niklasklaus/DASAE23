@@ -1,6 +1,9 @@
 ﻿@page "/ProjectSearch/{uid}"
 @using DA_Angebotserstellungssoftware.Proposals
 @inject SearchProposalService searchProposalService 
+@inject NavigationManager navigationManager
+@inject DeleteProposalService deleteProposalService
+@inject IModalService Modal
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/projectSearch_style.css" rel="stylesheet"/>
@@ -9,14 +12,16 @@
 
     <!-- Blazor Navbar Component -->
     <Navbar_Basic />
-    
+
     <div class="concrete-content-container-projectSearch">
-        <div class="header-projectSearch"><h1>Angebot suchen</h1></div>
+        <div class="header-projectSearch">
+            <h1>Angebot suchen</h1>
+        </div>
+
         <div class="item-grid item-ProjectInput">
             <label class="primary-label-text kind-item-label-choose" for="ProjectChoice">Projekt:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
                 <InputSelect class="kind-item-input-choose" @bind-Value="selectedProjectName" @onchange="HandleProjectSelection">
-                    
                     @if (_searchProject.Project != null)
                     {
                         <option>Projektname auswählen</option>
@@ -28,7 +33,7 @@
                 </InputSelect>
             </EditForm>
         </div>
-        
+
         <div class="item-grid item-OfferNumberInput">
             <label class="primary-label-text kind-item-label-choose" for="OfferNumberChoice">Angebot-Nummer:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
@@ -44,46 +49,61 @@
                 </InputSelect>
             </EditForm>
         </div>
-        
+
         <div class="item-grid item-Customer">
             <label class="primary-label-text kind-item-label-choose" for="CustomerChoice">Kunde:</label>
             <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
-               <InputSelect class="kind-item-input-choose" @bind-Value="selectedCustomer" @onchange="HandleCustomerSelection">
-                   @if (_searchProject.Customer != null)
-                   {
-                       <option>Kundenname auswählen</option>
-                       @for (int i = 0; i < _searchProject.Customer.Count; i++)
-                       {
-                           <option>@_searchProject.Customer[i]</option>
-                       }
-                   }
-               </InputSelect>
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedCustomer" @onchange="HandleCustomerSelection">
+                    @if (_searchProject.Customer != null)
+                    {
+                        <option>Kundenname auswählen</option>
+                        @for (int i = 0; i < _searchProject.Customer.Count; i++)
+                        {
+                            <option>@_searchProject.Customer[i]</option>
+                        }
+                    }
+                </InputSelect>
             </EditForm>
-            </div> 
-       
-       
-        <div class="item-input-ButtonSearch">
-            <button  @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
         </div>
-        <div class="item-grid item-result">
-            <label class="primary-label-text kind-item-label-choose">Treffer:</label>
-            <p class="kind-item-input-choose"> @if (!string.IsNullOrEmpty(resultProposal))
-                                               {
 
-                                                   <p>@resultProposal</p>
-                                               }
-                                               else
-                                               {
-                                                   <p>Keine Ergebnisse gefunden</p>
-                                               }
-            </p>
+        <div class="item-input-ButtonSearch">
+            <button @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
         </div>
+
+         <div class="item-grid item-result">
+                    <label class="primary-label-text kind-item-label-choose">Treffer:</label>
+                    <div class="kind-item-input-choose">
+                        @if (!string.IsNullOrEmpty(resultProposal))
+                        {
+                            <p>@resultProposal</p>
+                            <div class="icon-container">
+                                <button style="width: 30px; height: 30px" @onclick="() => ExecuteDelete()" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                    <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" />
+                                </button>
+                                <button style="width: 30px; height: 30px" @onclick="() => ExecuteEdit()" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                    <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
+                                </button>
+                                <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                    <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
+                                </button>
+                                <button style="width: 30px; height: 30px" class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                    <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
+                                </button>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>Keine Ergebnisse gefunden</p>
+                        }
+                    </div>
+                </div>
     </div>
 
     <!-- Blazor Footer Component -->
-    <Footer_Basic/>
+    <Footer_Basic />
 
 </div>
+
 
 
 @code {
@@ -146,5 +166,19 @@
             cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
             resultProposal = await searchProposalService.ReturnFoundProposal(selectedProjectName, cid, selectedProposalName);
         //}
+    }
+
+    public void ExecuteEdit()
+    {
+        string[] splittedProposal = resultProposal.Split(' ');
+        navigationManager.NavigateTo($"/customer/{uid.ToString()}/{splittedProposal[0]}");
+    }
+    
+    public void ExecuteDelete()
+    {
+        string[] splittedProposal = resultProposal.Split(' ');
+        int converted = Int32.Parse(splittedProposal[0]);
+        deleteProposalService.DeleteProposal(converted, convertedNumberUser);
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
     }
 }

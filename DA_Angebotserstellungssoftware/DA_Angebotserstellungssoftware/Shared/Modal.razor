@@ -57,7 +57,7 @@
     {
         
         insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal);
-        navigationManager.NavigateTo($"/PaymentTerms/{uid.ToString()}/{pid.ToString()}");
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
         Msg = $"Die betroffenen Leistungsverezcinisse wurden geändert";
     }
 }

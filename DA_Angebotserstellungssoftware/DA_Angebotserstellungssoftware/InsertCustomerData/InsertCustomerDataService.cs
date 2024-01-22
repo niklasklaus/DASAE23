@@ -88,7 +88,8 @@ public class InsertCustomerDataService
 
                     else
                     {
-                        int val = 0;
+                        Random rand = new Random();
+                        int val = rand.Next(1, 90001);
                         resultCustomerId.Add(val);
                     }
                 }

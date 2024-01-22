@@ -1,6 +1,7 @@
 ﻿@page "/ListOfLVs/{uid}/{pid}"
 @inject IModalService Modal
 @inject SharedService _srvice
+@inject NavigationManager navigationManager
 
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
@@ -62,7 +63,7 @@
             <a class="button-position-properties button-position-add"><img class="img-size" src="css/images_login_page/Add_Icon.png"/></a>
             <a @onclick="@(()=>Modal.Show<Modal>("Einstellungen"))" class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
             <button class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
-            <button class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
+            <button @onclick = "ExecuteNext" class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
         </div>
     </div>
     
@@ -103,5 +104,10 @@
     public void ExecuteConfirm()
     {
         _ChooseLv = new ChooseLVModel();
+    }
+
+    public void ExecuteNext()
+    {
+        navigationManager.NavigateTo($"/PaymentTerms/{uid.ToString()}/{pid.ToString()}");
     }
 }

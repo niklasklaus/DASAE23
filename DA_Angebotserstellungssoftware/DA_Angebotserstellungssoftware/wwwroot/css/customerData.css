@@ -69,19 +69,25 @@
     width: 100%;
 }
 
-.item-input-ButtonNext{
+.item-input-Button{
     display: grid;
-    grid-template-columns: 1fr 13fr;
+    grid-template-columns: 1fr 0fr 13fr;
     grid-row: 8;
-}
-
-.item-input-ButtonNext button{
-    grid-column: 2;
 }
 
 .primary-label-text-customer {
     font-size: 1.5em;
     color: #000000;
+}
+
+.button-next{
+    grid-column: 3;
+}
+
+.button-back{
+    grid-column: 2;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 
@@ -102,7 +108,7 @@
     }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 420px){
     .item-grid {
         display: grid;
         grid-template-rows: 1fr 1fr;

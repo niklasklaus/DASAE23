@@ -44,8 +44,9 @@
                     <InputText class="input-form input-field-customer" type="text" id="CustomerUIDNumber" @bind-Value="@_customer.UIDNumber"></InputText>
                 </EditForm>
             </div>
-            <div class="item-input-ButtonNext">
-                <button  @onclick="ExecuteNext" class="primary-btn-login" type="submit" id="loginBtn">WEITER</button>
+            <div class="item-input-Button">
+                <button class="primary-btn-login button-back" type="submit" id="loginBtn">ZURÜCK</button>
+                <button @onclick="ExecuteNext" class="primary-btn-login button-next" type="submit" id="loginBtn">WEITER</button>
             </div>
         </div>
         

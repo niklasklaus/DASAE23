@@ -90,6 +90,16 @@
     public List<int> proposalIds = new List<int>();
     public List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
 
+
+    public class GetUserId
+    {
+        public static string UserId = "";
+        
+        public static void SetId(string id)
+        {
+            UserId = id;
+        }
+    }
     protected override async Task OnInitializedAsync()
     {
         Random rand = new Random();
@@ -99,6 +109,7 @@
         proposalNames = await searchProposalService.ReturnProposalShortList(convertedNumber);
         proposalIds = await searchProposalService.ReturnProposalIdList(convertedNumber);
         proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumber);
+        GetUserId.SetId(id);
     }
     
     public void ExecuteCreate()

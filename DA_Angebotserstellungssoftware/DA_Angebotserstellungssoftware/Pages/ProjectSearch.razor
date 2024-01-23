@@ -69,15 +69,16 @@
         <div class="item-input-ButtonSearch">
             <button @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
         </div>
+        
          
-         <div class="header-item-container">
+        <div class="header-item-container">
              <label class="primary-label-text kind-item-label-choose">Treffer:</label>
              <div class="item-list-container">
                  @if (!string.IsNullOrEmpty(resultProposal))
                  {
                      <div class="item-container">
                          <p class="name-text">@resultProposal</p>
-                         <p class="date-text">dd-MM-yyyy</p>
+                         <p class="date-text">@proposalLastUpdatedAt[0]</p>
                          <button @onclick="() => ExecuteDelete()" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
                          <button @onclick="() => ExecuteEdit()" class="button-position-properties-projectSearch button-position-edit-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
@@ -121,6 +122,8 @@
     public int cid;
     public int convertedNumberUser;
     
+    public List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
+    
     protected override async Task OnInitializedAsync()
     {
         convertedNumberUser = Int32.Parse(uid);
@@ -128,6 +131,7 @@
         _searchProject.Project = await searchProposalService.ReturnProjectNamesList(convertedNumberUser);
         _searchProject.Customer = await searchProposalService.ReturnCustomersList();
         _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList(convertedNumberUser);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumberUser);
     }
     
     public class SearchProjectModel
@@ -180,6 +184,11 @@
         string[] splittedProposal = resultProposal.Split(' ');
         int converted = Int32.Parse(splittedProposal[0]);
         deleteProposalService.DeleteProposal(converted, convertedNumberUser);
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+    }
+
+    public void ExecuteStartingScreen()
+    {
         navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
     }
 }

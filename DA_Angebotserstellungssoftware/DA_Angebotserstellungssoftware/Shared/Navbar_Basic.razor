@@ -1,11 +1,18 @@
-﻿<link href="/css/mainComponents.css" rel="stylesheet"/>
+﻿@using DA_Angebotserstellungssoftware.Pages
+@inject NavigationManager navigationManager
+@inject SharedService _srvice
+<link href="/css/mainComponents.css" rel="stylesheet"/>
 
 <div class="header-container">
-        <a class="image-header"><img class="img-size" src="css/images_login_page/Strabag_Logo.png"/></a>
+        <a @onclick="ExecuteStartingScreen" class="image-header"><img class="img-size" src="css/images_login_page/Strabag_Logo.png"/></a>
         <a class="image-header-icon-search"><img class="img-size" src="css/images_login_page/Search_Icon.png"/></a>
         <a class="image-header-icon-menu"><img class="img-size" src="css/images_login_page/Navbar_Menu_Icon.png"/></a>
 </div>
 
 @code {
     
+    public void ExecuteStartingScreen()
+    {
+        navigationManager.NavigateTo($"/StartingScreen/{StartingScreen.GetUserId.UserId}", forceLoad: true);
+    }
 }

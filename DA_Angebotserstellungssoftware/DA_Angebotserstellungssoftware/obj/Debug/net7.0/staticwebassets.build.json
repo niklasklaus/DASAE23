@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QOK8h4Vy8msQ6/K18vWoBLkNM87VpS0ghBrFsboPgUk=",
+  "Hash": "3UUXAJbMeuCEjhoAjFYdnyluNcarCIlFVKGDQuNcdhI=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "DA_Angebotserstellungssoftware\\wwwroot",
       "Source": "DA_Angebotserstellungssoftware",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css",
       "SourceId": "Blazored.Modal",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazored.Modal",
       "RelativePath": "Blazored.Modal.bundle.scp.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js",
       "SourceId": "Blazored.Modal",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazored.Modal",
       "RelativePath": "BlazoredModal.razor.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark-base.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\dark.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default-base.css",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default.css",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\default.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/fluent-base.css",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/fluent-dark-base.css",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/fluent-dark.css",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/fluent.css",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\fluent.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-base.css",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic.css",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\humanistic.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-base.css",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-dark-base.css",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-dark.css",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material.css",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material3-base.css",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material3-dark-base.css",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material3-dark.css",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3-dark.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material3.css",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\material3.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-base.css",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software.css",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\software.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard-base.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-base.css",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard-base.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard-base.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard.css",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard.css",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\css\\standard.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\MaterialIcons-Regular.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\MaterialIcons-Regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/MaterialIcons-Regular.woff",
       "AssetKind": "All",
@@ -439,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\MaterialIcons-Regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-300.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-300.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-300.woff",
       "AssetKind": "All",
@@ -456,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-300.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-300.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-700.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-700.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-700.woff",
       "AssetKind": "All",
@@ -473,13 +473,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-700.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-700.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-regular.woff",
       "AssetKind": "All",
@@ -490,13 +490,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-300.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-300.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-300.woff",
       "AssetKind": "All",
@@ -507,13 +507,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-300.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-300.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-500.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-500.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-500.woff",
       "AssetKind": "All",
@@ -524,13 +524,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-500.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-500.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-700.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-700.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-700.woff",
       "AssetKind": "All",
@@ -541,13 +541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-700.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-700.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-regular.woff",
       "AssetKind": "All",
@@ -558,13 +558,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Black.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Black.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Black.woff",
       "AssetKind": "All",
@@ -575,13 +575,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Black.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Black.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-BlackIt.woff",
       "AssetKind": "All",
@@ -592,13 +592,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Bold.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Bold.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Bold.woff",
       "AssetKind": "All",
@@ -609,13 +609,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Bold.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Bold.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-BoldIt.woff",
       "AssetKind": "All",
@@ -626,13 +626,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-ExtraLight.woff",
       "AssetKind": "All",
@@ -643,13 +643,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-ExtraLightIt.woff",
       "AssetKind": "All",
@@ -660,13 +660,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-It.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-It.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-It.woff",
       "AssetKind": "All",
@@ -677,13 +677,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-It.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-It.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Light.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Light.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Light.woff",
       "AssetKind": "All",
@@ -694,13 +694,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Light.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Light.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-LightIt.woff",
       "AssetKind": "All",
@@ -711,13 +711,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Regular.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Regular.woff",
       "AssetKind": "All",
@@ -728,13 +728,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Regular.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Semibold.woff",
       "AssetKind": "All",
@@ -745,13 +745,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-SemiboldIt.woff",
       "AssetKind": "All",
@@ -762,13 +762,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\Radzen.Blazor.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\Radzen.Blazor.js",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "Radzen.Blazor.js",
       "AssetKind": "All",
@@ -779,13 +779,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\Radzen.Blazor.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\radzen.blazor\\4.23.4\\staticwebassets\\Radzen.Blazor.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-floating-action-button.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-floating-action-button.min.js",
       "SourceId": "Syncfusion.Blazor.Buttons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Buttons",
       "RelativePath": "scripts/sf-floating-action-button.min.js",
       "AssetKind": "All",
@@ -796,13 +796,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-floating-action-button.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-floating-action-button.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-speeddial.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-speeddial.min.js",
       "SourceId": "Syncfusion.Blazor.Buttons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Buttons",
       "RelativePath": "scripts/sf-speeddial.min.js",
       "AssetKind": "All",
@@ -813,13 +813,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-speeddial.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.buttons\\24.1.43\\staticwebassets\\scripts\\sf-speeddial.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\compression.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\compression.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/compression.min.js",
       "AssetKind": "All",
@@ -830,13 +830,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\compression.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\compression.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\excelexport.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\excelexport.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/excelexport.min.js",
       "AssetKind": "All",
@@ -847,13 +847,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\excelexport.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\excelexport.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\fileutils.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\fileutils.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/fileutils.min.js",
       "AssetKind": "All",
@@ -864,13 +864,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\fileutils.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\fileutils.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\pdfexport.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\pdfexport.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/pdfexport.min.js",
       "AssetKind": "All",
@@ -881,13 +881,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\pdfexport.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\pdfexport.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popup.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popup.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/popup.min.js",
       "AssetKind": "All",
@@ -898,13 +898,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popup.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popup.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popupsbase.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popupsbase.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/popupsbase.min.js",
       "AssetKind": "All",
@@ -915,13 +915,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popupsbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\popupsbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\sf-svg-export.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\sf-svg-export.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/sf-svg-export.min.js",
       "AssetKind": "All",
@@ -932,13 +932,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\sf-svg-export.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\sf-svg-export.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\svgbase.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\svgbase.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/svgbase.min.js",
       "AssetKind": "All",
@@ -949,13 +949,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\svgbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\svgbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor-base.min.js",
       "AssetKind": "All",
@@ -966,13 +966,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor-extended.min.js",
       "AssetKind": "All",
@@ -983,13 +983,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor.min.js",
       "AssetKind": "All",
@@ -1000,13 +1000,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.core\\24.1.43\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\scripts\\data.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\scripts\\data.min.js",
       "SourceId": "Syncfusion.Blazor.Data",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Data",
       "RelativePath": "scripts/data.min.js",
       "AssetKind": "All",
@@ -1017,13 +1017,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\scripts\\data.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.data\\24.1.43\\staticwebassets\\scripts\\data.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-colorpicker.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-colorpicker.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-colorpicker.min.js",
       "AssetKind": "All",
@@ -1034,13 +1034,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-colorpicker.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-colorpicker.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-maskedtextbox.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-maskedtextbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-maskedtextbox.min.js",
       "AssetKind": "All",
@@ -1051,13 +1051,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-maskedtextbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-maskedtextbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-numerictextbox.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-numerictextbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-numerictextbox.min.js",
       "AssetKind": "All",
@@ -1068,13 +1068,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-numerictextbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-numerictextbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-rating.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-rating.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-rating.min.js",
       "AssetKind": "All",
@@ -1085,13 +1085,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-rating.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-rating.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-signature.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-signature.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-signature.min.js",
       "AssetKind": "All",
@@ -1102,13 +1102,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-signature.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-signature.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-slider.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-slider.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-slider.min.js",
       "AssetKind": "All",
@@ -1119,13 +1119,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-slider.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-slider.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-textbox.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-textbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-textbox.min.js",
       "AssetKind": "All",
@@ -1136,13 +1136,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-textbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-textbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-uploader.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-uploader.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-uploader.min.js",
       "AssetKind": "All",
@@ -1153,13 +1153,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-uploader.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.inputs\\24.1.43\\staticwebassets\\scripts\\sf-uploader.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-dialog.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-dialog.min.js",
       "SourceId": "Syncfusion.Blazor.Popups",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Popups",
       "RelativePath": "scripts/sf-dialog.min.js",
       "AssetKind": "All",
@@ -1170,13 +1170,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-dialog.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-dialog.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-tooltip.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-tooltip.min.js",
       "SourceId": "Syncfusion.Blazor.Popups",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Popups",
       "RelativePath": "scripts/sf-tooltip.min.js",
       "AssetKind": "All",
@@ -1187,13 +1187,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-tooltip.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.popups\\24.1.43\\staticwebassets\\scripts\\sf-tooltip.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\sf-spinner.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\sf-spinner.min.js",
       "SourceId": "Syncfusion.Blazor.Spinner",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Spinner",
       "RelativePath": "scripts/sf-spinner.min.js",
       "AssetKind": "All",
@@ -1204,13 +1204,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\sf-spinner.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\sf-spinner.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\spinner.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\spinner.min.js",
       "SourceId": "Syncfusion.Blazor.Spinner",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Spinner",
       "RelativePath": "scripts/spinner.min.js",
       "AssetKind": "All",
@@ -1221,13 +1221,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\spinner.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.spinner\\24.1.43\\staticwebassets\\scripts\\spinner.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\sf-drop-down-button.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\sf-drop-down-button.min.js",
       "SourceId": "Syncfusion.Blazor.SplitButtons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.SplitButtons",
       "RelativePath": "scripts/sf-drop-down-button.min.js",
       "AssetKind": "All",
@@ -1238,13 +1238,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\sf-drop-down-button.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\sf-drop-down-button.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\splitbuttonsbase.min.js",
+      "Identity": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\splitbuttonsbase.min.js",
       "SourceId": "Syncfusion.Blazor.SplitButtons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.SplitButtons",
       "RelativePath": "scripts/splitbuttonsbase.min.js",
       "AssetKind": "All",
@@ -1255,13 +1255,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\splitbuttonsbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\24.1.43\\staticwebassets\\scripts\\splitbuttonsbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "DA_Angebotserstellungssoftware.styles.css",
       "AssetKind": "All",
@@ -1272,13 +1272,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\bundle\\DA_Angebotserstellungssoftware.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "DA_Angebotserstellungssoftware.bundle.scp.css",
       "AssetKind": "All",
@@ -1289,13 +1289,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/chooseLV_style.css",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\css\\chooseLV_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/customerData.css",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\css\\customerData.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\editLV_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\editLV_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/editLV_style.css",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\css\\editLV_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Add_Icon.png",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Add_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\CreateOffer.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\CreateOffer.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/CreateOffer.png",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\CreateOffer.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Delete_Icon.png",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Delete_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Download_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Download_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Download_Icon.png",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Download_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Edit_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Edit_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Edit_Icon.png",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Edit_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\EditLV.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\EditLV.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/EditLV.png",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\EditLV.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu_1.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu_1.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Logo_Neu_1.png",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Logo_Neu_1.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Logo_Neu.png",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Logo_Neu.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Max_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Max_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Max_Icon.png",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Max_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Navbar_Menu_Icon.png",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Search_Icon.png",
       "AssetKind": "All",
@@ -1581,10 +1581,27 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Search_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\SearchOffer.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "css/images_login_page/SearchOffer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images_login_page\\SearchOffer.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Settings_Icon.png",
       "AssetKind": "All",
@@ -1598,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Settings_Icon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\ShowOffer.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\ShowOffer.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/ShowOffer.png",
       "AssetKind": "All",
@@ -1615,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\ShowOffer.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/images_login_page/Strabag_Logo.png",
       "AssetKind": "All",
@@ -1632,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\css\\images_login_page\\Strabag_Logo.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/listOfLV.css",
       "AssetKind": "All",
@@ -1649,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\css\\listOfLV.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -1666,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/mainComponents.css",
       "AssetKind": "All",
@@ -1683,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\css\\mainComponents.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -1700,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -1717,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -1734,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -1751,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -1768,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -1785,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -1802,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -1819,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -1836,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\payment_terms_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\payment_terms_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/payment_terms_style.css",
       "AssetKind": "All",
@@ -1853,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\css\\payment_terms_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\popUpCard_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\popUpCard_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/popUpCard_style.css",
       "AssetKind": "All",
@@ -1870,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\css\\popUpCard_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\projectSearch_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\projectSearch_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/projectSearch_style.css",
       "AssetKind": "All",
@@ -1887,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\css\\projectSearch_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/showPDF_style.css",
       "AssetKind": "All",
@@ -1904,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\css\\showPDF_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1921,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\startingScreen_style.css",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\startingScreen_style.css",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "css/startingScreen_style.css",
       "AssetKind": "All",
@@ -1938,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\css\\startingScreen_style.css"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -1955,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\Kleinangebote LV.pdf",
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\Kleinangebote LV.pdf",
       "SourceId": "DA_Angebotserstellungssoftware",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niklas\\repos_da_5chit\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
       "BasePath": "_content/DA_Angebotserstellungssoftware",
       "RelativePath": "pdfs/Kleinangebote LV.pdf",
       "AssetKind": "All",

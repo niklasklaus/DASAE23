@@ -31,10 +31,10 @@
                 <p>Erstellen</p>
                 <img src="css/images_login_page/CreateOffer.png"/>
             </div>
-            <div class="Edit-img-div">
-                <button>Bearbeiten</button>
-                <p>Bearbeiten</p>
-                <img src="css/images_login_page/EditLV.png"/>
+            <div @onclick="ExecuteSearchProject" class="Edit-img-div">
+                <button>Suchen</button>
+                <p>Suchen</p>
+                <img src="css/images_login_page/SearchOffer.png"/>
             </div>
             <div class="Show-img-div">
                 <button>Anzeigen</button>
@@ -130,5 +130,10 @@
     {
         deleteProposalService.DeleteProposal(pid, convertedNumber);
         navigationManager.NavigateTo($"/StartingScreen/{id.ToString()}", forceLoad: true);
+    }
+
+    public void ExecuteSearchProject()
+    {
+        navigationManager.NavigateTo($"/ProjectSearch/{id.ToString()}");
     }
 }

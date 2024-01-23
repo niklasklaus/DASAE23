@@ -187,8 +187,8 @@
 }
 
 .name-text {
-    grid-column: 1;
-    margin: 0 0 0 0;
+    grid-column: 1; 
+    margin: 0 0 0 10px;
     align-self: center;
     overflow: hidden;
     white-space: nowrap;

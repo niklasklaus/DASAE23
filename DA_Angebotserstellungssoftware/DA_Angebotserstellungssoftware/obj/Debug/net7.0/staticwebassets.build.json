@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3UUXAJbMeuCEjhoAjFYdnyluNcarCIlFVKGDQuNcdhI=",
+  "Hash": "qnApImYNDuZpZvxmk7lztpVNPaeCw93oMgGnwpXyAz4=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -1902,6 +1902,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\projectSearch_style.css"
+    },
+    {
+      "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showAllOffers_style.css",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "css/showAllOffers_style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\showAllOffers_style.css"
     },
     {
       "Identity": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",

@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdFNlYXJjaC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Lukas/repos/DA/DASAE23/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/ShowAllOffers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd0FsbE9mZmVycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Lukas/repos/DA/DASAE23/DA_Angebotserstellungssoftware/DA_Angebotserstellungssoftware/Pages/StartingScreen.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRpbmdTY3JlZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

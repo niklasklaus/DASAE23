@@ -36,7 +36,7 @@
                 <p>Suchen</p>
                 <img src="css/images_login_page/SearchOffer.png"/>
             </div>
-            <div class="Show-img-div">
+            <div @onclick="ExecuteShowAllProjects" class="Show-img-div">
                 <button>Anzeigen</button>
                 <p>Anzeigen</p>
                 <img src="css/images_login_page/ShowOffer.png"/>
@@ -135,5 +135,10 @@
     public void ExecuteSearchProject()
     {
         navigationManager.NavigateTo($"/ProjectSearch/{id.ToString()}");
+    }
+
+    public void ExecuteShowAllProjects()
+    {
+        navigationManager.NavigateTo($"/ShowAllOffers");
     }
 }

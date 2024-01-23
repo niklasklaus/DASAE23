@@ -149,6 +149,10 @@
       "PackagePath": "staticwebassets\\css\\projectSearch_style.css"
     },
     {
+      "Id": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showAllOffers_style.css",
+      "PackagePath": "staticwebassets\\css\\showAllOffers_style.css"
+    },
+    {
       "Id": "C:\\Users\\Lukas\\repos\\DA\\DASAE23\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",
       "PackagePath": "staticwebassets\\css\\showPDF_style.css"
     },

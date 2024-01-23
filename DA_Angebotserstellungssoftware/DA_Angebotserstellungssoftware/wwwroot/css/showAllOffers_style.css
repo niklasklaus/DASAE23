@@ -1,0 +1,30 @@
+﻿.concrete-content-container-showAllOffers {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 2fr 1fr 10fr 1fr 2fr;
+}
+
+.header-showAllOffers{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.header-showAllOffers h1{
+    color: #D72622;
+}
+
+.pagination-container {
+    display: inline-block;
+    height: 80%;
+    grid-row: 4;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.pagination-container a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}

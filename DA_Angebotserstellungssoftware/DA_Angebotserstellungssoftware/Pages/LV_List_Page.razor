@@ -38,7 +38,7 @@
         <div class="button-position-div">
             <!--<a class="button-position-properties button-position-add"><img class="img-size" src="css/images_login_page/Add_Icon.png"/></a>-->
             <a @onclick="@(()=>Modal.Show<Modal>("Einstellungen"))" class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
-            <button class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
+            <button @onclick="ExecuteBack" class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
             <button @onclick = "ExecuteNext" class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
         </div>
     </div>
@@ -85,5 +85,10 @@
     public void ExecuteNext()
     {
         navigationManager.NavigateTo($"/PaymentTerms/{uid.ToString()}/{pid.ToString()}");
+    }
+    
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/customer/{uid.ToString()}/{pid.ToString()}");
     }
 }

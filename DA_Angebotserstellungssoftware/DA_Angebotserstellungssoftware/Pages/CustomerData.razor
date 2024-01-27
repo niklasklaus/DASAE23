@@ -45,7 +45,7 @@
                 </EditForm>
             </div>
             <div class="item-input-Button">
-                <button class="primary-btn-login button-back" type="submit" id="loginBtn">ZURÜCK</button>
+                <button @onclick="ExecuteBack" class="primary-btn-login button-back" type="submit" id="loginBtn">ZURÜCK</button>
                 <button @onclick="ExecuteNext" class="primary-btn-login button-next" type="submit" id="loginBtn">WEITER</button>
             </div>
         </div>
@@ -109,5 +109,10 @@
         updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
         Msg = $"Der Kunde wurde erfolgreich hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
+    }
+    
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}");
     }
 }

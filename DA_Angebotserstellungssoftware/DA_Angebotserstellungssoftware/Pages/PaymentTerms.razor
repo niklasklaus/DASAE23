@@ -61,7 +61,8 @@
         </div>
         
         <div class="btn-container">
-            <button  @onclick="ExecuteConfirm" class="primary-btn-login" type="submit" id="loginBtn">WEITER</button>
+            <button @onclick="ExecuteBack" class="primary-btn-login button-back-payment" type="submit" id="loginBtn">ZURÜCK</button>
+            <button @onclick="ExecuteConfirm" class="primary-btn-login button-next-payment" type="submit" id="loginBtn">WEITER</button>
         </div>
     </div>
     
@@ -111,5 +112,10 @@
         insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
         navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}");
+    }
+
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
     }
 }

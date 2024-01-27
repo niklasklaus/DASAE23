@@ -8,6 +8,7 @@ public class UpdateLVService
     private List<string> resultsshortText = new List<string>();
     private List<double> resultsLVamount = new List<double>();
     private List<string> resultsLVAmountUnit = new List<string>();
+    private List<string> resultsOZ = new List<string>();
     public UpdateLVService(MySqlConnectionManager connectionManager)
     {
         this.connection = connectionManager;
@@ -130,5 +131,40 @@ public class UpdateLVService
             command.ExecuteNonQuery();
             
         }
+    }
+
+    public async Task SelectOZ(int uid, int pid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+            mysqlconnection.Open();
+            string selectProposal = $"SELECT oz FROM LVS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
+            MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
+            command1.ExecuteNonQuery();
+            
+            using (var reader = await command1.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (!reader.IsDBNull(reader.GetOrdinal("oz")))
+                    {
+                        // Assuming the column name is 'discount', change it accordingly
+                        string val = reader.GetString("oz");
+                        resultsOZ.Add(val); // Add the retrieved value to the list
+                    }
+                    else
+                    {
+                        string val = "-";
+                        resultsOZ.Add(val); // Add the retrieved value to the list
+                    }
+                }
+            }
+        }
+    }
+    
+    public async Task<List<string>> ReturnOZ(int uid, int pid)
+    {
+        await SelectOZ(uid, pid);
+        return resultsOZ.Count > 0 ? resultsOZ : new List<string>(); // Return the first value if available, otherwise return a default value
     }
 }

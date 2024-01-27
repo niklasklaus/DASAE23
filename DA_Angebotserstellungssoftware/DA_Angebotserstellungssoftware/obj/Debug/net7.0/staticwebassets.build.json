@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N+DbEMJoQrDGcBkW47CdjR3R84pmTymSsl9qhKl/9HQ=",
+  "Hash": "OaQlAkJjA4bw+U8bcPVeDo5+rHgTo5ZJ3El1A2m8wXo=",
   "Source": "DA_Angebotserstellungssoftware",
   "BasePath": "_content/DA_Angebotserstellungssoftware",
   "Mode": "Default",
@@ -1681,6 +1681,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm",
+      "SourceId": "DA_Angebotserstellungssoftware",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\",
+      "BasePath": "_content/DA_Angebotserstellungssoftware",
+      "RelativePath": "css/LV/PV-Kleinbaustellen_Ansichten.xlsm",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm"
     },
     {
       "Identity": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",

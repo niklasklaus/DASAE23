@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\DA_Angebotserstellungssoftware.bundle.scp.css"
     },
     {
+      "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm",
+      "PackagePath": "staticwebassets\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm"
+    },
+    {
       "Id": "E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

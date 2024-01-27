@@ -1,4 +1,5 @@
 ﻿@page "/EditLV_Page/{uid}/{pid}"
+@using System.Text.RegularExpressions
 @inject UpdateLVService _updateLvService
 @inject IJSRuntime JSRuntime
 @inject NavigationManager navigationManager
@@ -17,6 +18,7 @@
             <table class="table-properties">
                 <thead>
                 <tr>
+                    <!--<th>Nr.</th>-->
                     <th>Kurztext</th>
                     <th>LV Menge</th>
                     <th>ME</th>
@@ -26,9 +28,12 @@
                 @for (int i = 0; i < lvAmount.Count; i++)
                 {
                     int currentIndex = i;
-                    <tr>
+                    <!--<tr>
                         <td>
-                            <p>@shortText[i]</p>
+                            <p>@oz[i]</p>
+                        </td>
+                        <td>
+                            <p style="font-weight: @(IsOzHeading(oz[i]) ? "bold" : "normal")">@shortText[i]</p>
                         </td>
                         <td>
                             <input value="@lvAmount[i]" @onchange="e => UpdateLvAmount(e, currentIndex)" class="input-field" style="width: 80px;"/>
@@ -36,7 +41,30 @@
                         <td>
                             <p>@lvAmountUnit[i]</p>
                         </td>
-                    </tr>
+                    </tr>-->
+
+                    if (IsOzHeading(oz[i]))
+                    {
+                        <tr>
+                            <td colspan="3">
+                                <p style="font-weight: bold">@shortText[i]</p>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>
+                                <p>@shortText[i]</p>
+                            </td>
+                            <td>
+                                <input value="@lvAmount[i]" @onchange="e => UpdateLvAmount(e, currentIndex)" class="input-field" style="width: 80px;"/>
+                            </td>
+                            <td>
+                                <p>@lvAmountUnit[i]</p>
+                            </td>
+                        </tr>
+                    }
                 }
                 </tbody>
             </table>
@@ -61,6 +89,7 @@
     public List<string> shortText = new List<string>();
     public List<double> lvAmount = new List<double>();
     public List<string> lvAmountUnit = new List<string>();
+    public List<string> oz = new List<string>();
     int convertedNumberUser;
     int convertedNumberProposal;
     
@@ -72,6 +101,7 @@
         lvAmount = await _updateLvService.ReturnLVAmount(convertedNumberUser, convertedNumberProposal);
         lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumberUser, convertedNumberProposal);
         ShortName = shortText.ToList();
+        oz = await _updateLvService.ReturnOZ(convertedNumberUser, convertedNumberProposal);
     }
     
     void UpdateLvAmount(ChangeEventArgs e, int index)
@@ -92,4 +122,10 @@
         }
         navigationManager.NavigateTo($"/ProjectSearch/{uid.ToString()}");
     }
+    
+    bool IsOzHeading(string oz)
+    {
+        return Regex.IsMatch(oz, @"^\d{2}(\.\d{0,2}\.)?$|^(\d{2}\.)$");
+    }
+
 }

@@ -1,8 +1,12 @@
-﻿@page "/EditLV_Page/{uid}/{pid}"
+﻿@page "/EditLV_Page/{uid}/{pid}/{type}"
+@using System.Globalization
 @using System.Text.RegularExpressions
+@using DA_Angebotserstellungssoftware.Proposals
 @inject UpdateLVService _updateLvService
+@inject InsertLVsService lvs;
 @inject IJSRuntime JSRuntime
 @inject NavigationManager navigationManager
+@inject UpdateShortNameService UpdateShortNameService
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/editLV_style.css" rel="stylesheet"/>
@@ -43,7 +47,7 @@
                         </td>
                     </tr>-->
 
-                    if (IsOzHeading(oz[i]))
+                    if (IsOzHeading(Oz[i]))
                     {
                         <tr>
                             <td colspan="3">
@@ -86,24 +90,66 @@
     
     [Parameter] 
     public string pid { get; set; }
+    
+    [Parameter] 
+    public string type { get; set; }
+    
     public double val = 0;
+    
     public List<string> ShortName = new List<string>();
     public List<string> shortText = new List<string>();
     public List<double> lvAmount = new List<double>();
     public List<string> lvAmountUnit = new List<string>();
-    public List<string> oz = new List<string>();
+    private List<string> Oz = new List<string>();
+    private List<string> LongText = new List<string>();
+    private List<double> basicEp = new List<double>();
+    private List<double> calculatedEp = new List<double>();
+    private List<string> epCurrency = new List<string>();
+    private List<double> basicGb = new List<double>();
+    private List<double> calculatedGb = new List<double>();
+    private List<string> gbCurrency = new List<string>();
+    private List<double> effortFactor = new List<double>();
+
+    public string lvName;
+    public string customerName;
+    public int customerId;
+    
     int convertedNumberUser;
     int convertedNumberProposal;
+    int doesExist;
     
     protected override async Task OnInitializedAsync()
     {
         convertedNumberProposal = Int32.Parse(pid);
         convertedNumberUser = Int32.Parse(uid);
-        shortText = await _updateLvService.ReturnLVShortText(convertedNumberUser, convertedNumberProposal);
-        lvAmount = await _updateLvService.ReturnLVAmount(convertedNumberUser, convertedNumberProposal);
-        lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumberUser, convertedNumberProposal);
+        if (type == "PV")
+        {
+            doesExist = await lvs.ReturnCheckIfPVLVExists();
+        }
+
+        else
+        {
+            doesExist = await lvs.ReturnCheckIfHausAnschlussLV();
+        }
+        
+        shortText = await _updateLvService.ReturnLVShortText(convertedNumberUser, convertedNumberProposal,  type, doesExist);
+        lvAmount = await _updateLvService.ReturnLVAmount(convertedNumberUser, convertedNumberProposal,  type, doesExist);
+        lvAmountUnit = await _updateLvService.ReturnLVAmountUnit(convertedNumberUser, convertedNumberProposal,  type, doesExist);
+        Oz = await _updateLvService.ReturnOz(convertedNumberUser, convertedNumberProposal, type);
+        LongText = await _updateLvService.ReturnLongText(convertedNumberUser, convertedNumberProposal, type);
+        basicEp = await _updateLvService.ReturnBasicEp(convertedNumberUser, convertedNumberProposal, type);
+        calculatedEp = await _updateLvService.ReturnCalculatedEp(convertedNumberUser, convertedNumberProposal, type);
+        epCurrency = await _updateLvService.ReturnEpCurrency(convertedNumberUser, convertedNumberProposal, type);
+        basicGb = await _updateLvService.ReturnBasicGb(convertedNumberUser, convertedNumberProposal, type);
+        calculatedGb = await _updateLvService.ReturnCalculatedGb(convertedNumberUser, convertedNumberProposal, type);
+        gbCurrency = await _updateLvService.ReturnGbCurrency(convertedNumberUser, convertedNumberProposal, type);
+        effortFactor = await _updateLvService.ReturnEffortFactor(convertedNumberUser, convertedNumberProposal, type);
+
+        lvName = await UpdateShortNameService.ReturnLVName(type);
+        customerId = await UpdateShortNameService.ReturnCustomerIdFromProposal(convertedNumberUser, convertedNumberProposal);
+        customerName = await UpdateShortNameService.ReturnCustomerNameFromProposalCustomer(customerId);
+        
         ShortName = shortText.ToList();
-        oz = await _updateLvService.ReturnOZ(convertedNumberUser, convertedNumberProposal);
     }
     
     void UpdateLvAmount(ChangeEventArgs e, int index)
@@ -118,11 +164,29 @@
 
     public async Task ExecuteSave()
     {
+        UpdateShortNameService.UpdateProposalShortName(lvName, customerName, convertedNumberUser, convertedNumberProposal);
         for (int i = 0; i < lvAmount.Count; i++)
         {
-            await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, lvAmount[i], ShortName[i]);
+            /*if (basicEp[i] == 59.5)
+            {
+                Console.WriteLine("test");
+
+                double basicGbValue = basicEp[i];
+                string formattedBasicGb = basicGbValue.ToString("0.00", CultureInfo.InvariantCulture);
+                double formattedBasicGbValue = double.Parse(formattedBasicGb, CultureInfo.InvariantCulture);
+                string gbToInsert = "59.5";
+                double toInsert = double.Parse(gbToInsert, CultureInfo.InvariantCulture);
+                
+                await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, type, Oz[i], ShortName[i], LongText[i], lvAmount[i], lvAmountUnit[i], 59.5, calculatedEp[i], epCurrency[i], basicGb[i], calculatedGb[i], gbCurrency[i], effortFactor[i], doesExist);
+            }*/
+
+           
+                await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, type, Oz[i], ShortName[i], LongText[i], lvAmount[i], lvAmountUnit[i], basicEp[i], calculatedEp[i], epCurrency[i], basicGb[i], calculatedGb[i], gbCurrency[i], effortFactor[i], doesExist);
+            
+                // ToDos bis Präsi bei Strabag: Proposal-Short in EditLV_Page.razor setzen; Bugfix von LV bearbeiten (Warum ist bei Hausanschluss PV-LV weg? Warum doppelte Einträge bei Hausanschluss-PV, wenn etwas geändert wird?)
+            
         }
-        navigationManager.NavigateTo($"/ProjectSearch/{uid.ToString()}");
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
     }
     
     bool IsOzHeading(string oz)

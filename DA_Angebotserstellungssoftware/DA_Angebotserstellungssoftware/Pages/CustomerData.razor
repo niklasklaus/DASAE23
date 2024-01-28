@@ -89,7 +89,7 @@
         _customer.LastName = await insertCustomer.ReturnLastName(customer_idd);
         _customer.Address = await insertCustomer.ReturnAddress(customer_idd);
         _customer.UIDNumber = await insertCustomer.ReturnUID(customer_idd);
-        lvNameForPropsal = await updateShortNameService.ReturnLVName(user_id,proposal_id);
+        //lvNameForPropsal = await updateShortNameService.ReturnLVName(user_id,proposal_id);
         checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
 
     }
@@ -106,7 +106,7 @@
     public void ExecuteNext()
     {
         insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, user_id, proposal_id, customer_idd, checkIfCustomerExists);
-        updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
+        //updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
         Msg = $"Der Kunde wurde erfolgreich hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
     }

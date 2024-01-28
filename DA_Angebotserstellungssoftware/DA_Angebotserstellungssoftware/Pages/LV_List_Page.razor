@@ -2,6 +2,7 @@
 @inject IModalService Modal
 @inject SharedService _srvice
 @inject NavigationManager navigationManager
+@inject InsertLVsService lvs
 
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
@@ -18,25 +19,18 @@
         
         <div class="showList-container">
             <div class="showList-concrete-item-div">
-                <p class="nameOfLVPos">Name LV</p>
-                <a class="button-position-properties button-position-edit"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+                <p class="nameOfLVPos">@shortPVLV</p>
+                <a @onclick="ExecuteEditPV" class="button-position-properties button-position-delete"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
             </div>
             <div class="showList-concrete-item-div">
-                <p class="nameOfLVPos">Name LV</p>
-                <a class="button-position-properties button-position-edit"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+                <p class="nameOfLVPos">@shortHausanschlussPV</p>
+                <a @onclick="ExecuteEditHausanschluss" class="button-position-properties button-position-delete"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
             </div>
-            <div class="showList-concrete-item-div">
-                <p class="nameOfLVPos">Name LV</p>
-                <a class="button-position-properties button-position-edit"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
-            </div>
-            <div class="showList-concrete-item-div">
-                <p class="nameOfLVPos">Name LV</p>
-                <a class="button-position-properties button-position-edit"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
-            </div>
+            
         </div>
         
         <div class="button-position-div">
-            <!--<a class="button-position-properties button-position-add"><img class="img-size" src="css/images_login_page/Add_Icon.png"/></a>-->
+            <a class="button-position-properties button-position-add"><img class="img-size" src="css/images_login_page/Add_Icon.png"/></a>
             <a @onclick="@(()=>Modal.Show<Modal>("Einstellungen"))" class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
             <button @onclick="ExecuteBack" class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
             <button @onclick = "ExecuteNext" class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
@@ -54,11 +48,25 @@
     [Parameter] 
     public string pid { get; set; }
 
-   
-    protected override void OnInitialized()
+    public int convertedUID;
+    public int conertedPID;
+
+    public int checkValuesInPVLV;
+    public int checkValuesINHausanschlussPV;
+    public string shortPVLV;
+    public string shortHausanschlussPV;
+    
+    
+    protected override async Task OnInitializedAsync()
     {
         _srvice.proposalId = pid;
         _srvice.userId = uid;
+        convertedUID = Int32.Parse(uid);
+        conertedPID = Int32.Parse(pid);
+        checkValuesInPVLV = await lvs.ReturnCheckIfPVLVExists();
+        checkValuesINHausanschlussPV = await lvs.ReturnCheckIfHausAnschlussLV();
+        shortPVLV = await lvs.ReturnPVLV(checkValuesInPVLV, convertedUID, conertedPID);
+        shortHausanschlussPV = await lvs.ReturnHausanschlussLV(checkValuesINHausanschlussPV, convertedUID, conertedPID);
     }
     
     
@@ -86,9 +94,21 @@
     {
         navigationManager.NavigateTo($"/PaymentTerms/{uid.ToString()}/{pid.ToString()}");
     }
-    
+
     public void ExecuteBack()
     {
         navigationManager.NavigateTo($"/customer/{uid.ToString()}/{pid.ToString()}");
+    }
+
+    public void ExecuteEditPV()
+    {
+        string type = "PV";
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}");
+    }
+
+    public void ExecuteEditHausanschluss()
+    {
+        string type = "Hausanschluss";
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}");
     }
 }

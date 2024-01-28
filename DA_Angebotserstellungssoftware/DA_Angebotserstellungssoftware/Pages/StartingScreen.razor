@@ -84,7 +84,7 @@
     [Parameter]
     public string id { get; set; } //User-Id
     public int proposal_id;
-    public int convertedNumber; // Konvertierte User-Id
+    public int convertedUserNumber; // Konvertierte User-Id
     public string userName;
     public List<string> proposalNames = new List<string>();
     public List<int> proposalIds = new List<int>();
@@ -104,20 +104,27 @@
     {
         Random rand = new Random();
         proposal_id = rand.Next(1, 9000001);
-        convertedNumber = Int32.Parse(id);
-        userName = await _SelectUserIdService.ReturnUserName(convertedNumber);
-        proposalNames = await searchProposalService.ReturnProposalShortList(convertedNumber);
-        proposalIds = await searchProposalService.ReturnProposalIdList(convertedNumber);
-        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumber);
+        convertedUserNumber = Int32.Parse(id);
+        userName = await _SelectUserIdService.ReturnUserName(convertedUserNumber);
+        proposalNames = await searchProposalService.ReturnProposalShortList(convertedUserNumber);
+        proposalIds = await searchProposalService.ReturnProposalIdList(convertedUserNumber);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedUserNumber);
         GetUserId.SetId(id);
+        
+        //folgende Zeilen wurden nur einmal für Master LVs ausgeführt
+        
+        /*string filepath1 = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        string filepath2 = @"C:\DA\Hausanschluss_Privat.xlsm";
+        lvs.InsertMasterLVsPV(filepath1);
+        lvs.InsertMasterLVsHausanschluss(filepath2);*/
+        
     }
     
     public void ExecuteCreate()
     {
-        string filePath = @"E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\Hausanschluss Privat.xlsm";
-        //string filePath = @"E:\\Diplomarbeit\\Website\\DA_Angebotserstellungssoftware\\PV-Kleinbaustellen_Ansichten.xlsm";
+        //string filePath = @"E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\PV-Kleinbaustellen_Ansichten.xlsm";
         //string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
-        lvs.InsertLVs(filePath, proposal_id, convertedNumber);
+        lvs.InsertProposal(proposal_id, convertedUserNumber);
         navigationManager.NavigateTo($"/customer/{id.ToString()}/{proposal_id.ToString()}");
     }
     
@@ -129,7 +136,7 @@
     
     public void ExecuteDelete(int pid)
     {
-        deleteProposalService.DeleteProposal(pid, convertedNumber);
+        deleteProposalService.DeleteProposal(pid, convertedUserNumber);
         navigationManager.NavigateTo($"/StartingScreen/{id.ToString()}", forceLoad: true);
     }
 

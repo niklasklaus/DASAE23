@@ -93,7 +93,7 @@
     {
         convertedNumberProposal = Int32.Parse(pid);
         convertedNumberUser = int.Parse(uid);
-         _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumberUser, convertedNumberProposal);
         _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumberUser, convertedNumberProposal);
         _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumberUser, convertedNumberProposal);
         _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumberUser, convertedNumberProposal);
@@ -111,7 +111,7 @@
     {
         insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
-        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}");
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}");
     }
 
     public void ExecuteBack()

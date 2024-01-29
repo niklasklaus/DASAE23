@@ -102,12 +102,12 @@
     public void ExecuteEditPV()
     {
         string type = "PV";
-        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}");
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}",  forceLoad: true);
     }
 
     public void ExecuteEditHausanschluss()
     {
         string type = "Hausanschluss";
-        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}");
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}", forceLoad: true);
     }
 }

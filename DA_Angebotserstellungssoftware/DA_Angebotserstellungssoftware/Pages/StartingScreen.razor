@@ -46,28 +46,55 @@
         <div class="list-body-container">
             <label class="primary-label-text kind-item-label-choose">Letzte Angebote:</label>
             <div class="item-list-container">
-                @for (int i = 0; i < proposalNames.Count; i++)
+                @if (proposalNames.Count <= 3)
                 {
-                    int currentIndex = i;
-                    <div class="item-container item@(i + 1)">
-                        <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
-                        <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy")</p>
-                        <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" />
-                        </button>
-                        <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
-                        </button>
-                        <button @onclick="@(()=>Modal.Show<ModalPDF>(@proposalNames[currentIndex], new ModalOptions() { Size = ModalSize.Custom,
-                                              SizeCustomClass = "custom-modal"}))" class="button-position-properties-startingScreen button-position-max-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
-                        </button>
-                        <button class="button-position-properties-startingScreen button-position-download-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
-                        </button>
-                    </div>
+                    @for (int i = 0; i < proposalNames.Count; i++)
+                    {
+                        int currentIndex = i;
+                        <div class="item-container item@(i + 1)">
+                            <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy")</p>
+                            <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png"/>
+                            </button>
+                            <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png"/>
+                            </button>
+                            <button @onclick="@(() => Modal.Show<ModalPDF>(@proposalNames[currentIndex], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png"/>
+                            </button>
+                            <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png"/>
+                            </button>
+                        </div>
+                    }
                 }
-                
+
+                else
+                {
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        int currentIndex = i;
+                        <div class="item-container item@(i + 1)">
+                            <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy")</p>
+                            <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png"/>
+                            </button>
+                            <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png"/>
+                            </button>
+                            <button @onclick="@(() => Modal.Show<ModalPDF>(@proposalNames[currentIndex], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png"/>
+                            </button>
+                            <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png"/>
+                            </button>
+                        </div>
+                    }
+                }
+               
+
             </div>
             <!--<a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>-->
         </div>

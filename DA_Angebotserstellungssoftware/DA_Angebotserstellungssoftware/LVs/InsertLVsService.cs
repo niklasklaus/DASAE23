@@ -15,12 +15,12 @@ public class InsertLVsService
         this.connection = connectionManager;
     }
     
-    public async Task CheckPVLVExists()
+    public async Task CheckPVLVExists(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'PV'";
+            string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'PV' and user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -43,18 +43,18 @@ public class InsertLVsService
         }
     }
     
-    public async Task<int> ReturnCheckIfPVLVExists()
+    public async Task<int> ReturnCheckIfPVLVExists(int uid, int pid)
     {
-        await CheckPVLVExists();
+        await CheckPVLVExists(uid, pid);
         return resultCheckIfValuesExistInNormalLVPV.Count > 0 ? resultCheckIfValuesExistInNormalLVPV[0] : 0; // Return the first value if available, otherwise return a default value
     }
     
-    public async Task CheckPVHausanschlussExists()
+    public async Task CheckPVHausanschlussExists(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             mysqlconnection.Open();
-            string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'Hausanschluss'";
+            string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'Hausanschluss' and user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -77,9 +77,9 @@ public class InsertLVsService
         }
     }
     
-    public async Task<int> ReturnCheckIfHausAnschlussLV()
+    public async Task<int> ReturnCheckIfHausAnschlussLV(int uid, int pid)
     {
-        await CheckPVLVExists();
+        await CheckPVHausanschlussExists(uid, pid);
         return resultCheckIfValuesExistInNormalLVHausanschluss.Count > 0 ? resultCheckIfValuesExistInNormalLVHausanschluss[0] : 0; // Return the first value if available, otherwise return a default value
     }
     

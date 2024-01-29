@@ -6,36 +6,40 @@ public class UpdateShortNameService
 {
     private readonly MySqlConnectionManager connection;
     private List<string> resultLvName = new List<string>();
-    private List<int> resultProposalCustomerId = new List<int>();
     private List<string> resultProposalCustomerName = new List<string>();
+    private List<int> resultProposalCustomerId = new List<int>();
+    private List<int> resultProposalShortNameExists = new List<int>();
 
     public UpdateShortNameService(MySqlConnectionManager connectionManager)
     {
         this.connection = connectionManager;
     }
 
-    public void UpdateProposalShortName(string lv_name, string customer_name, int uid, int pid)
+    public void UpdateProposalShortName(string lv_name, string customer_name, int uid, int pid, int shortExists)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             string[] splittedLVName;
 
-            if (lv_name.Contains("-"))
+            if (shortExists == 0)
             {
-                splittedLVName = lv_name.Split('-');
-            }
-            else
-            {
-                splittedLVName = lv_name.Split(' ');
-            }
+                if (lv_name.Contains("-"))
+                {
+                    splittedLVName = lv_name.Split('-');
+                }
+                else
+                {
+                    splittedLVName = lv_name.Split(' ');
+                }
             
-            Random rand = new Random();
-            int number = rand.Next(1, 11);
-            mysqlconnection.Open();
+                Random rand = new Random();
+                int number = rand.Next(1, 11);
+                mysqlconnection.Open();
             
-            string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}' WHERE proposal_id = '{pid}' and user_id = '{uid}'";
-            MySqlCommand command1 = new MySqlCommand(updateShortName, mysqlconnection);
-            command1.ExecuteNonQuery();
+                string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}' WHERE proposal_id = '{pid}' and user_id = '{uid}'";
+                MySqlCommand command1 = new MySqlCommand(updateShortName, mysqlconnection);
+                command1.ExecuteNonQuery();
+            }
         }
     }
     
@@ -130,6 +134,33 @@ public class UpdateShortNameService
     {
         await SelectCustomerNameFromProposalCustomer(cid);
         return  resultProposalCustomerName.Count > 0 ? resultProposalCustomerName[0] : ""; // Return the first value if available, otherwise return a default value
+    }
+    
+    public async Task SelectProposalShortExists(int uid, int pid)
+    {
+        using (MySqlConnection mysqlconnection = connection.GetConnection())
+        {
+            mysqlconnection.Open();
+            string selectProposal = $"SELECT COUNT(*) FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}' and proposal_short is not null";
+            MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
+        
+            int count = Convert.ToInt32(await command1.ExecuteScalarAsync());
+
+            if (count == 1)
+            {
+                resultProposalShortNameExists.Add(1);
+            }
+            else
+            {
+                resultProposalShortNameExists.Add(0);
+            }
+        }
+    }
+
+    public async Task<int> ReturnProposalShortExists(int uid, int pid)
+    {
+        await SelectProposalShortExists(uid, pid);
+        return  resultProposalShortNameExists.Count > 0 ? resultProposalShortNameExists[0] : 0; // Return the first value if available, otherwise return a default value
     }
     
     

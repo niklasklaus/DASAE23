@@ -487,7 +487,7 @@ public class UpdateLVService
 
             if (doesExist == 1)
             {
-                string updateLV1 = $"UPDATE LVS SET lv_amount = @LvAmount, calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST  and user_id = '{uid}' and lv_type = '{lv_type}'";
+                string updateLV1 = $"UPDATE LVS SET lv_amount = @LvAmount, calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST and user_id = '{uid}' and lv_type = '{lv_type}'";
                 command = new MySqlCommand(updateLV1, mysqlconnection);
                 command.Parameters.AddWithValue("@LvAmount", lvAmount);
                 command.Parameters.AddWithValue("@Pid", pid);

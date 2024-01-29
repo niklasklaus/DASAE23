@@ -117,6 +117,7 @@
     int convertedNumberUser;
     int convertedNumberProposal;
     int doesExist;
+    int ProposalShortExists;
     
     protected override async Task OnInitializedAsync()
     {
@@ -124,12 +125,12 @@
         convertedNumberUser = Int32.Parse(uid);
         if (type == "PV")
         {
-            doesExist = await lvs.ReturnCheckIfPVLVExists();
+            doesExist = await lvs.ReturnCheckIfPVLVExists(convertedNumberUser, convertedNumberProposal);
         }
 
         else
         {
-            doesExist = await lvs.ReturnCheckIfHausAnschlussLV();
+            doesExist = await lvs.ReturnCheckIfHausAnschlussLV(convertedNumberUser, convertedNumberProposal);
         }
         
         shortText = await _updateLvService.ReturnLVShortText(convertedNumberUser, convertedNumberProposal,  type, doesExist);
@@ -148,6 +149,7 @@
         lvName = await UpdateShortNameService.ReturnLVName(type);
         customerId = await UpdateShortNameService.ReturnCustomerIdFromProposal(convertedNumberUser, convertedNumberProposal);
         customerName = await UpdateShortNameService.ReturnCustomerNameFromProposalCustomer(customerId);
+        ProposalShortExists = await UpdateShortNameService.ReturnProposalShortExists(convertedNumberUser, convertedNumberProposal);
         
         ShortName = shortText.ToList();
     }
@@ -164,7 +166,7 @@
 
     public async Task ExecuteSave()
     {
-        UpdateShortNameService.UpdateProposalShortName(lvName, customerName, convertedNumberUser, convertedNumberProposal);
+        UpdateShortNameService.UpdateProposalShortName(lvName, customerName, convertedNumberUser, convertedNumberProposal, ProposalShortExists);
         for (int i = 0; i < lvAmount.Count; i++)
         {
             /*if (basicEp[i] == 59.5)

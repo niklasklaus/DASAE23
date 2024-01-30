@@ -127,6 +127,7 @@
         <div class="item-input-ButtonSave">
             <button @onclick="ExecuteSave" class="primary-btn-login" type="submit" id="SaveBtn">SPEICHERN</button>
         </div>
+        
     </div>
     
     <!-- Blazor Footer Component -->
@@ -317,6 +318,11 @@
     bool IsOzHeading(string oz)
     {
         return Regex.IsMatch(oz, @"^\d{2}(\.\d{0,2}\.)?$|^(\d{2}\.)$");
+    }
+
+    public void ExecuteCancel()
+    {
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
     }
 
 }

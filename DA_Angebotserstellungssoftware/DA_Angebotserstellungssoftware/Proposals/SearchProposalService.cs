@@ -90,7 +90,7 @@ public class SearchProposalService
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}'";
+            string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -187,7 +187,7 @@ public class SearchProposalService
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}'";
+            string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -223,7 +223,7 @@ public class SearchProposalService
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}'";
+            string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             

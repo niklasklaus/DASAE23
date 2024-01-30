@@ -27,10 +27,10 @@
             </EditForm>
         </div>-->
         <div class="totalDays-container">
-            <label class="primary-label-text totalDays-header" for="subChoice">Zahlungsziel:</label>
+            <label class="primary-label-text totalDays-header" for="subChoice">Zahlungsziel netto:</label>
             <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="totalDays-input">
                 <InputSelect class="totalDays-input" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
-                    @for (int i = 1; i <= 10; i++)
+                    @for (int i = 1; i <= 30; i++)
                     {
                         <option value="@i">@i Tage</option>
                     }
@@ -44,8 +44,8 @@
                 <InputNumber class="skonto-input1" id="CustomerAnrede" @bind-Value="@_paymentModel.SkontoValue"></InputNumber>
             </EditForm>
             <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="skonto-input2">
-                <InputSelect class="skonto-input2" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
-                    @for (int i = 1; i <= 10; i++)
+                <InputSelect class="skonto-input2" id="subLVInputSelect" @bind-Value="_paymentModel.LimitDays">
+                    @for (int i = 1; i <= 14; i++)
                     {
                         <option value="@i">@i Tage</option>
                     }
@@ -109,13 +109,13 @@
 
     public void ExecuteConfirm()
     {
-        insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.TotalDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
+        insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.LimitDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
         Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
-        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}");
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
     }
 
     public void ExecuteBack()
     {
-        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
     }
 }

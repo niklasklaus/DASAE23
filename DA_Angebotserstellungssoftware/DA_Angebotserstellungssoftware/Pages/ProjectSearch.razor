@@ -78,7 +78,7 @@
                  {
                      <div class="item-container">
                          <p class="name-text">@resultProposal</p>
-                         <p class="date-text">@proposalLastUpdatedAt[0]</p>
+                         <p class="date-text">@proposalLastUpdatedAt[0].ToString("dd-MM-yyyy hh:mm")</p>
                          <button @onclick="() => ExecuteDelete()" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
                          <button @onclick="() => ExecuteEdit()" class="button-position-properties-projectSearch button-position-edit-startingScreen">
                             <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />

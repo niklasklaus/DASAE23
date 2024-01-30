@@ -28,3 +28,96 @@
     padding: 8px 16px;
     text-decoration: none;
 }
+
+.list-body-container {
+    display: grid;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.item-list-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+    width: 100%;
+    grid-row: 1;
+    overflow-x: auto;
+}
+
+.item-container {
+    display: grid;
+    height: 90%;
+    width: 100%;
+    grid-template-columns: 10fr 10fr repeat(4, 1fr);
+    background-color: #ffffff;
+    align-items: center;
+    padding-right: 5px;
+    position: relative; /* Position relativ für die Pseudo-Elemente */
+}
+
+.item-container::before,
+.item-container::after {
+    content: ""; /* Pseudo-Elemente für die Schatten */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Breite des Schattens */
+    pointer-events: none;
+}
+
+.item-container::before {
+    left: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+.item-container::after {
+    right: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.name-text {
+    grid-column: 1;
+    margin: 0 0 0 10px;
+    align-self: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Zeigt "..." am Ende, wenn der Text zu lang ist */
+}
+
+.date-text {
+    grid-column: 2;
+    margin: 0 0 0 0;
+    align-self: center;
+}
+
+.img-size-starting {
+    height: 100%;
+}
+
+.button-position-delete-startingScreen {
+    grid-column: 6;
+    grid-row: 1;
+}
+
+.button-position-edit-startingScreen {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.button-position-max-startingScreen {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.button-position-download-startingScreen {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.button-position-properties-startingScreen {
+    object-fit: contain;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #ffffff;
+}

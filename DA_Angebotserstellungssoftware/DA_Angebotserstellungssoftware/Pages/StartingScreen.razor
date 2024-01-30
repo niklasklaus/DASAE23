@@ -133,9 +133,9 @@
         proposal_id = rand.Next(1, 9000001);
         convertedUserNumber = Int32.Parse(id);
         userName = await _SelectUserIdService.ReturnUserName(convertedUserNumber);
-        proposalNames = await searchProposalService.ReturnProposalShortList(convertedUserNumber);
-        proposalIds = await searchProposalService.ReturnProposalIdList(convertedUserNumber);
-        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedUserNumber);
+        proposalNames = await searchProposalService.ReturnProposalShortList(convertedUserNumber, 3);
+        proposalIds = await searchProposalService.ReturnProposalIdList(convertedUserNumber,3);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedUserNumber, 3);
         GetUserId.SetId(id);
         
         //folgende Zeilen wurden nur einmal für Master LVs ausgeführt
@@ -169,11 +169,11 @@
 
     public void ExecuteSearchProject()
     {
-        navigationManager.NavigateTo($"/ProjectSearch/{id.ToString()}");
+        navigationManager.NavigateTo($"/ProjectSearch/{id.ToString()}", forceLoad: true);
     }
 
     public void ExecuteShowAllProjects()
     {
-        navigationManager.NavigateTo($"/ShowAllOffers");
+        navigationManager.NavigateTo($"/ShowAllOffers/{convertedUserNumber.ToString()}");
     }
 }

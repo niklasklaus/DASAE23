@@ -84,13 +84,13 @@ public class SearchProposalService
     }
     
     
-    public async Task SelectProposalShort(int uid)
+    public async Task SelectProposalShort(int uid, int limit)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
+            string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -108,9 +108,9 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<string>> ReturnProposalShortList(int uid)
+    public async Task<List<string>> ReturnProposalShortList(int uid, int limit)
     {
-        await SelectProposalShort(uid);
+        await SelectProposalShort(uid, limit);
         return resultProposals.Count > 0 ? resultProposals : new List<string>(); // Return the first value if available, otherwise return a default value
     }
     
@@ -181,13 +181,13 @@ public class SearchProposalService
         return resultFoundProposals.Count > 0 ? resultFoundProposals[0] : ""; // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SearchProposalLastUpdatedAt(int userid)
+    public async Task SearchProposalLastUpdatedAt(int userid, int limit)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
+            string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -211,19 +211,19 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<DateTime>> ReturnProposalLastUpdatedAtList(int userid)
+    public async Task<List<DateTime>> ReturnProposalLastUpdatedAtList(int userid, int limit)
     {
-        await SearchProposalLastUpdatedAt(userid);
+        await SearchProposalLastUpdatedAt(userid, limit);
         return resultProposalLastUpdatedAt.Count > 0 ? resultProposalLastUpdatedAt : new List<DateTime>(); // Return the first value if available, otherwise return a default value
     }
     
-    public async Task SearchProposalId(int userid)
+    public async Task SearchProposalId(int userid, int limit)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
             mysqlconnection.Open();
-            string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT 3";
+            string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -241,9 +241,9 @@ public class SearchProposalService
         }
     }
 
-    public async Task<List<int>> ReturnProposalIdList(int userid)
+    public async Task<List<int>> ReturnProposalIdList(int userid, int limit)
     {
-        await SearchProposalId(userid);
+        await SearchProposalId(userid, limit);
         return resultProposalId.Count > 0 ? resultProposalId : new List<int>(); // Return the first value if available, otherwise return a default value
     }
 }

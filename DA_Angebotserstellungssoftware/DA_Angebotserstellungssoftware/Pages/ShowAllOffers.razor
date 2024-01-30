@@ -1,4 +1,9 @@
-﻿@page "/ShowAllOffers"
+﻿@page "/ShowAllOffers/{uid}"
+@using DA_Angebotserstellungssoftware.Proposals
+@inject SearchProposalService searchProposalService 
+@inject NavigationManager navigationManager
+@inject DeleteProposalService deleteProposalService
+@inject IModalService Modal
 <PageTitle>Angebote</PageTitle>
 
 <link href="/css/mainComponents.css" rel="stylesheet"/>
@@ -11,6 +16,37 @@
     
     <div class="concrete-content-container-showAllOffers">
         <div class="header-showAllOffers"><h1>Angebote:</h1></div>
+                <div class="list-body-container">
+                    <label class="primary-label-text kind-item-label-choose">Letzte Angebote:</label>
+                    <div class="item-list-container">
+                            @for (int i = 0; i < proposalNames.Count; i++)
+                            {
+                                int currentIndex = i;
+                                <div class="item-container item@(i + 1)">
+                                    <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                                    <p class="date-text">@proposalLastUpdatedAt[i].ToString("dd-MM-yyyy  hh:mm")</p>
+                                    <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                        <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png"/>
+                                    </button>
+                                    <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                        <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png"/>
+                                    </button>
+                                    <button @onclick="@(() => Modal.Show<ModalPDF>(@proposalNames[currentIndex], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                        <img class="img-size-starting" src="css/images_login_page/Max_Icon.png"/>
+                                    </button>
+                                    <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                        <img class="img-size-starting" src="css/images_login_page/Download_Icon.png"/>
+                                    </button>
+                                </div>
+                            }
+                        }
+        
+                    </div>
+                    <!--<a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>-->
+                </div>
+        
+              
+            </div>
         
         <div class="pagination-container">
             <a href="#">1</a>
@@ -24,9 +60,37 @@
     
     <!-- Blazor Footer Component -->
     <Footer_Basic />
-</div>
+
 
 
 @code {
     
+    [Parameter]
+    public string uid { get; set; }
+    
+    
+    private List<int> proposalIds = new List<int>();
+    private List<string> proposalNames = new List<string>();
+    private List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
+    int convertedUserNumber;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Random rand = new Random();
+        convertedUserNumber = Int32.Parse(uid);
+        proposalNames = await searchProposalService.ReturnProposalShortList(convertedUserNumber, 1000);
+        proposalIds = await searchProposalService.ReturnProposalIdList(convertedUserNumber, 1000);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedUserNumber, 1000);
+    }
+    
+    public void ExecuteEdit(int pid)
+    {
+        navigationManager.NavigateTo($"/customer/{uid.ToString()}/{pid.ToString()}");
+    }
+    
+    public void ExecuteDelete(int pid)
+    {
+        deleteProposalService.DeleteProposal(pid, convertedUserNumber);
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+    }
 }

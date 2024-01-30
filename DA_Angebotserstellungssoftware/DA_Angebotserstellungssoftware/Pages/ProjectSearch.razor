@@ -130,8 +130,8 @@
         _searchProject = new();
         _searchProject.Project = await searchProposalService.ReturnProjectNamesList(convertedNumberUser);
         _searchProject.Customer = await searchProposalService.ReturnCustomersList();
-        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList(convertedNumberUser);
-        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumberUser);
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList(convertedNumberUser, 1000);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumberUser, 1000);
     }
     
     public class SearchProjectModel

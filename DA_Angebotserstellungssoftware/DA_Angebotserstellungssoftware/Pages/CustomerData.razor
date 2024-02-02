@@ -105,7 +105,7 @@
 
     public void ExecuteNext()
     {
-        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, user_id, proposal_id, customer_idd, checkIfCustomerExists);
+        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, user_id, proposal_id, customer_idd, checkIfCustomerExists, user_id, proposal_id);
         //updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
         Msg = $"Der Kunde wurde erfolgreich hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");

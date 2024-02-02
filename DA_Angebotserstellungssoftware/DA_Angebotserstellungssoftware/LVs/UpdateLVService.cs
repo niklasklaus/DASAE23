@@ -484,6 +484,7 @@ public class UpdateLVService
         {
             mysqlconnection.Open();
             MySqlCommand command;
+            MySqlCommand comannd2;
 
             if (doesExist == 1)
             {
@@ -492,7 +493,13 @@ public class UpdateLVService
                 command.Parameters.AddWithValue("@LvAmount", lvAmount);
                 command.Parameters.AddWithValue("@Pid", pid);
                 command.Parameters.AddWithValue("@ST", lvshort);
-                command.ExecuteNonQuery();   
+                
+                TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+                DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+                string updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{uid}' and proposal_id = '{pid}'";
+                command.ExecuteNonQuery();
+                comannd2 = new MySqlCommand(updateQuery2, mysqlconnection);
+                comannd2.ExecuteNonQuery();
             }
 
             else
@@ -503,6 +510,11 @@ public class UpdateLVService
                     $"VALUES ('{pid}', '{uid}', '{lv_type}', '{oz}', NULL, '{lvshort}', '{longtext}', '{lvAmount}', '{lv_amount_unit}', CAST(REPLACE('{basic_ep}', ',', '.') AS DECIMAL(10,2)), '{calculated_ep}', '{ep_currency}', '{basic_gb}', '{calculated_gb}', '{gb_currency}', '{effort_factor}')";
                 command = new MySqlCommand(insertLV, mysqlconnection);
                 command.ExecuteNonQuery(); 
+                TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+                DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+                string updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{uid}' and proposal_id = '{pid}'";
+                comannd2 = new MySqlCommand(updateQuery2, mysqlconnection);
+                comannd2.ExecuteNonQuery();
             }
         }
     }

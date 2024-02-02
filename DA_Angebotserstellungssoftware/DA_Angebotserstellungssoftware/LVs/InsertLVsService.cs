@@ -178,14 +178,15 @@ public class InsertLVsService
         {
             MySqlCommand commandA = mySqlConnection.CreateCommand();
 
-
+            TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+            DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
             // Öffne die Verbindung
             mySqlConnection.Open();
 
             //Random rand = new Random();
             //int id = rand.Next(1, 5000001);
             commandA.CommandText =
-                $"INSERT INTO PROPOSALS (proposal_id, user_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{pid}', '{uid}', null, null, null, null, null, null, null, DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'), null)";
+                $"INSERT INTO PROPOSALS (proposal_id, user_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{pid}', '{uid}', null, null, null, null, null, null, null, '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}', null)";
             commandA.ExecuteNonQuery();
             commandA.Parameters.Clear();
             

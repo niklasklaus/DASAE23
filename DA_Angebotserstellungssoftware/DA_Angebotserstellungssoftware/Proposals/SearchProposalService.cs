@@ -187,7 +187,11 @@ public class SearchProposalService
         {
 
             mysqlconnection.Open();
+            TimeZoneInfo cetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time");
+
             string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
+
+
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
@@ -198,12 +202,16 @@ public class SearchProposalService
                     if (!reader.IsDBNull(reader.GetOrdinal("updated_at")))
                     {
                         DateTime val = reader.GetDateTime("updated_at");
-                        resultProposalLastUpdatedAt.Add(val); // Füge den kombinierten Wert zur Liste hinzu
+                        string converted = val.ToString("yyyy-MM-dd HH:mm:ss");
+                        val = DateTime.Parse(converted);
+                        resultProposalLastUpdatedAt.Add(val); 
                     }
 
                     else if (!reader.IsDBNull(reader.GetOrdinal("created_at")))
                     {
                         DateTime val = reader.GetDateTime("created_at");
+                        string converted = val.ToString("yyyy-MM-dd HH:mm:ss");
+                        val = DateTime.Parse(converted);
                         resultProposalLastUpdatedAt.Add(val); 
                     }
                 }

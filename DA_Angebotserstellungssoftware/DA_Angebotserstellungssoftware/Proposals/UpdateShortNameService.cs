@@ -35,8 +35,9 @@ public class UpdateShortNameService
                 Random rand = new Random();
                 int number = rand.Next(1, 11);
                 mysqlconnection.Open();
-            
-                string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}' WHERE proposal_id = '{pid}' and user_id = '{uid}'";
+                TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+                DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+                string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}',  updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE proposal_id = '{pid}' AND user_id = '{uid}'";
                 MySqlCommand command1 = new MySqlCommand(updateShortName, mysqlconnection);
                 command1.ExecuteNonQuery();
             }

@@ -87,7 +87,9 @@ public class InsertEffortAndDiscountService
             string updateLV1 = $"UPDATE LVS SET effort_factor = CAST(REPLACE('{effort}', ',', '.') AS DECIMAL(3,2)) WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             string updateLV2 = $"UPDATE LVS SET calculated_ep = basic_ep * effort_factor  WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             string updateProposal1 = $"UPDATE PROPOSALS SET discount = CAST(REPLACE('{discount}', ',', '.') AS DECIMAL(10,2)) WHERE proposal_id = '{pid}' and user_id = '{uid}'";
-            string updateProposal2 = $"UPDATE PROPOSALS SET updated_at = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s') WHERE proposal_id = '{pid}' and user_id = '{uid}'";
+            TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+            DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+            string updateProposal2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             
             
             MySqlCommand command1 = new MySqlCommand(updateLV1, mysqlconnection);

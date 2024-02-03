@@ -24,7 +24,7 @@
                 <InputSelect class="kind-item-input-choose" @bind-Value="selectedProjectName" @onchange="HandleProjectSelection">
                     @if (_searchProject.Project != null)
                     {
-                        <option>Projektname auswählen</option>
+                        //<option>Projektname auswählen</option>
                         @for (int i = 0; i < _searchProject.Project.Count; i++)
                         {
                             <option>@_searchProject.Project[i]</option>
@@ -40,7 +40,7 @@
                 <InputSelect class="kind-item-input-choose" @bind-Value="selectedProposalName" @onchange="HandleProposalSelection">
                     @if (_searchProject.OfferNumber != null)
                     {
-                        <option>Angebotsname auswählen</option>
+                        //<option>Angebotsname auswählen</option>
                         @for (int i = 0; i < _searchProject.OfferNumber.Count; i++)
                         {
                             <option>@_searchProject.OfferNumber[i]</option>
@@ -56,7 +56,7 @@
                 <InputSelect class="kind-item-input-choose" @bind-Value="selectedCustomer" @onchange="HandleCustomerSelection">
                     @if (_searchProject.Customer != null)
                     {
-                        <option>Kundenname auswählen</option>
+                        //<option>Kundenname auswählen</option>
                         @for (int i = 0; i < _searchProject.Customer.Count; i++)
                         {
                             <option>@_searchProject.Customer[i]</option>
@@ -74,27 +74,38 @@
         <div class="header-item-container">
              <label class="primary-label-text kind-item-label-choose">Treffer:</label>
              <div class="item-list-container">
-                 @if (!string.IsNullOrEmpty(resultProposal))
-                 {
-                     <div class="item-container">
-                         <p class="name-text">@resultProposal</p>
-                         <p class="date-text">@proposalLastUpdatedAt[0].ToString("yyyy-MM-dd HH:mm:ss")</p>
-                         <button @onclick="() => ExecuteDelete()" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
-                         <button @onclick="() => ExecuteEdit()" class="button-position-properties-projectSearch button-position-edit-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
-                         </button>
-                         <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-projectSearch button-position-max-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
-                         </button>
-                         <button class="button-position-properties-projectSearch button-position-download-startingScreen">
-                            <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
-                         </button>
-                     </div>
-                 }
-                 else
-                 {
-                     <p>Keine Ergebnisse gefunden</p>
-                 }
+                @for (int i = 0; i < resultProposal.Count; i++)
+                {
+                    int currentIdx = i;
+                    @if (!string.IsNullOrEmpty(resultProposal[i]))
+                    {
+                        <div class="item-container">
+                            <p class="name-text">@resultProposal[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("yyyy-MM-dd HH:mm:ss")</p>
+                            <button @onclick="() => ExecuteDelete(currentIdx)" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
+                            <button @onclick="() => ExecuteEdit(currentIdx)" class="button-position-properties-projectSearch button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
+                            </button>
+                            <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal[i], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-projectSearch button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
+                            </button>
+                            <button class="button-position-properties-projectSearch button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
+                            </button>
+                        </div>
+                
+                        @if (i < resultProposal.Count - 1)
+                        {
+                            <hr class="separator">
+                        }
+                    }
+                    else
+                    {
+                        <p>Keine Ergebnisse gefunden</p>
+                    }
+                }
+
+                
              </div>
                  
          </div>
@@ -118,7 +129,7 @@
     public string selectedCustomer;
     public string selectedProposalName;
 
-    public string resultProposal;
+    public List<string> resultProposal = new List<string>();
     public int cid;
     public int convertedNumberUser;
     
@@ -128,10 +139,9 @@
     {
         convertedNumberUser = Int32.Parse(uid);
         _searchProject = new();
-        _searchProject.Project = await searchProposalService.ReturnProjectNamesList(convertedNumberUser);
-        _searchProject.Customer = await searchProposalService.ReturnCustomersList();
-        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortList(convertedNumberUser, 1000);
-        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedNumberUser, 1000);
+        _searchProject.Project = await searchProposalService.ReturnProjectNamesListProjectSearch(convertedNumberUser);
+        _searchProject.Customer = await searchProposalService.ReturnCustomersListProjectSearch();
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortListProjectSearch(convertedNumberUser, 1000);
     }
     
     public class SearchProjectModel
@@ -160,28 +170,33 @@
 
     public async Task ExecuteSearch()
     {
-        /*if (string.IsNullOrEmpty(selectedCustomer) || string.IsNullOrEmpty(selectedProjectName) || !string.IsNullOrEmpty(selectedProposalName))
-        {
-            cid = await searchProposalService.ReturnCustomerNameToID(_searchProject.Customer[0]);
-            resultProposal = await searchProposalService.ReturnFoundProposal(_searchProject.Project[0], 585547, _searchProject.OfferNumber[0]);
-        }*/
-        
-       // else
-        //{
-            cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
-            resultProposal = await searchProposalService.ReturnFoundProposal(selectedProjectName, cid, selectedProposalName);
-        //}
+        // Leere die Ergebnisliste, um Platz für die neuen Ergebnisse zu machen
+        resultProposal.Clear();
+
+        Console.WriteLine(selectedProjectName);
+        Console.WriteLine(selectedProposalName);
+        Console.WriteLine(selectedCustomer);
+        cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
+        Console.WriteLine(cid);
+
+        // Führe die Suche durch und aktualisiere die Ergebnisse
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtListForProjectSearch(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
+        resultProposal = await searchProposalService.ReturnFoundProposal(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
+
+        // Navigiere zu einer neuen Seite oder führe andere Aktionen durch
+        // navigationManager.NavigateTo($"/ProjectSearch/{convertedNumberUser.ToString()}", forceLoad: true);
     }
 
-    public void ExecuteEdit()
+
+    public void ExecuteEdit(int i)
     {
-        string[] splittedProposal = resultProposal.Split(' ');
+        string[] splittedProposal = resultProposal[i].Split(' ');
         navigationManager.NavigateTo($"/customer/{uid.ToString()}/{splittedProposal[0]}");
     }
     
-    public void ExecuteDelete()
+    public void ExecuteDelete(int i)
     {
-        string[] splittedProposal = resultProposal.Split(' ');
+        string[] splittedProposal = resultProposal[i].Split(' ');
         int converted = Int32.Parse(splittedProposal[0]);
         deleteProposalService.DeleteProposal(converted, convertedNumberUser);
         navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);

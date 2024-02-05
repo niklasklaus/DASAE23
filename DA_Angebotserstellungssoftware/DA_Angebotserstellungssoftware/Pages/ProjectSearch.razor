@@ -86,7 +86,7 @@
                             <button @onclick="() => ExecuteEdit(currentIdx)" class="button-position-properties-projectSearch button-position-edit-startingScreen">
                                 <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
                             </button>
-                            <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal[i], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-projectSearch button-position-max-startingScreen">
+                            <button @onclick="@(() => Modal.Show<ModalPDF>(resultProposal[currentIdx], new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" }))" class="button-position-properties-projectSearch button-position-max-startingScreen">
                                 <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
                             </button>
                             <button class="button-position-properties-projectSearch button-position-download-startingScreen">
@@ -181,7 +181,7 @@
         // Führe die Suche durch und aktualisiere die Ergebnisse
         proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtListForProjectSearch(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
         resultProposal = await searchProposalService.ReturnFoundProposal(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
-
+        
         // Navigiere zu einer neuen Seite oder führe andere Aktionen durch
         // navigationManager.NavigateTo($"/ProjectSearch/{convertedNumberUser.ToString()}", forceLoad: true);
     }

@@ -241,14 +241,17 @@ public class SearchProposalService
                     $"SELECT customer_id FROM CUSTOMERS WHERE first_name = '{firstName}' and last_name = '{lastName}'";
                 MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
                 command1.ExecuteNonQuery();
+                Console.WriteLine(selectProposal);
 
                 using (var reader = await command1.ExecuteReaderAsync())
                 {
+                    resultCustomerNameToID.Clear();
                     while (await reader.ReadAsync())
                     {
                         if (!reader.IsDBNull(reader.GetOrdinal("customer_id")))
                         {
                             int val = reader.GetInt32("customer_id");
+                            Console.WriteLine(val);
                             resultCustomerNameToID.Add(val); // Füge den kombinierten Wert zur Liste hinzu
                         }
 

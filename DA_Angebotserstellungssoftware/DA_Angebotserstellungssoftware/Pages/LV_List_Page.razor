@@ -1,4 +1,5 @@
 ﻿@page "/ListOfLVs/{uid}/{pid}"
+@using DA_Angebotserstellungssoftware.Proposals
 @inject IModalService Modal
 @inject SharedService _srvice
 @inject NavigationManager navigationManager
@@ -46,6 +47,7 @@
     
     [Parameter] 
     public string pid { get; set; }
+    
 
     public int convertedUID;
     public int convertedPID;
@@ -54,6 +56,8 @@
     public int checkValuesINHausanschlussPV;
     public string shortPVLV;
     public string shortHausanschlussPV;
+
+    private List<double> calculatedGBs = new List<double>();
     
     
     protected override async Task OnInitializedAsync()

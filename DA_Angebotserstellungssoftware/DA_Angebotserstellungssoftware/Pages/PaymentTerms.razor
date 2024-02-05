@@ -5,6 +5,7 @@
 @inject NavigationManager navigationManager
 @inject InsertPaymentTermService insertPaymentTermService
 
+
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/payment_terms_style.css" rel="stylesheet"/>
 
@@ -88,6 +89,8 @@
     public string Msg;
     int convertedNumberUser;
     int convertedNumberProposal;
+
+    
     
     protected override async Task OnInitializedAsync()
     {
@@ -97,6 +100,7 @@
         _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumberUser, convertedNumberProposal);
         _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumberUser, convertedNumberProposal);
         _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumberUser, convertedNumberProposal);
+       
     }
 
     public class PaymentModel

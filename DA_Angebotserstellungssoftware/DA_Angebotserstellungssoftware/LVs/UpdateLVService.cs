@@ -484,22 +484,33 @@ public class UpdateLVService
         {
             mysqlconnection.Open();
             MySqlCommand command;
-            MySqlCommand comannd2;
+            MySqlCommand command1;
+            MySqlCommand command2;
 
             if (doesExist == 1)
             {
-                string updateLV1 = $"UPDATE LVS SET lv_amount = @LvAmount, calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST and user_id = '{uid}' and lv_type = '{lv_type}'";
+                string updateLV1 = $"UPDATE LVS SET lv_amount = @LvAmount WHERE proposal_id = @Pid and short_text = @ST and user_id = '{uid}' and lv_type = '{lv_type}'";
                 command = new MySqlCommand(updateLV1, mysqlconnection);
                 command.Parameters.AddWithValue("@LvAmount", lvAmount);
                 command.Parameters.AddWithValue("@Pid", pid);
                 command.Parameters.AddWithValue("@ST", lvshort);
                 
+                command.ExecuteNonQuery();
+                
+                string updateLV2 = $"UPDATE LVS SET calculated_gb = calculated_ep * @LVAmount WHERE proposal_id = @Pid and short_text = @ST and user_id = '{uid}' and lv_type = '{lv_type}'";
+                command1 = new MySqlCommand(updateLV2, mysqlconnection);
+                command1.Parameters.AddWithValue("@LvAmount", lvAmount);
+                command1.Parameters.AddWithValue("@Pid", pid);
+                command1.Parameters.AddWithValue("@ST", lvshort);
+                
+                command1.ExecuteNonQuery();
+                
                 TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
                 DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
                 string updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{uid}' and proposal_id = '{pid}'";
-                command.ExecuteNonQuery();
-                comannd2 = new MySqlCommand(updateQuery2, mysqlconnection);
-                comannd2.ExecuteNonQuery();
+                command2 = new MySqlCommand(updateQuery2, mysqlconnection);
+                
+                command2.ExecuteNonQuery();
             }
 
             else
@@ -507,14 +518,14 @@ public class UpdateLVService
                 
                 string insertLV =
                     $"INSERT INTO LVS (proposal_id, user_id, lv_type, oz, pa, short_text, long_text, lv_amount, lv_amount_unit, basic_ep, calculated_ep, ep_currency, basic_gb, calculated_gb, gb_currency, effort_factor) " +
-                    $"VALUES ('{pid}', '{uid}', '{lv_type}', '{oz}', NULL, '{lvshort}', '{longtext}', '{lvAmount}', '{lv_amount_unit}', CAST(REPLACE('{basic_ep}', ',', '.') AS DECIMAL(10,2)), '{calculated_ep}', '{ep_currency}', '{basic_gb}', '{calculated_gb}', '{gb_currency}', '{effort_factor}')";
+                    $"VALUES ('{pid}', '{uid}', '{lv_type}', '{oz}', NULL, '{lvshort}', '{longtext}', '{lvAmount}', '{lv_amount_unit}', CAST(REPLACE('{basic_ep}', ',', '.') AS DECIMAL(10,2)), CAST(REPLACE('{basic_ep * effort_factor}', ',', '.') AS DECIMAL(10,2)), '{ep_currency}', '{basic_gb}', CAST(REPLACE('{basic_ep * effort_factor * lvAmount}', ',', '.') AS DECIMAL(10,2)), '{gb_currency}', '{effort_factor}')";
                 command = new MySqlCommand(insertLV, mysqlconnection);
                 command.ExecuteNonQuery(); 
                 TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
                 DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
                 string updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{uid}' and proposal_id = '{pid}'";
-                comannd2 = new MySqlCommand(updateQuery2, mysqlconnection);
-                comannd2.ExecuteNonQuery();
+                command2 = new MySqlCommand(updateQuery2, mysqlconnection);
+                command2.ExecuteNonQuery();
             }
         }
     }

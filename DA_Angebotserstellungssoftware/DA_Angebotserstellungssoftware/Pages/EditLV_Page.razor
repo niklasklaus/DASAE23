@@ -8,6 +8,7 @@
 @inject NavigationManager navigationManager
 @inject UpdateShortNameService UpdateShortNameService
 
+
 <link href="/css/mainComponents.css" rel="stylesheet"/>
 <link href="/css/editLV_style.css" rel="stylesheet"/>
 
@@ -184,6 +185,8 @@
     int convertedNumberProposal;
     int doesExist;
     int ProposalShortExists;
+
+    private List<double> calculatedGBs = new List<double>();
     
     protected override async Task OnInitializedAsync()
     {
@@ -205,6 +208,7 @@
             gbCurrencyPV = await _updateLvService.ReturnGbCurrency(convertedNumberUser, convertedNumberProposal, type);
             effortFactorPV = await _updateLvService.ReturnEffortFactor(convertedNumberUser, convertedNumberProposal, type);
             ShortNamePV = shortTextPV.ToList();
+            
         }
 
         if (type == "Hausanschluss")
@@ -231,7 +235,6 @@
         customerId = await UpdateShortNameService.ReturnCustomerIdFromProposal(convertedNumberUser, convertedNumberProposal);
         customerName = await UpdateShortNameService.ReturnCustomerNameFromProposalCustomer(customerId);
         ProposalShortExists = await UpdateShortNameService.ReturnProposalShortExists(convertedNumberUser, convertedNumberProposal);
-        
         
     }
     
@@ -281,9 +284,8 @@
 
            
                 await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, type, OzPV[i], ShortNamePV[i], LongTextPV[i], lvAmountPV[i], lvAmountUnitPV[i], basicEpPV[i], calculatedEpPV[i], epCurrencyPV[i], basicGbPV[i], calculatedGbPV[i], gbCurrencyPV[i], effortFactorPV[i], doesExist);
-            
-                // ToDos bis Präsi bei Strabag: Proposal-Short in EditLV_Page.razor setzen; Bugfix von LV bearbeiten (Warum ist bei Hausanschluss PV-LV weg? Warum doppelte Einträge bei Hausanschluss-PV, wenn etwas geändert wird?)
-        }
+                
+            }
         
         }
 
@@ -307,8 +309,6 @@
 
            
                 await _updateLvService.UpdateLV(convertedNumberUser, convertedNumberProposal, type, OzHausanschluss[currentidx], ShortNameHausanschluss[currentidx], LongTextHausanschluss[currentidx], lvAmountHausanschluss[currentidx], lvAmountUnitHausanschluss[currentidx], basicEpHausanschluss[currentidx], calculatedEpHausanschluss[currentidx], epCurrencyHausanschluss[currentidx], basicGbHausanschluss[currentidx], calculatedGbHausanschluss[currentidx], gbCurrencyHausanschluss[currentidx], effortFactorHausanschluss[currentidx], doesExist);
-            
-                // ToDos bis Präsi bei Strabag: Proposal-Short in EditLV_Page.razor setzen; Bugfix von LV bearbeiten (Warum ist bei Hausanschluss PV-LV weg? Warum doppelte Einträge bei Hausanschluss-PV, wenn etwas geändert wird?)
             }
         }
         

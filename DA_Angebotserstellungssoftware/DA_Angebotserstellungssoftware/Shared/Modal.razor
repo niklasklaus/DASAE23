@@ -1,6 +1,9 @@
-﻿@inject InsertEffortAndDiscountService insertEffortAndDiscountService
+﻿@using DA_Angebotserstellungssoftware.Proposals
+@inject InsertEffortAndDiscountService insertEffortAndDiscountService
 @inject SharedService _srvice
 @inject NavigationManager navigationManager
+@inject UpdateProposalPriceService _UpdateProposalPriceService
+@inject InsertEffortAndDiscountService InsertEffortAndDiscount
 <link href="/css/popUpCard_style.css" rel="stylesheet"/>
 
 <div class="content-container-popup">
@@ -30,6 +33,15 @@
     int convertedNumberProposal;
     int convertedNumberUser;
     
+    private double ProposalDiscount;
+    private double currentProposalPrice;
+    
+    private List<int> resultslvAmount = new List<int>(); // Variable to store the results
+    private List<double> resultscalculatedEp = new List<double>(); // Variable to store the results
+    public int lvID;
+    
+    private List<double> calculatedGBs = new List<double>();
+    private double proposalPrice;
     
     protected override async Task OnInitializedAsync()
     {
@@ -39,6 +51,13 @@
         convertedNumberUser = Int32.Parse(uid);
         value = await insertEffortAndDiscountService.ReturnEffort(convertedNumberUser, convertedNumberProposal);
         price = await insertEffortAndDiscountService.ReturnDiscount(convertedNumberUser, convertedNumberProposal);
+        ProposalDiscount = await _UpdateProposalPriceService.ReturnProposalDiscount(convertedNumberUser, convertedNumberProposal);
+        currentProposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
+        resultslvAmount = await InsertEffortAndDiscount.ReturnLvAmount(convertedNumberUser, convertedNumberProposal);
+        resultscalculatedEp = await InsertEffortAndDiscount.ReturnCalculatedEp(convertedNumberUser, convertedNumberProposal);
+        lvID = await InsertEffortAndDiscount.ReturnLvId(convertedNumberUser, convertedNumberProposal);
+        proposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
+        await base.OnInitializedAsync();
     }
 
 
@@ -53,10 +72,12 @@
         }
     }
 
-    public void ExecuteUpdate()
+    public async Task ExecuteUpdate()
     {
-        
-        insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal);
+        await insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal, resultslvAmount, lvID);
+        calculatedGBs = await _UpdateProposalPriceService.ReturnCalculatedGb(convertedNumberUser, convertedNumberProposal);
+        await _UpdateProposalPriceService.UpdateProposalPriceWithCalculatedGb(convertedNumberUser, convertedNumberProposal, calculatedGBs, proposalPrice);
+        await _UpdateProposalPriceService.UpdateProposalPriceWithDiscount(convertedNumberUser, convertedNumberProposal, price, currentProposalPrice);
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
         Msg = $"Die betroffenen Leistungsverezcinisse wurden geändert";
     }

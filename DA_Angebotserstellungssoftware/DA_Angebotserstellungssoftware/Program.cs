@@ -36,6 +36,7 @@ builder.Services.AddScoped<UpdateLVService>();
 builder.Services.AddScoped<UpdateShortNameService>();
 builder.Services.AddScoped<SelectUserIdService>();
 builder.Services.AddScoped<DeleteProposalService>();
+builder.Services.AddScoped<UpdateProposalPriceService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

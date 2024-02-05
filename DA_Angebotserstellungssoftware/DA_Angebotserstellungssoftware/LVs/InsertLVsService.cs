@@ -186,7 +186,7 @@ public class InsertLVsService
             //Random rand = new Random();
             //int id = rand.Next(1, 5000001);
             commandA.CommandText =
-                $"INSERT INTO PROPOSALS (proposal_id, user_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at) VALUES ('{pid}', '{uid}', null, null, null, null, null, null, null, '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}', null)";
+                $"INSERT INTO PROPOSALS (proposal_id, user_id, customer_id, proposal_short, discount, payment_term, skonto_percent, skonto_days, project_name, created_at, updated_at, proposal_price) VALUES ('{pid}', '{uid}', null, null, null, null, null, null, null, '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}', null, 0.00)";
             commandA.ExecuteNonQuery();
             commandA.Parameters.Clear();
             
@@ -263,7 +263,7 @@ public class InsertLVsService
                     command.Parameters.AddWithValue("@ValueK", dbValueI);
                     command.Parameters.AddWithValue("@ValueL", DBNull.Value);
                     command.Parameters.AddWithValue("@ValueM", "EUR");
-                    command.Parameters.AddWithValue("@ValueN", DBNull.Value);
+                    command.Parameters.AddWithValue("@ValueN", 1.00);
                     command.Parameters.AddWithValue("@ValueT", "PV");
 
                     command.ExecuteNonQuery();
@@ -341,7 +341,7 @@ public class InsertLVsService
                     command.Parameters.AddWithValue("@ValueK", dbValueI);
                     command.Parameters.AddWithValue("@ValueL", DBNull.Value);
                     command.Parameters.AddWithValue("@ValueM", "EUR");
-                    command.Parameters.AddWithValue("@ValueN", DBNull.Value);
+                    command.Parameters.AddWithValue("@ValueN", 1.00);
                     command.Parameters.AddWithValue("@ValueT", "Hausanschluss");
 
                     command.ExecuteNonQuery();

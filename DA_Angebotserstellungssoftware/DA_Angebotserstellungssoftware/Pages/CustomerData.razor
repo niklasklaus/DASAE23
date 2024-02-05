@@ -70,27 +70,25 @@
     
     public CustomerModel _customer { get; set; } = new();
     public string Msg;
-    public int customer_idd;
+    public int customer_id;
     public int user_id;
     public int proposal_id;
-    public int customer_id;
     public string lvNameForPropsal;
     int checkIfCustomerExists;
     
     protected override async Task OnInitializedAsync()
     {
         Random rand = new Random();
-        customer_id = rand.Next(1, 9000001);
         proposal_id = Int32.Parse(pid);
         user_id = Int32.Parse(uid);
-        customer_idd = await insertCustomer.ReturnUserIdForProposal(user_id, proposal_id); // Dort kommt dann die ID aus der Url rein (später)
-        _customer.Anrede = await insertCustomer.ReturnSalutation(customer_idd);
-        _customer.FirstName = await insertCustomer.ReturnFirstName(customer_idd);
-        _customer.LastName = await insertCustomer.ReturnLastName(customer_idd);
-        _customer.Address = await insertCustomer.ReturnAddress(customer_idd);
-        _customer.UIDNumber = await insertCustomer.ReturnUID(customer_idd);
+        customer_id = await insertCustomer.ReturnUserIdForProposal(user_id, proposal_id); // Dort kommt dann die ID aus der Url rein (später)
+        _customer.Anrede = await insertCustomer.ReturnSalutation(customer_id);
+        _customer.FirstName = await insertCustomer.ReturnFirstName(customer_id);
+        _customer.LastName = await insertCustomer.ReturnLastName(customer_id);
+        _customer.Address = await insertCustomer.ReturnAddress(customer_id);
+        _customer.UIDNumber = await insertCustomer.ReturnUID(customer_id);
         //lvNameForPropsal = await updateShortNameService.ReturnLVName(user_id,proposal_id);
-        checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
+        //checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
 
     }
     
@@ -103,9 +101,11 @@
         public string UIDNumber { get; set; }
     }
 
-    public void ExecuteNext()
+    public async Task ExecuteNext()
     {
-        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, user_id, proposal_id, customer_idd, checkIfCustomerExists, user_id, proposal_id);
+        checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
+        Console.WriteLine(checkIfCustomerExists);
+        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, customer_id, checkIfCustomerExists, user_id, proposal_id);
         //updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
         Msg = $"Der Kunde wurde erfolgreich hinzugefügt";
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");

@@ -18,7 +18,7 @@ public class InsertCustomerDataService
         this.connection = connectionManager;
     }
 
-    public void InsertCustomerData(string salutation, string firstname, string lastname, string address, string uid, int uid1, int pid, int customerid, int checkIfUserExists, int userid, int proposalid)
+    public void InsertCustomerData(string salutation, string firstname, string lastname, string address, string uid,  int customerid, int checkIfUserExists, int userid, int proposalid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
@@ -26,16 +26,18 @@ public class InsertCustomerDataService
             string updateQuery;
             string updateQuery2;
             mysqlconnection.Open();
-
-            if (checkIfUserExists != 0)
+            
+            if (checkIfUserExists  != 0)
             {
+                //Console.WriteLine("do muas i eine");
+                //Console.WriteLine(checkIfUserExists);
                 if (uid == null || uid == "")
                 {
                     updateQuery =
-                        $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr =  NULL WHERE customer_id = '{customerid}'";
+                        $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr =  NULL WHERE customer_id = '{checkIfUserExists}'";
                     TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
                     DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
-                    updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
+                    updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}', customer_id = '{checkIfUserExists}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
 
                 }
 
@@ -45,7 +47,7 @@ public class InsertCustomerDataService
                         $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr = '{uid}' WHERE customer_id = '{customerid}'";
                     TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
                     DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
-                    updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
+                    updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}', customer_id = '{checkIfUserExists}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
                 }
                 MySqlCommand command1 = new MySqlCommand(updateQuery, mysqlconnection);
                 command1.ExecuteNonQuery();
@@ -55,22 +57,58 @@ public class InsertCustomerDataService
 
             else
             {
-                if (uid == null || uid == "")
-                {
-                    insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}', '{salutation}', '{firstname}', '{lastname}', '{address}', NULL)";
-                    updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}' WHERE proposal_id = '{pid}' and user_id = '{uid1}'";
+                string selectProposal = $"SELECT customer_id FROM PROPOSALS WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
+                MySqlCommand commandA = new MySqlCommand(selectProposal, mysqlconnection);
+                object currentProposal = commandA.ExecuteScalar();
+                int currentProposalId = (currentProposal != null && currentProposal != DBNull.Value) ? Convert.ToInt32(currentProposal) : 0;
 
+                
+                if (customerid == currentProposalId)
+                {
+                    if (uid == null || uid == "")
+                    {
+                        updateQuery =
+                            $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr =  NULL WHERE customer_id = '{customerid}'";
+                        TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+                        DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+                        updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
+
+                    }
+
+                    else
+                    {
+                        updateQuery =
+                            $"UPDATE CUSTOMERS SET salutation = '{salutation}', first_name = '{firstname}', last_name = '{lastname}', address = '{address}', uid_nr = '{uid}' WHERE customer_id = '{customerid}'";
+                        TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
+                        DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
+                        updateQuery2 = $"UPDATE PROPOSALS SET updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE user_id ='{userid}' and proposal_id = '{proposalid}'";
+                    }
+                    MySqlCommand command1 = new MySqlCommand(updateQuery, mysqlconnection);
+                    command1.ExecuteNonQuery();
+                    MySqlCommand command3 = new MySqlCommand(updateQuery2, mysqlconnection);
+                    command3.ExecuteNonQuery();
                 }
 
                 else
                 {
-                    insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}','{salutation}', '{firstname}', '{lastname}', '{address}', '{uid}')";
-                    updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}'  WHERE proposal_id = '{pid}'  and user_id = '{uid1}'";
+                    if (uid == null || uid == "")
+                    {
+                        insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}', '{salutation}', '{firstname}', '{lastname}', '{address}', NULL)";
+                        updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}' WHERE proposal_id = '{proposalid}' and user_id = '{userid}'";
+
+                    }
+
+                    else
+                    {
+                        insertQuery = $"INSERT INTO CUSTOMERS (customer_id, salutation, first_name, last_name, address, uid_nr) VALUES ('{customerid}','{salutation}', '{firstname}', '{lastname}', '{address}', '{uid}')";
+                        updateQuery =  $"UPDATE PROPOSALS SET customer_id = '{customerid}'  WHERE proposal_id = '{userid}'  and user_id = '{userid}'";
+                    }
+                    MySqlCommand command1 = new MySqlCommand(insertQuery, mysqlconnection);
+                    command1.ExecuteNonQuery();
+                    MySqlCommand command2 = new MySqlCommand(updateQuery, mysqlconnection);
+                    command2.ExecuteNonQuery();
                 }
-                MySqlCommand command1 = new MySqlCommand(insertQuery, mysqlconnection);
-                command1.ExecuteNonQuery();
-                MySqlCommand command2 = new MySqlCommand(updateQuery, mysqlconnection);
-                command2.ExecuteNonQuery();
+               
                 
             }
             

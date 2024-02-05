@@ -172,13 +172,12 @@
     {
         // Leere die Ergebnisliste, um Platz für die neuen Ergebnisse zu machen
         resultProposal.Clear();
-
         Console.WriteLine(selectedProjectName);
         Console.WriteLine(selectedProposalName);
         Console.WriteLine(selectedCustomer);
         cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
         Console.WriteLine(cid);
-
+        
         // Führe die Suche durch und aktualisiere die Ergebnisse
         proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtListForProjectSearch(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
         resultProposal = await searchProposalService.ReturnFoundProposal(convertedNumberUser, selectedProjectName, cid, selectedProposalName);

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PDFGenerierung_iText
-build_property.ProjectDir = E:\Diplomarbeit\PDFGenerierung_iText\PDFGenerierung_iText\
+build_property.ProjectDir = C:\Users\Niklas\repos_da_5chit\DASAE23\PDFGenerierung_iText\PDFGenerierung_iText\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

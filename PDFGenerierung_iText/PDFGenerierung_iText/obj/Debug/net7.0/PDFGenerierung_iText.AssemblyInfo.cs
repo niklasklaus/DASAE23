@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDFGenerierung_iText")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+278ead7d4c6dc24912b3dfe40d2946d4ace69340")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDFGenerierung_iText")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDFGenerierung_iText")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

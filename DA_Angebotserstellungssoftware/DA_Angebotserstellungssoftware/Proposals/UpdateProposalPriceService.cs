@@ -94,6 +94,7 @@ public class UpdateProposalPriceService
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
+            resultCalculatedGb.Clear();
             using (var reader = await command1.ExecuteReaderAsync())
             {
                 while (await reader.ReadAsync())
@@ -115,10 +116,12 @@ public class UpdateProposalPriceService
         return  resultCalculatedGb.Count > 0 ? resultCalculatedGb : new List<double>(); // Return the first value if available, otherwise return a default value
     }
 
-    public async Task UpdateProposalPriceWithCalculatedGb(int uid, int pid, List<double> calculatedGbs, double currentproposalPrice)
+    public async Task<double> UpdateProposalPriceWithCalculatedGb(int uid, int pid, List<double> calculatedGbs, double currentproposalPrice)
     {
+        double Price = 0.00;
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
+            
             mysqlconnection.Open();
             if (currentproposalPrice >= 0.00)
             {
@@ -130,7 +133,8 @@ public class UpdateProposalPriceService
                 {
                     string updateProposalX =
                         $"UPDATE PROPOSALS SET proposal_price = CAST(REPLACE(proposal_price, ',', '.') AS DECIMAL(10,2)) + CAST(REPLACE('{amount}', ',', '.') AS DECIMAL(10,2)) WHERE user_id = '{uid}' AND proposal_id = '{pid}'";
-                    Console.WriteLine(updateProposalX);
+                    //Console.WriteLine(updateProposalX);
+                    Price = Price + amount;
 
                     using (MySqlCommand commandX = new MySqlCommand(updateProposalX, mysqlconnection))
                     {
@@ -147,8 +151,8 @@ public class UpdateProposalPriceService
 
                     string updateProposalX =
                         $"UPDATE PROPOSALS SET proposal_price = CAST(REPLACE(proposal_price, ',', '.') AS DECIMAL(10,2)) + CAST(REPLACE('{amount}', ',', '.') AS DECIMAL(10,2)) WHERE user_id = '{uid}' AND proposal_id = '{pid}'";
-                    Console.WriteLine(updateProposalX);
-
+                    //Console.WriteLine(updateProposalX);
+                    Price = Price + amount;
                     using (MySqlCommand commandX = new MySqlCommand(updateProposalX, mysqlconnection))
                     {
                         commandX.ExecuteNonQuery();
@@ -157,6 +161,8 @@ public class UpdateProposalPriceService
             }
             
         }
+
+        return Price;
     }
 
     

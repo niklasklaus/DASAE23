@@ -42,6 +42,7 @@
     
     private List<double> calculatedGBs = new List<double>();
     private double proposalPrice;
+    private double Price;
     
     protected override async Task OnInitializedAsync()
     {
@@ -51,12 +52,10 @@
         convertedNumberUser = Int32.Parse(uid);
         value = await insertEffortAndDiscountService.ReturnEffort(convertedNumberUser, convertedNumberProposal);
         price = await insertEffortAndDiscountService.ReturnDiscount(convertedNumberUser, convertedNumberProposal);
-        ProposalDiscount = await _UpdateProposalPriceService.ReturnProposalDiscount(convertedNumberUser, convertedNumberProposal);
-        currentProposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
         resultslvAmount = await InsertEffortAndDiscount.ReturnLvAmount(convertedNumberUser, convertedNumberProposal);
         resultscalculatedEp = await InsertEffortAndDiscount.ReturnCalculatedEp(convertedNumberUser, convertedNumberProposal);
         lvID = await InsertEffortAndDiscount.ReturnLvId(convertedNumberUser, convertedNumberProposal);
-        proposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
+        ProposalDiscount = await _UpdateProposalPriceService.ReturnProposalDiscount(convertedNumberUser, convertedNumberProposal);
         await base.OnInitializedAsync();
     }
 
@@ -74,11 +73,15 @@
 
     public async Task ExecuteUpdate()
     {
-        await insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal, resultslvAmount, lvID);
+        await insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal, resultslvAmount, lvID); 
         calculatedGBs = await _UpdateProposalPriceService.ReturnCalculatedGb(convertedNumberUser, convertedNumberProposal);
-        await _UpdateProposalPriceService.UpdateProposalPriceWithCalculatedGb(convertedNumberUser, convertedNumberProposal, calculatedGBs, proposalPrice);
-        await _UpdateProposalPriceService.UpdateProposalPriceWithDiscount(convertedNumberUser, convertedNumberProposal, price, currentProposalPrice);
+        
+        currentProposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
+        Price  = await _UpdateProposalPriceService.UpdateProposalPriceWithCalculatedGb(convertedNumberUser, convertedNumberProposal, calculatedGBs, currentProposalPrice);
+        
+        await _UpdateProposalPriceService.UpdateProposalPriceWithDiscount(convertedNumberUser, convertedNumberProposal, price, Price);
+        
         navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
-        Msg = $"Die betroffenen Leistungsverezcinisse wurden geändert";
+        Msg = $"Die betroffenen Leistungsverzeichnisse wurden geändert";
     }
 }

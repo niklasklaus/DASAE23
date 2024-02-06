@@ -57,6 +57,7 @@ public class InsertEffortAndDiscountService
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
+            resultsDiscount.Clear();
             using (var reader = await command1.ExecuteReaderAsync())
             {
                 while (await reader.ReadAsync())

@@ -42,7 +42,7 @@ class Program
         //string headerPdfPath = @"E:\Diplomarbeit\PDFGenerierung_iText\Kleinangebote_LV_Vorlage_Form_Copy.pdf";
 
         //string sqlStatement = "SELECT * FROM PROPOSALS WHERE proposal_id = 2677215";
-        string sqlStatement = "SELECT * FROM PROPOSALS WHERE proposal_id = 844898";
+        string sqlStatement = "SELECT * FROM PROPOSALS WHERE proposal_id = 3450150";
         
         // Retrieve data from the database
         List<Dictionary<string, object>> dataFromDatabase = RetrieveDataListFromDatabase(connectionString, sqlStatement);
@@ -64,7 +64,7 @@ class Program
             UpdateFormField(pdfDocument, "taxAmount", (0).ToString("0.00"), 12, fontArial);
             UpdateFormField(pdfDocument, "offerPrice", (0).ToString("0.00"), 12, fontArial);
 
-            string sqlStatementLvs = "SELECT * FROM LVS WHERE proposal_id = 844898";
+            string sqlStatementLvs = "SELECT * FROM LVS WHERE proposal_id = 3450150";
             List<Dictionary<string, object>> dataLVsFromDatabase = RetrieveDataListFromDatabase(connectionString, sqlStatementLvs);
 
             // Position Body

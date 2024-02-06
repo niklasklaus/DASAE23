@@ -34,7 +34,7 @@ public class UpdateShortNameService
             
                 Random rand = new Random();
                 int number = rand.Next(1, 11);
-                mysqlconnection.Open();
+                //mysqlconnection.Open();
                 TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
                 DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
                 string updateShortName = $"UPDATE PROPOSALS SET proposal_short = '{splittedLVName[0].Trim()}_{customer_name}_{number}',  updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE proposal_id = '{pid}' AND user_id = '{uid}'";
@@ -42,6 +42,7 @@ public class UpdateShortNameService
                 command1.ExecuteNonQuery();
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task SelectLVNames(string type)
@@ -49,7 +50,7 @@ public class UpdateShortNameService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT short_text FROM MASTER_LVS WHERE lv_type = '{type}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -67,6 +68,7 @@ public class UpdateShortNameService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<string> ReturnLVName(string type)
@@ -80,7 +82,7 @@ public class UpdateShortNameService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT customer_id FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -98,6 +100,7 @@ public class UpdateShortNameService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<int> ReturnCustomerIdFromProposal(int uid, int pid)
@@ -111,7 +114,7 @@ public class UpdateShortNameService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT last_name FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -129,6 +132,7 @@ public class UpdateShortNameService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<string> ReturnCustomerNameFromProposalCustomer(int cid)
@@ -141,7 +145,7 @@ public class UpdateShortNameService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT COUNT(*) FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}' and proposal_short is not null";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
         
@@ -156,6 +160,7 @@ public class UpdateShortNameService
                 resultProposalShortNameExists.Add(0);
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<int> ReturnProposalShortExists(int uid, int pid)

@@ -25,7 +25,7 @@ public class InsertCustomerDataService
             string insertQuery;
             string updateQuery;
             string updateQuery2;
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             
             if (checkIfUserExists  != 0)
             {
@@ -113,13 +113,14 @@ public class InsertCustomerDataService
             }
             
         }
+        connection.CloseConnection();
     }
     
     public async Task SelectCustomerIdFromProposal(int uid, int pid)
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT customer_id FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -144,6 +145,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<int> ReturnUserIdForProposal(int uid, int pid)
@@ -156,7 +158,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT salutation FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -180,6 +182,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnSalutation(int cid)
@@ -192,7 +195,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT first_name FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -216,6 +219,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnFirstName(int cid)
@@ -228,7 +232,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             string selectProposal = $"SELECT last_name FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -252,6 +256,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnLastName(int cid)
@@ -265,7 +270,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT address FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -289,6 +294,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnAddress(int cid)
@@ -302,7 +308,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT uid_nr FROM CUSTOMERS WHERE customer_id = '{cid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -326,6 +332,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnUID(int cid)
@@ -338,7 +345,7 @@ public class InsertCustomerDataService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectCustomer = $"SELECT customer_id FROM CUSTOMERS WHERE salutation = '{salutation}' and first_name = '{fname}' and last_name = '{lname}' and address = '{address}'";
             MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -362,6 +369,7 @@ public class InsertCustomerDataService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<int> ReturnCheckIfUserExists(string salutation, string fname, string lname, string address)

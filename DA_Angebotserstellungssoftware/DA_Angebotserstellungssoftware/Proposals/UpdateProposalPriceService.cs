@@ -21,7 +21,7 @@ public class UpdateProposalPriceService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT discount FROM PROPOSALS where user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -45,6 +45,7 @@ public class UpdateProposalPriceService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<double> ReturnProposalDiscount(int uid, int pid)
@@ -58,7 +59,7 @@ public class UpdateProposalPriceService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT proposal_price FROM PROPOSALS where user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -76,6 +77,7 @@ public class UpdateProposalPriceService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<double> ReturnProposalPrice(int uid, int pid)
@@ -89,7 +91,7 @@ public class UpdateProposalPriceService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT calculated_gb FROM LVS where user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -108,6 +110,7 @@ public class UpdateProposalPriceService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<double>> ReturnCalculatedGb(int uid, int pid)
@@ -122,7 +125,7 @@ public class UpdateProposalPriceService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
             
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             if (currentproposalPrice >= 0.00)
             {
                 string updateProposal1 = $"UPDATE PROPOSALS SET proposal_price = 0.00 WHERE user_id = '{uid}' AND proposal_id = '{pid}'";
@@ -161,6 +164,7 @@ public class UpdateProposalPriceService
             }
             
         }
+        connection.CloseConnection();
 
         return Price;
     }
@@ -170,7 +174,7 @@ public class UpdateProposalPriceService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
 
             if (currentproposalPrice != 0.00)
             {
@@ -185,5 +189,6 @@ public class UpdateProposalPriceService
             }
             
         }
+        connection.CloseConnection();
     }
 }

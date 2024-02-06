@@ -17,12 +17,11 @@ public class SelectUserIdService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectUser = $"SELECT user_id FROM USERS WHERE username = '{username}' and password = '{password}'";
             MySqlCommand command1 = new MySqlCommand(selectUser, mysqlconnection);
             command1.ExecuteNonQuery();
-            
+        
             using (var reader = await command1.ExecuteReaderAsync())
             {
                 while (await reader.ReadAsync())
@@ -33,7 +32,6 @@ public class SelectUserIdService
                         int val = reader.GetInt32("user_id");
                         resultUserId.Add(val); // Add the retrieved value to the list
                     }
-
                     else
                     {
                         int val = 0;
@@ -41,8 +39,14 @@ public class SelectUserIdService
                     }
                 }
             }
-        }
+        } 
+
+        // Nachdem der using-Block beendet ist, wird die MySqlConnection automatisch geschlossen
+        // Jetzt rufen wir die CloseConnection()-Methode auf, um den SSH-Tunnel zu schließen
+        connection.CloseConnection();
     }
+
+
 
     public async Task<int> ReturnUserId(string username, string password)
     {
@@ -55,7 +59,7 @@ public class SelectUserIdService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectUser = $"SELECT username FROM USERS WHERE user_id = '{userid}'";
             MySqlCommand command1 = new MySqlCommand(selectUser, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -79,6 +83,7 @@ public class SelectUserIdService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<string> ReturnUserName(int userid)

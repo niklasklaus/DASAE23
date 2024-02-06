@@ -250,3 +250,8 @@ E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssof
 E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\Renci.SshNet.Async.dll
+C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\SSH.Client.dll
+C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\Renci.SshNet.dll
+C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\SshNet.Security.Cryptography.dll
+C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll

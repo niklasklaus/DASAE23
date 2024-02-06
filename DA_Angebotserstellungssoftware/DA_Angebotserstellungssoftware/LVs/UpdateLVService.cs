@@ -27,7 +27,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT oz FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -46,6 +46,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnOz(int uid, int pid, string lv_type)
@@ -58,7 +59,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT long_text FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -83,6 +84,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnLongText(int uid, int pid, string lv_type)
@@ -95,7 +97,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT ep_currency FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -120,6 +122,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnEpCurrency(int uid, int pid, string lv_type)
@@ -132,7 +135,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT basic_ep FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -156,6 +159,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnBasicEp(int uid, int pid, string lv_type)
@@ -168,7 +172,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT calculated_ep FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -193,6 +197,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnCalculatedEp(int uid, int pid, string lv_type)
@@ -205,7 +210,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT basic_gb FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -223,7 +228,9 @@ public class UpdateLVService
                     }
                 }
             }
+            
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnBasicGb(int uid, int pid, string lv_type)
@@ -236,7 +243,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT calculated_gb FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -261,6 +268,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnCalculatedGb(int uid, int pid, string lv_type)
@@ -274,7 +282,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT effort_factor FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -299,6 +307,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnEffortFactor(int uid, int pid, string lv_type)
@@ -311,7 +320,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT gb_currency FROM MASTER_LVS WHERE lv_type = '{lv_type}'";
@@ -330,6 +339,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnGbCurrency(int uid, int pid, string lv_type)
@@ -344,7 +354,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
 
             if (doesExist == 1)
@@ -374,6 +384,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnLVShortText(int uid, int pid, string lv_type, int doesExist)
@@ -386,7 +397,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
 
             if (doesExist == 1)
@@ -421,6 +432,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnLVAmount(int uid, int pid, string lv_type, int doesExist)
@@ -433,7 +445,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
 
             if (doesExist == 1)
@@ -469,6 +481,7 @@ public class UpdateLVService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<string>> ReturnLVAmountUnit(int uid, int pid, string lv_type, int doesExist)
@@ -482,7 +495,7 @@ public class UpdateLVService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command;
             MySqlCommand command1;
             MySqlCommand command2;
@@ -528,5 +541,6 @@ public class UpdateLVService
                 command2.ExecuteNonQuery();
             }
         }
+        connection.CloseConnection();
     }
 }

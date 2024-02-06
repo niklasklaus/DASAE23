@@ -19,7 +19,7 @@ public class InsertLVsService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'PV' and user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -41,6 +41,7 @@ public class InsertLVsService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<int> ReturnCheckIfPVLVExists(int uid, int pid)
@@ -53,7 +54,7 @@ public class InsertLVsService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectCustomer = $"SELECT lv_id FROM LVS WHERE lv_type = 'Hausanschluss' and user_id = '{uid}' and proposal_id = '{pid}'";
             MySqlCommand command1 = new MySqlCommand(selectCustomer, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -75,6 +76,7 @@ public class InsertLVsService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<int> ReturnCheckIfHausAnschlussLV(int uid, int pid)
@@ -87,7 +89,7 @@ public class InsertLVsService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
 
             if (doesExist == 1)
@@ -118,6 +120,7 @@ public class InsertLVsService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnPVLV(int doesExist, int uid, int pid)
@@ -130,7 +133,7 @@ public class InsertLVsService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             MySqlCommand command1;
 
             if (doesExist == 1)
@@ -161,6 +164,7 @@ public class InsertLVsService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<string> ReturnHausanschlussLV(int doesExist, int uid, int pid)
@@ -181,7 +185,7 @@ public class InsertLVsService
             TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
             DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
             // Öffne die Verbindung
-            mySqlConnection.Open();
+            //mySqlConnection.Open();
 
             //Random rand = new Random();
             //int id = rand.Next(1, 5000001);
@@ -191,6 +195,7 @@ public class InsertLVsService
             commandA.Parameters.Clear();
             
         }
+        connection.CloseConnection();
          
     }
     
@@ -200,7 +205,7 @@ public class InsertLVsService
 {
     using (MySqlConnection mySqlConnection = this.connection.GetConnection())
     {
-        mySqlConnection.Open();
+        //mySqlConnection.Open();
         MySqlCommand command = mySqlConnection.CreateCommand();
 
         using (ExcelPackage package = new ExcelPackage(new FileInfo(filepath)))
@@ -272,13 +277,14 @@ public class InsertLVsService
             }
         }
     }
+    connection.CloseConnection();
 }
    
     public void InsertMasterLVsHausanschluss(string filepath)
 {
     using (MySqlConnection mySqlConnection = this.connection.GetConnection())
     {
-        mySqlConnection.Open();
+       // mySqlConnection.Open();
         MySqlCommand command = mySqlConnection.CreateCommand();
 
         using (ExcelPackage package = new ExcelPackage(new FileInfo(filepath)))
@@ -350,6 +356,7 @@ public class InsertLVsService
             }
         }
     }
+    connection.CloseConnection();
 }
 
     

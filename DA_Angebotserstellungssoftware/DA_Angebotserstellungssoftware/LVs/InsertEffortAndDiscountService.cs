@@ -21,7 +21,7 @@ public class InsertEffortAndDiscountService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectLV = $"SELECT effort_factor FROM LVS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectLV, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -39,6 +39,7 @@ public class InsertEffortAndDiscountService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<double> ReturnEffort(int uid, int pid)
@@ -52,7 +53,7 @@ public class InsertEffortAndDiscountService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT discount FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -72,6 +73,7 @@ public class InsertEffortAndDiscountService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<double> ReturnDiscount(int uid, int pid)
@@ -84,7 +86,7 @@ public class InsertEffortAndDiscountService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT lv_amount FROM LVS WHERE user_id  = '{uid}' and proposal_id = '{pid}'";
@@ -109,6 +111,7 @@ public class InsertEffortAndDiscountService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<int>> ReturnLvAmount(int uid, int pid)
@@ -121,7 +124,7 @@ public class InsertEffortAndDiscountService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT lv_id FROM LVS WHERE user_id  = '{uid}' and proposal_id = '{pid}' and oz = '01'";
@@ -146,6 +149,7 @@ public class InsertEffortAndDiscountService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<int> ReturnLvId(int uid, int pid)
@@ -158,7 +162,7 @@ public class InsertEffortAndDiscountService
     {
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             MySqlCommand command1;
             
             string selectProposal = $"SELECT calculated_ep FROM LVS WHERE user_id  = '{uid}' and proposal_id = '{pid}'";
@@ -183,6 +187,7 @@ public class InsertEffortAndDiscountService
                 }
             }
         }
+        connection.CloseConnection();
     }
     
     public async Task<List<double>> ReturnCalculatedEp(int uid, int pid)
@@ -196,7 +201,7 @@ public class InsertEffortAndDiscountService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             
             string updateLV1 = $"UPDATE LVS SET effort_factor = CAST(REPLACE('{effort}', ',', '.') AS DECIMAL(3,2)) WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             
@@ -235,5 +240,7 @@ public class InsertEffortAndDiscountService
 
 
         }
+        connection.CloseConnection();
     }
+    
 }

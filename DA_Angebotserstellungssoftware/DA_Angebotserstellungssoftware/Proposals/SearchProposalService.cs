@@ -25,7 +25,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT project_name FROM PROPOSALS where user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -43,6 +43,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnProjectNamesList(int uid)
@@ -57,7 +58,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT first_name, last_name FROM CUSTOMERS ";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -76,6 +77,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnCustomersList()
@@ -90,7 +92,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -107,6 +109,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnProposalShortList(int uid, int limit)
@@ -120,7 +123,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT DISTINCT project_name FROM PROPOSALS where user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -140,6 +143,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnProjectNamesListProjectSearch(int uid)
@@ -154,7 +158,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT first_name, last_name FROM CUSTOMERS ";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -175,6 +179,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnCustomersListProjectSearch()
@@ -189,7 +194,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT proposal_short FROM PROPOSALS where user_id = '{uid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -208,6 +213,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnProposalShortListProjectSearch(int uid, int limit)
@@ -236,7 +242,7 @@ public class SearchProposalService
 
         using (MySqlConnection mysqlconnection = connection.GetConnection())
             {
-                mysqlconnection.Open();
+               // mysqlconnection.Open();
                 string selectProposal =
                     $"SELECT customer_id FROM CUSTOMERS WHERE first_name = '{firstName}' and last_name = '{lastName}'";
                 MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
@@ -263,6 +269,7 @@ public class SearchProposalService
                     }
                 }
             }
+        connection.CloseConnection();
     }
 
     public async Task<int> ReturnCustomerNameToID(string name)
@@ -276,7 +283,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             string selectProposal;
             MySqlCommand command1 = new MySqlCommand();
 
@@ -369,6 +376,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<string>> ReturnFoundProposal(int uid, string projectname, int customer_id, string proposal_short)
@@ -382,7 +390,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             TimeZoneInfo cetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time");
 
             string selectProposal = $"SELECT created_at, updated_at FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
@@ -413,6 +421,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<DateTime>> ReturnProposalLastUpdatedAtList(int userid, int limit)
@@ -426,7 +435,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             TimeZoneInfo cetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time");
             MySqlCommand command1 = new MySqlCommand();
 
@@ -520,6 +529,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<DateTime>> ReturnProposalLastUpdatedAtListForProjectSearch(int userid, string projectname, int customer_id, string proposal_short)
@@ -534,7 +544,7 @@ public class SearchProposalService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+           // mysqlconnection.Open();
             string selectProposal = $"SELECT proposal_id FROM PROPOSALS WHERE user_id = '{userid}' ORDER BY CASE WHEN updated_at IS NULL THEN created_at ELSE updated_at END DESC LIMIT {limit}";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -551,6 +561,7 @@ public class SearchProposalService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<List<int>> ReturnProposalIdList(int userid, int limit)

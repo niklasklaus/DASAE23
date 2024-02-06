@@ -75,7 +75,7 @@
     public async Task ExecuteLogin()
     {
         userid = await _SelectUserIdService.ReturnUserId(_loginModel.Username, _loginModel.Password);
-        bool isAuthenticated = loginService.Authenticate(_loginModel.Username, _loginModel.Password);
+        bool isAuthenticated = await loginService.Authenticate(_loginModel.Username, _loginModel.Password);
         if (isAuthenticated)
         {
             navigationManager.NavigateTo($"/StartingScreen/{userid.ToString()}");

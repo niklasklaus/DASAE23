@@ -20,7 +20,7 @@ public class InsertPaymentTermService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT payment_term FROM PROPOSALS WHERE proposal_id = '{pid}' and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -38,6 +38,7 @@ public class InsertPaymentTermService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<int> ReturnPaymentTerm(int uid, int pid)
@@ -52,7 +53,7 @@ public class InsertPaymentTermService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT skonto_percent FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -70,6 +71,7 @@ public class InsertPaymentTermService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<double> ReturnSkontoPercent(int uid, int pid)
@@ -83,7 +85,7 @@ public class InsertPaymentTermService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT skonto_days FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -102,6 +104,7 @@ public class InsertPaymentTermService
                     }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<int> ReturnSkontoDays(int uid, int pid)
@@ -115,7 +118,7 @@ public class InsertPaymentTermService
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
 
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string selectProposal = $"SELECT project_name FROM PROPOSALS WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(selectProposal, mysqlconnection);
             command1.ExecuteNonQuery();
@@ -133,6 +136,7 @@ public class InsertPaymentTermService
                 }
             }
         }
+        connection.CloseConnection();
     }
 
     public async Task<string> ReturnProjectName(int uid, int pid)
@@ -148,11 +152,12 @@ public class InsertPaymentTermService
         {
             TimeZoneInfo austrianTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"); // CET
             DateTime currentDateTimeInAustria = TimeZoneInfo.ConvertTime(DateTime.Now, austrianTimeZone);
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string updateProposal = $"UPDATE PROPOSALS SET payment_term = '{payment_term}', skonto_percent = CAST(REPLACE('{skonto_percent}', ',', '.') AS DECIMAL(10,2)), skonto_days = '{skonto_days}', project_name = '{project_name}', updated_at = '{currentDateTimeInAustria.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE proposal_id = '{pid}'  and user_id = '{uid}'";
             MySqlCommand command1 = new MySqlCommand(updateProposal, mysqlconnection);
             command1.ExecuteNonQuery();
             
         }
+        connection.CloseConnection();
     }
 }

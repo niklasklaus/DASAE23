@@ -1,4 +1,10 @@
-﻿using MySqlConnector;
+﻿using Microsoft.Extensions.Configuration;
+using MySqlConnector;
+using Renci.SshNet;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using ConnectionInfo = Renci.SshNet.ConnectionInfo;
 
 namespace DA_Angebotserstellungssoftware;
 
@@ -11,28 +17,20 @@ public class LoginService
         this.connection = connectionManager;
     }
 
-    public bool Authenticate(string username, string password)
+ 
+    public async Task<bool> Authenticate(string username, string password)
     {
+        int count;
         using (MySqlConnection mysqlconnection = connection.GetConnection())
         {
-            mysqlconnection.Open();
+            //mysqlconnection.Open();
             string query = $"SELECT COUNT(*) FROM USERS WHERE username = '{username}' AND password = '{password}'";
             MySqlCommand command = new MySqlCommand(query, mysqlconnection);
-            int count = Convert.ToInt32(command.ExecuteScalar());
-            return count > 0;
+            count = Convert.ToInt32(command.ExecuteScalar());
         }
+        
+        connection.CloseConnection();
+        return count > 0;
+        
     }
-    
-    /*private readonly ApplicationDbContext _dbContext;
-
-    public LoginService(ApplicationDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
-    public bool Authenticate(string username, string password)
-    {
-        var user = _dbContext.Users2.FirstOrDefault(u => u.Username == username && u.Password == password);
-        return user != null;
-    }*/
 }

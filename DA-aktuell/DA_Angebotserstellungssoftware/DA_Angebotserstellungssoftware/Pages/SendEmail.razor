@@ -1,0 +1,190 @@
+﻿@page "/SendEmail/{uid}/{pid}"
+@using DA_Angebotserstellungssoftware.Proposals
+@using EMailSendService.Model
+@inject InsertEMailsForProposalSendService _InsertEMailsForProposalSendService
+@inject NavigationManager navigationManager
+
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/sendEmail_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-sendEmail">
+        <div class="email-header"><h1>Email versenden:</h1></div>
+    
+        <div class="client-container">
+            <label class="primary-label-text name-header" for="subChoice">Kunden Email:</label>
+            <EditForm Model="@_emailModel" OnValidSubmit="ExecuteConfirm" class="name-input">
+                <InputText class="name-input" type="text" id="CustomerAnrede" @bind-Value="@_emailModel.ClientEmail"></InputText>
+            </EditForm>
+        </div>
+        <div class="constructor-container">
+            <label class="primary-label-text name-header" for="subChoice">Bauleiter Email:</label>
+            <EditForm Model="@_emailModel" OnValidSubmit="ExecuteConfirm" class="name-input">
+                <InputText class="name-input" type="text" id="CustomerAnrede" @bind-Value="@_emailModel.ConstructorEmail"></InputText>
+            </EditForm>
+        </div>
+        <div class="office-container">
+            <label class="primary-label-text name-header" for="subChoice">Office Email:</label>
+            <EditForm Model="@_emailModel" OnValidSubmit="ExecuteConfirm" class="name-input">
+                <InputText class="name-input" type="text" id="CustomerAnrede" @bind-Value="@_emailModel.OfficeEmail"></InputText>
+            </EditForm>
+        </div>
+        
+        <div class="btn-container">
+            <button @onclick="ExecuteBack" class="primary-btn-login button-back-email" type="submit" id="loginBtn">ZURÜCK</button>
+            <button @onclick="ExecuteConfirm" class="primary-btn-login button-next-email" type="submit" id="loginBtn">SENDEN</button>
+        </div>
+        
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+
+
+@code {
+    
+    [Parameter] 
+    public string uid { get; set; }
+
+    [Parameter] 
+    public string pid { get; set; }
+    public EmailModel _emailModel { get; set; } = new();
+    public string startCustomerEmail;
+    public string startConstructorEmail;
+    public string startOfficeEmail;
+
+    public List<string> emailstoSend = new List<string>();
+
+    public bool doesCustomerEMailExist;
+    public bool doesConstructorEmailExist;
+    public bool doesOfficeEMailExist;
+
+    int convertedNumberUser;
+    int convertedNumberProposal;
+
+    protected override async Task OnInitializedAsync()
+    {
+        convertedNumberUser = Int32.Parse(uid);
+        convertedNumberProposal = Int32.Parse(pid);
+        _emailModel.ClientEmail = await _InsertEMailsForProposalSendService.ReturnCustomerEMail(convertedNumberUser, convertedNumberProposal);
+        _emailModel.ConstructorEmail = await _InsertEMailsForProposalSendService.ReturnConstructerEMail(convertedNumberUser, convertedNumberProposal);
+        _emailModel.OfficeEmail = await _InsertEMailsForProposalSendService.ReturnOfficeEMail(convertedNumberUser, convertedNumberProposal);
+        startConstructorEmail = _emailModel.ConstructorEmail;
+        startCustomerEmail = _emailModel.ClientEmail;
+        startOfficeEmail = _emailModel.OfficeEmail;
+
+    }
+    
+    public class EmailModel
+    {
+        public string ClientEmail { get; set; }
+        public string ConstructorEmail { get; set; }
+        public string OfficeEmail { get; set; }
+    }
+
+    public async Task ExecuteConfirm()
+    {
+        doesCustomerEMailExist = await _InsertEMailsForProposalSendService.ReturnCheckIfEmailExists(startCustomerEmail, convertedNumberUser, convertedNumberProposal);
+        await _InsertEMailsForProposalSendService.InsertEmailsForProposalSend(_emailModel.ClientEmail, "Kunde", convertedNumberUser, convertedNumberProposal, doesCustomerEMailExist);
+
+        doesConstructorEmailExist = await _InsertEMailsForProposalSendService.ReturnCheckIfEmailExists(startConstructorEmail, convertedNumberUser, convertedNumberProposal);
+        await _InsertEMailsForProposalSendService.InsertEmailsForProposalSend(_emailModel.ConstructorEmail, "Bauleiter", convertedNumberUser, convertedNumberProposal, doesConstructorEmailExist);
+
+        doesOfficeEMailExist = await _InsertEMailsForProposalSendService.ReturnCheckIfEmailExists(startOfficeEmail, convertedNumberUser, convertedNumberProposal);
+        await _InsertEMailsForProposalSendService.InsertEmailsForProposalSend(_emailModel.OfficeEmail, "Büro", convertedNumberUser, convertedNumberProposal, doesOfficeEMailExist);
+        
+        int uid = convertedNumberUser; // Setzen Sie den Wert für uid entsprechend
+        int pid = convertedNumberProposal; // Setzen Sie den Wert für pid entsprechend
+        
+        // E-Mails von der Datenbank abfragen
+        var getEmailsUrl = $"http://localhost:5551/EMail/NeededEmails?uid={uid}&pid={pid}";
+        var httpClient = new HttpClient();
+
+        try
+        {
+            // Senden Sie eine GET-Anfrage an die URL und deserialisieren Sie die Antwort
+            var response = await httpClient.GetFromJsonAsync<List<EMailModel>>(getEmailsUrl);
+
+            // Überprüfen Sie, ob die Antwort nicht null ist
+            if (response != null)
+            {
+                // Iterieren Sie durch jede E-Mail in der Liste und geben Sie sie aus
+                foreach (var emailModel in response)
+                {
+                    //Console.WriteLine($"EMailId: {emailModel.EMailId}, UserId: {emailModel.UserId}, EMail: {emailModel.EMail}, Type: {emailModel.Type}");
+                    emailstoSend.Add(emailModel.EMail);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Die Antwort ist leer.");
+            }
+        }
+        catch (HttpRequestException e)
+        {
+            // Wenn ein Fehler beim Senden der Anfrage auftritt, geben Sie ihn aus
+            Console.WriteLine($"Fehler beim Senden der Anfrage: {e.Message}");
+        }
+        
+        foreach (var item in emailstoSend)
+        {
+            Console.WriteLine(item);
+        }
+
+        // PDF von Datenbank abfrgaen
+        var getPdfPathUrl = $"http://localhost:5552/Generation?proposal_id={pid}&user_id={uid}";
+        var responesPdfPath = await httpClient.GetFromJsonAsync<Pdf>(getPdfPathUrl);
+        var pdfPath = responesPdfPath.pdfPath;
+        
+        // Proposal-Name von Datenbank abfragen
+        var getproposalNameUrl =  $"http://localhost:5551/EMail/ProposalName?uid={uid}&pid={pid}";
+        var responseProposalName = await httpClient.GetFromJsonAsync<Proposals>(getproposalNameUrl);
+        var proposalName = responseProposalName.Name;
+        Console.WriteLine(proposalName);
+        
+        Console.WriteLine(pdfPath.ToString());
+        
+        //var pdfPath =  @"E:\Schule\DA\datenblatt_20240112_angebot-strabag-elektrotechnik-at.pdf"; // Pfad zur PDF-Datei auf Ihrem lokalen System
+        var sendEmailsUrl = "http://localhost:5551/EMail"; // Basis-URL Ihrer REST-API
+        
+        // Erstellen Sie eine Formulardaten, die die E-Mail-Adressen und den Pfad zur PDF-Datei enthält
+        var formData = new MultipartFormDataContent();
+        foreach (var email in emailstoSend)
+        {
+            formData.Add(new StringContent(email), "emailAddresses");
+        }
+        formData.Add(new StringContent(pdfPath.ToString()), "pdfPath");
+        formData.Add(new StringContent(proposalName), "pdfName");
+        
+        // Senden Sie die POST-Anforderung an den Endpunkt Ihrer API
+        var response2 = await httpClient.PostAsync(sendEmailsUrl, formData);
+
+        // Überprüfen Sie die Antwort
+        if (response2.IsSuccessStatusCode)
+        {
+            Console.WriteLine("E-Mail erfolgreich gesendet!");
+        }
+        else
+        {
+            Console.WriteLine($"Fehler beim Senden der E-Mail. Statuscode: {response2.StatusCode}");
+        }
+        
+        navigationManager.NavigateTo($"StartingScreen/{uid.ToString()}", forceLoad:true);
+
+        
+
+    }
+
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"StartingScreen/{uid.ToString()}", forceLoad:true);
+    }
+}

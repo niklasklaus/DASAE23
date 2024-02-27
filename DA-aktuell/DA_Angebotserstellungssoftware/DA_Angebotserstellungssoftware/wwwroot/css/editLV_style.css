@@ -1,0 +1,47 @@
+﻿.concrete-content-container-editLV{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr 15fr 1fr 1fr;
+    grid-template-columns: 1fr 13fr 1fr;
+}
+
+.header-editLV{
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.header-editLV h1{
+    color: #D72622;
+}
+
+.table_lv{
+    overflow: auto;
+    display: grid;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.table-properties{
+    background-color: #ffffff;
+    border: 3px solid #F2F3F3;
+}
+
+.item-input-ButtonSave{
+    display: grid;
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.item-input-ButtonSave button{
+    margin-top: 5px;
+}
+
+.table-properties td{
+    border: 3px solid #F2F3F3;
+    white-space: nowrap;
+}
+
+.table-properties th{
+    border: 3px solid #F2F3F3;
+}

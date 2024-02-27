@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA_PDF_Generierung_Result", "DA_PDF_Generierung_Result\DA_PDF_Generierung_Result.csproj", "{DAFF4EAC-90C8-4EE4-A438-7C35F8BF40BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAFF4EAC-90C8-4EE4-A438-7C35F8BF40BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFF4EAC-90C8-4EE4-A438-7C35F8BF40BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFF4EAC-90C8-4EE4-A438-7C35F8BF40BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFF4EAC-90C8-4EE4-A438-7C35F8BF40BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

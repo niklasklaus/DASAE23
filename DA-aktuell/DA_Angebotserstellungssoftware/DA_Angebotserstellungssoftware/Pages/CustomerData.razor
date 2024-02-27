@@ -1,0 +1,118 @@
+﻿@page "/customer/{uid}/{pid}"
+@using DA_Angebotserstellungssoftware.InsertCustomerData
+@using DA_Angebotserstellungssoftware
+@using DA_Angebotserstellungssoftware.Proposals
+@inject InsertCustomerDataService insertCustomer
+@inject NavigationManager navigationManager
+@inject UpdateShortNameService updateShortNameService
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/customerData.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+        <!-- Blazor Navbar Component -->
+        <Navbar_Basic />
+        
+        <div class="concrete-content-container-customer">
+            <div class="header-customer"><h1>Kundendaten eingeben</h1></div>
+            <div class="item-grid item-Anrede">
+                <label class="primary-label-text kind-item-label" for="CustomerAnrede">Anrede *</label>
+                <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+                    <InputText class="input-form input-field-customer" type="text" id="CustomerAnrede" @bind-Value="@_customer.Anrede"></InputText>
+                </EditForm>
+            </div>
+            <div class="item-grid item-FirstName">
+                <label class="primary-label-text kind-item-label" for="CustomerFirstName">Vorname *</label>
+                <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+                    <InputText class="input-form input-field-customer" type="text" id="CustomerFirstName" @bind-Value="@_customer.FirstName"></InputText>
+                </EditForm>
+            </div>
+            <div class="item-grid item-LastName">
+                <label class="primary-label-text kind-item-label" for="CustomerLastName">Nachname *</label>
+                <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+                    <InputText class="input-form input-field-customer" type="text" id="CustomerLastName" @bind-Value="@_customer.LastName"></InputText>
+                </EditForm>
+            </div>
+            <div class="item-grid item-Address">
+                <label class="primary-label-text kind-item-label" for="CustomerAddress">Anschrift *</label>
+                <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+                    <InputText class="input-form input-field-customer" type="text" id="CustomerAddress" @bind-Value="@_customer.Address"></InputText>
+                </EditForm>
+            </div>
+            <div class="item-grid item-UIDNumber">
+                <label class="primary-label-text kind-item-label" for="CustomerUIDNumber">Firmen UID-Nummer</label>
+                <EditForm Model="@_customer" OnValidSubmit="ExecuteNext" class="kind-item-input">
+                    <InputText class="input-form input-field-customer" type="text" id="CustomerUIDNumber" @bind-Value="@_customer.UIDNumber"></InputText>
+                </EditForm>
+            </div>
+            <div class="item-input-Button">
+                <button @onclick="ExecuteBack" class="primary-btn-login button-back" type="submit" id="loginBtn">ZURÜCK</button>
+                <button @onclick="ExecuteNext" class="primary-btn-login button-next" type="submit" id="loginBtn">WEITER</button>
+            </div>
+        </div>
+        
+        <!-- Blazor Footer Component -->
+        <Footer_Basic />
+    
+    @if (!string.IsNullOrEmpty(Msg))
+    {
+        <div class="alert alert-info">
+            <p>@Msg</p>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] 
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
+    
+    public CustomerModel _customer { get; set; } = new();
+    public string Msg;
+    public int customer_id;
+    public int user_id;
+    public int proposal_id;
+    public string lvNameForPropsal;
+    int checkIfCustomerExists;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Random rand = new Random();
+        proposal_id = Int32.Parse(pid);
+        user_id = Int32.Parse(uid);
+        customer_id = await insertCustomer.ReturnUserIdForProposal(user_id, proposal_id); // Dort kommt dann die ID aus der Url rein (später)
+        _customer.Anrede = await insertCustomer.ReturnSalutation(customer_id);
+        _customer.FirstName = await insertCustomer.ReturnFirstName(customer_id);
+        _customer.LastName = await insertCustomer.ReturnLastName(customer_id);
+        _customer.Address = await insertCustomer.ReturnAddress(customer_id);
+        _customer.UIDNumber = await insertCustomer.ReturnUID(customer_id);
+        //lvNameForPropsal = await updateShortNameService.ReturnLVName(user_id,proposal_id);
+        //checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
+
+    }
+    
+    public class CustomerModel
+    {
+        public string Anrede { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string UIDNumber { get; set; }
+    }
+
+    public async Task ExecuteNext()
+    {
+        checkIfCustomerExists = await insertCustomer.ReturnCheckIfUserExists(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address);
+        Console.WriteLine(checkIfCustomerExists);
+        insertCustomer.InsertCustomerData(_customer.Anrede, _customer.FirstName, _customer.LastName, _customer.Address, _customer.UIDNumber, customer_id, checkIfCustomerExists, user_id, proposal_id);
+        //updateShortNameService.UpdateProposalShortName(lvNameForPropsal, _customer.LastName, user_id, proposal_id);
+        Msg = $"Der Kunde wurde erfolgreich hinzugefügt";
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}");
+    }
+    
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+    }
+}

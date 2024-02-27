@@ -1,0 +1,138 @@
+﻿@page "/PaymentTerms/{uid}/{pid}"
+@using Microsoft.AspNetCore.Mvc.Filters
+@using DA_Angebotserstellungssoftware.Proposals
+@using DA_Angebotserstellungssoftware.ServiceConnection
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager navigationManager
+@inject InsertPaymentTermService insertPaymentTermService
+
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/payment_terms_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-payment">
+        <div class="payment-header"><h1>Zahlungsziel eingeben</h1></div>
+        <!--<div class="totalDays-header"><p>Zahlungsziel:</p></div>
+        <div class="totalDays-input">
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>-->
+        <div class="totalDays-container">
+            <label class="primary-label-text totalDays-header" for="subChoice">Zahlungsziel netto:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="totalDays-input">
+                <InputSelect class="totalDays-input" id="subLVInputSelect" @bind-Value="_paymentModel.TotalDays">
+                    @for (int i = 1; i <= 30; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        
+        <div class="skonto-container">
+            <label class="primary-label-text skonto-header" for="subChoice">Skonto:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="skonto-input1">
+                <InputNumber class="skonto-input1" id="CustomerAnrede" @bind-Value="@_paymentModel.SkontoValue"></InputNumber>
+            </EditForm>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="skonto-input2">
+                <InputSelect class="skonto-input2" id="subLVInputSelect" @bind-Value="_paymentModel.LimitDays">
+                    @for (int i = 1; i <= 14; i++)
+                    {
+                        <option value="@i">@i Tage</option>
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+        
+        <div class="name-container">
+            <label class="primary-label-text name-header" for="subChoice">Angebot gilt für folgendes Projekt:</label>
+            <EditForm Model="@_paymentModel" OnValidSubmit="ExecuteConfirm" class="name-input">
+                <InputText class="name-input" type="text" id="CustomerAnrede" @bind-Value="@_paymentModel.ProjectName"></InputText>
+            </EditForm>
+        </div>
+        
+        <div class="btn-container">
+            <button @onclick="ExecuteBack" class="primary-btn-login button-back-payment" type="submit" id="loginBtn">ZURÜCK</button>
+            <button @onclick="ExecuteConfirm" class="primary-btn-login button-save-payment" type="submit" id="loginBtn">WEITER</button>
+        </div>
+    </div>
+    
+     @if (!string.IsNullOrEmpty(Msg))
+        {
+            <div class="alert alert-info">
+                <p>@Msg</p>
+            </div>
+        }
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+@code {
+    [Parameter] 
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
+    public PaymentModel _paymentModel { get; set; } = new();
+    public GetGenerationServiceData data = new GetGenerationServiceData();
+
+    public string Msg;
+    int convertedNumberUser;
+    int convertedNumberProposal;
+
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        convertedNumberProposal = Int32.Parse(pid);
+        convertedNumberUser = int.Parse(uid);
+        _paymentModel.TotalDays = await insertPaymentTermService.ReturnPaymentTerm(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.SkontoValue = await insertPaymentTermService.ReturnSkontoPercent(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.LimitDays = await insertPaymentTermService.ReturnSkontoDays(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.ProjectName = await insertPaymentTermService.ReturnProjectName(convertedNumberUser, convertedNumberProposal);
+        _paymentModel.uid = uid;
+       
+    }
+
+    public class PaymentModel
+    {
+        public int TotalDays { get; set; }
+        public int LimitDays { get; set; }
+        public double SkontoValue { get; set; }
+        public string ProjectName { get; set; }
+        public string uid { get; set; }
+    }
+
+    public void ExecuteConfirm()
+    {
+        if (_paymentModel.SkontoValue <= 100.00)
+        {
+            insertPaymentTermService.InsertPaymentTerms(_paymentModel.TotalDays, _paymentModel.SkontoValue, _paymentModel.LimitDays, _paymentModel.ProjectName ,convertedNumberUser, convertedNumberProposal);
+            Msg = $"Zahlungsziel wurde erfolgreich hinzugefügt";
+            data.WritePDFData(Convert.ToInt32(pid), Convert.ToInt32(uid));
+            navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+        }
+        else
+        {
+            Msg = "Skonto kann nicht vergeben werden";
+        }
+    }
+    
+
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
+    }
+}

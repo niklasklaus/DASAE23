@@ -1,0 +1,229 @@
+﻿@page "/ProjectSearch/{uid}"
+@using DA_Angebotserstellungssoftware.Proposals
+@using DA_Angebotserstellungssoftware.PDFs
+@inject SearchProposalService searchProposalService 
+@inject NavigationManager navigationManager
+@inject DeleteProposalService deleteProposalService
+@inject IModalService Modal
+@inject ReadPdfPathDatabase _ReadPdf
+@inject SharedService _srvice
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/projectSearch_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+
+    <div class="concrete-content-container-projectSearch">
+        <div class="header-projectSearch">
+            <h1>Angebot suchen</h1>
+        </div>
+
+        <div class="item-grid item-ProjectInput">
+            <label class="primary-label-text kind-item-label-choose" for="ProjectChoice">Projekt:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedProjectName" @onchange="HandleProjectSelection">
+                    @if (_searchProject.Project != null)
+                    {
+                        //<option>Projektname auswählen</option>
+                        @for (int i = 0; i < _searchProject.Project.Count; i++)
+                        {
+                            <option>@_searchProject.Project[i]</option>
+                        }
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+
+        <div class="item-grid item-OfferNumberInput">
+            <label class="primary-label-text kind-item-label-choose" for="OfferNumberChoice">Angebot-Nummer:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedProposalName" @onchange="HandleProposalSelection">
+                    @if (_searchProject.OfferNumber != null)
+                    {
+                        //<option>Angebotsname auswählen</option>
+                        @for (int i = 0; i < _searchProject.OfferNumber.Count; i++)
+                        {
+                            <option>@_searchProject.OfferNumber[i]</option>
+                        }
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+
+        <div class="item-grid item-Customer">
+            <label class="primary-label-text kind-item-label-choose" for="CustomerChoice">Kunde:</label>
+            <EditForm Model="@_searchProject" OnValidSubmit="ExecuteSearch" class="kind-item-input-choose">
+                <InputSelect class="kind-item-input-choose" @bind-Value="selectedCustomer" @onchange="HandleCustomerSelection">
+                    @if (_searchProject.Customer != null)
+                    {
+                        //<option>Kundenname auswählen</option>
+                        @for (int i = 0; i < _searchProject.Customer.Count; i++)
+                        {
+                            <option>@_searchProject.Customer[i]</option>
+                        }
+                    }
+                </InputSelect>
+            </EditForm>
+        </div>
+
+        <div class="item-input-ButtonSearch">
+            <button @onclick="ExecuteSearch" class="primary-btn-login" type="submit" id="loginBtn">SUCHEN</button>
+        </div>
+        
+         
+        <div class="header-item-container">
+             <label class="primary-label-text kind-item-label-choose">Treffer:</label>
+             <div class="item-list-container">
+                @for (int i = 0; i < resultProposal.Count; i++)
+                {
+                    int currentIdx = i;
+                    @if (!string.IsNullOrEmpty(resultProposal[i]))
+                    {
+                        <div class="item-container">
+                            <p class="name-text">@resultProposal[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("yyyy-MM-dd HH:mm:ss")</p>
+                            <button @onclick="() => ExecuteDelete(currentIdx)" class="button-position-properties-projectSearch button-position-delete-startingScreen"><img class="img-size-starting" src="css/images_login_page/Delete_Icon.png" /></button>
+                            <button @onclick="() => ExecuteEdit(currentIdx)" class="button-position-properties-projectSearch button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png" />
+                            </button>
+                            <button @onclick="@(() => ExecuteOpeningModal(currentIdx))" class="button-position-properties-projectSearch button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png" />
+                            </button>
+                            <button class="button-position-properties-projectSearch button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png" />
+                            </button>
+                        </div>
+                
+                        @if (i < resultProposal.Count - 1)
+                        {
+                            <hr class="separator">
+                        }
+                    }
+                    else
+                    {
+                        <p>Keine Ergebnisse gefunden</p>
+                    }
+                }
+
+                
+             </div>
+                 
+         </div>
+             
+    </div>
+
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+
+</div>
+
+
+
+@code {
+    public SearchProjectModel _searchProject { get; set; }
+
+    [Parameter] 
+    public string uid { get; set; }
+    
+    public string selectedProjectName;
+    public string selectedCustomer;
+    public string selectedProposalName;
+
+    public List<string> resultProposal = new List<string>();
+    public int cid;
+    public int convertedNumberUser;
+    
+    public List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        convertedNumberUser = Int32.Parse(uid);
+        _searchProject = new();
+        _searchProject.Project = await searchProposalService.ReturnProjectNamesListProjectSearch(convertedNumberUser);
+        _searchProject.Customer = await searchProposalService.ReturnCustomersListProjectSearch();
+        _searchProject.OfferNumber = await searchProposalService.ReturnProposalShortListProjectSearch(convertedNumberUser, 1000);
+    }
+    
+    public class SearchProjectModel
+    {
+        public List<string> Project { get; set; }
+        public List<string> OfferNumber { get; set; }
+        public List<string> Customer { get; set; }
+    }
+    
+    public void HandleProjectSelection(ChangeEventArgs e)
+    {
+        selectedProjectName = e.Value.ToString();
+    }
+    
+    
+    public void HandleCustomerSelection(ChangeEventArgs e)
+    {
+        selectedCustomer = e.Value.ToString();
+    }
+    
+    
+    public void HandleProposalSelection(ChangeEventArgs e)
+    {
+        selectedProposalName = e.Value.ToString();
+    }
+
+    public async Task ExecuteSearch()
+    {
+        // Leere die Ergebnisliste, um Platz für die neuen Ergebnisse zu machen
+        resultProposal.Clear();
+        Console.WriteLine(selectedProjectName);
+        Console.WriteLine(selectedProposalName);
+        Console.WriteLine(selectedCustomer);
+        cid = await searchProposalService.ReturnCustomerNameToID(selectedCustomer);
+        Console.WriteLine(cid);
+        
+        // Führe die Suche durch und aktualisiere die Ergebnisse
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtListForProjectSearch(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
+        resultProposal = await searchProposalService.ReturnFoundProposal(convertedNumberUser, selectedProjectName, cid, selectedProposalName);
+        
+        // Navigiere zu einer neuen Seite oder führe andere Aktionen durch
+        // navigationManager.NavigateTo($"/ProjectSearch/{convertedNumberUser.ToString()}", forceLoad: true);
+    }
+
+
+    public void ExecuteEdit(int i)
+    {
+        string[] splittedProposal = resultProposal[i].Split(' ');
+        navigationManager.NavigateTo($"/customer/{uid.ToString()}/{splittedProposal[0]}");
+    }
+    
+    public void ExecuteDelete(int i)
+    {
+        string[] splittedProposal = resultProposal[i].Split(' ');
+        int converted = Int32.Parse(splittedProposal[0]);
+        deleteProposalService.DeleteProposal(converted, convertedNumberUser);
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+    }
+    
+    public async Task ExecuteShowPdf(int proposalids, int userid, string name)
+    {
+        Console.WriteLine("Edit Method Test");
+        string p = await _ReadPdf.GetPathOfPdf(userid, proposalids);
+        ModalPDF.path = $"pdfs/{userid}/{Path.GetFileName(p)}";
+        //ModalPDF.path = "pdfs/1/1_2978419_Angebot.pdf";
+        Modal.Show<ModalPDF>(name, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" });
+    }
+    
+    public async Task ExecuteOpeningModal(int currentIndex)
+    {
+        string[] splittedProposal = resultProposal[currentIndex].Split(' ');
+        int converted = Int32.Parse(splittedProposal[0]);
+        string name = splittedProposal[1];
+        _srvice.proposalId = converted.ToString();
+        await ExecuteShowPdf(converted, convertedNumberUser, name);
+    }
+
+    public void ExecuteStartingScreen()
+    {
+        navigationManager.NavigateTo($"/StartingScreen/{uid.ToString()}", forceLoad: true);
+    }
+}

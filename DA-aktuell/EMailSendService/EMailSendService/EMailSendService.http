@@ -1,0 +1,7 @@
+@EMailSendService_HostAddress = http://localhost:5551
+@uid = {{uid}}
+@pid = {{pid}}
+
+GET {{EMailSendService_HostAddress}}/EMail?uid={{uid}}&pid={{pid}}
+GET {{EMailSendService_HostAddress}}/ProposalName?uid={{uid}}&pid={{pid}}
+Accept: application/json

@@ -1,0 +1,201 @@
+﻿@page "/StartingScreen/{id}"
+@using DA_Angebotserstellungssoftware.Users
+@using DA_Angebotserstellungssoftware.Proposals
+@using DA_Angebotserstellungssoftware.PDFs
+@inject InsertLVsService lvs
+@inject IModalService Modal
+@inject SharedService _srvice
+@inject SelectUserIdService _SelectUserIdService
+@inject NavigationManager navigationManager
+@inject SearchProposalService searchProposalService 
+@inject DeleteProposalService deleteProposalService
+@inject ReadPdfPathDatabase _ReadPdf
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/startingScreen_style.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-startingScreen">
+        <div class="header-startingScreen"><h1>Willkommen @userName</h1></div>
+        <div class="links-container">
+            <!--<div class="Create-img-div"></div>
+            <button @onclick="ExecuteCreate" class="Create-btn">Angebot erstellen</button>
+            <div class="Edit-img-div"></div>
+            <button class="Edit-btn">Leistungsverzeichnis bearbeiten</button>
+            <div class="Show-img-div"></div>
+            <button class="Show-btn">Angebot anzeigen</button>-->
+                    
+            <div @onclick="ExecuteCreate" class="Create-img-div">
+                <button @onclick="ExecuteCreate">Erstellen</button>
+                <p>Erstellen</p>
+                <img src="css/images_login_page/CreateOffer.png"/>
+            </div>
+            <div @onclick="ExecuteSearchProject" class="Edit-img-div">
+                <button>Suchen</button>
+                <p>Suchen</p>
+                <img src="css/images_login_page/SearchOffer.png"/>
+            </div>
+            <div @onclick="ExecuteShowAllProjects" class="Show-img-div">
+                <button>Anzeigen</button>
+                <p>Anzeigen</p>
+                <img src="css/images_login_page/ShowOffer.png"/>
+            </div>
+        </div>
+        
+        <div class="list-body-container">
+            <label class="primary-label-text kind-item-label-choose">Letzte Angebote:</label>
+            <div class="item-list-container">
+                @if (proposalNames.Count <= 3)
+                {
+                    @for (int i = 0; i < proposalNames.Count; i++)
+                    {
+                        int currentIndex = i;
+                        <div class="item-container item@(i + 1)">
+                            <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("yyyy-MM-dd HH:mm:ss")</p>
+                            <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png"/>
+                            </button>
+                            <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png"/>
+                            </button>
+                            <button @onclick="@(() => ExecuteOpeningModal(currentIndex))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png"/>
+                                </button>
+                            <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png"/>
+                            </button>
+                        </div>
+                    }
+                }
+
+                else
+                {
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        int currentIndex = i;
+                        <div class="item-container item@(i + 1)">
+                            <p class="name-text">@proposalIds[i] @proposalNames[i]</p>
+                            <p class="date-text">@proposalLastUpdatedAt[i].ToString("yyyy-MM-dd HH:mm:ss")</p>
+                            <button @onclick="() => ExecuteDelete(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-delete-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Delete_Icon.png"/>
+                            </button>
+                            <button @onclick="() => ExecuteEdit(proposalIds[currentIndex])" class="button-position-properties-startingScreen button-position-edit-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Edit_Icon.png"/>
+                            </button>
+                            <button @onclick="@(() => ExecuteOpeningModal(currentIndex))" class="button-position-properties-startingScreen button-position-max-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Max_Icon.png"/>
+                            </button>
+                            <button class="button-position-properties-startingScreen button-position-download-startingScreen">
+                                <img class="img-size-starting" src="css/images_login_page/Download_Icon.png"/>
+                            </button>
+                        </div>
+                    }
+                }
+               
+
+            </div>
+            <!--<a class="Show-All-Offer-Link">Alle Angebote anzeigen</a>-->
+        </div>
+
+      
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+    
+</div>
+
+@code {
+    [Parameter]
+    public string id { get; set; } //User-Id
+    public int proposal_id;
+    public int convertedUserNumber; // Konvertierte User-Id
+    public string userName;
+    public List<string> proposalNames = new List<string>();
+    public List<int> proposalIds = new List<int>();
+    public List<DateTime> proposalLastUpdatedAt = new List<DateTime>();
+
+
+    public class GetUserId
+    {
+        public static string UserId = "";
+        
+        public static void SetId(string id)
+        {
+            UserId = id;
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        Random rand = new Random();
+        proposal_id = rand.Next(1, 9000001);
+        convertedUserNumber = Int32.Parse(id);
+        userName = await _SelectUserIdService.ReturnUserName(convertedUserNumber);
+        proposalNames = await searchProposalService.ReturnProposalShortList(convertedUserNumber, 3);
+        proposalIds = await searchProposalService.ReturnProposalIdList(convertedUserNumber,3);
+        proposalLastUpdatedAt = await searchProposalService.ReturnProposalLastUpdatedAtList(convertedUserNumber, 3);
+        GetUserId.SetId(id);
+        
+        //folgende Zeilen wurden nur einmal für Master LVs ausgeführt
+        
+        /*string filepath1 = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        string filepath2 = @"C:\DA\Hausanschluss_Privat.xlsm";
+        lvs.InsertMasterLVsPV(filepath1);
+        lvs.InsertMasterLVsHausanschluss(filepath2);*/
+        
+    }
+
+   
+    
+    public void ExecuteCreate()
+    {
+        //string filePath = @"E:\Diplomarbeit\Website\DA_Angebotserstellungssoftware\PV-Kleinbaustellen_Ansichten.xlsm";
+        //string filePath = @"C:\DA\PV-Kleinbaustellen_Ansichten.xlsm";
+        lvs.InsertProposal(proposal_id, convertedUserNumber);
+        navigationManager.NavigateTo($"/customer/{id.ToString()}/{proposal_id.ToString()}");
+    }
+    
+     
+    public void ExecuteEdit(int pid)
+    {
+        navigationManager.NavigateTo($"/customer/{id.ToString()}/{pid.ToString()}");
+    }
+    
+    public void ExecuteDelete(int pid)
+    {
+        deleteProposalService.DeleteProposal(pid, convertedUserNumber);
+        navigationManager.NavigateTo($"/StartingScreen/{id.ToString()}", forceLoad: true);
+    }
+
+    public void ExecuteSearchProject()
+    {
+        navigationManager.NavigateTo($"/ProjectSearch/{id.ToString()}", forceLoad: true);
+    }
+
+    public void ExecuteShowAllProjects()
+    {
+        string PageId = "1";
+        navigationManager.NavigateTo($"/ShowAllOffers/{convertedUserNumber.ToString()}/{PageId.ToString()}", forceLoad: true);
+    }
+    
+    public async Task ExecuteShowPdf(int proposalids, int userid, string name)
+    {
+        ModalPDF.pid_sign = proposalids;
+        ModalPDF.uid = userid;
+        Console.WriteLine("Edit Method Test");
+        string p = await _ReadPdf.GetPathOfPdf(userid, proposalids);
+        ModalPDF.path = $"pdfs/{userid}/{Path.GetFileName(p)}";
+        //ModalPDF.path = "pdfs/1/1_2978419_Angebot.pdf";
+        Modal.Show<ModalPDF>(name, new ModalOptions() { Size = ModalSize.Custom, SizeCustomClass = "custom-modal" });
+    }
+    
+    public async Task ExecuteOpeningModal(int currentIndex)
+    {
+         _srvice.proposalId = proposalIds[currentIndex].ToString();
+         await ExecuteShowPdf(proposalIds[currentIndex], Convert.ToInt32(id), proposalNames[currentIndex]);
+    }
+}

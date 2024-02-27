@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+XUT2UQX86eK25JDznR//Y0KJqp2A3T37VZZZW8vbsE=",
+  "Source": "EMailSendService",
+  "BasePath": "_content/EMailSendService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

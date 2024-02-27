@@ -1,0 +1,72 @@
+﻿@using Microsoft.AspNetCore.Mvc.ModelBinding
+@using DA_Angebotserstellungssoftware.Pages
+@using DA_Angebotserstellungssoftware.ServiceConnection
+@using EMailSendService.Model
+@inject InsertEffortAndDiscountService insertEffortAndDiscountService
+@inject SharedService _srvice
+@inject NavigationManager navigationManager
+@inject IJSRuntime JavaScript
+<link href="/css/showPDF_style.css" rel="stylesheet"/>
+
+
+<style>
+    #myPDF{
+    width: 90%;
+    height: 100%;
+    }
+    
+    
+</style>
+
+<!--<div class="default-container-pdf">
+    
+    <embed id="myPDF" type="application/pdf" class="pdf-show" src="pdfs/Kleinangebote%20LV.pdf" frameborder="0">
+    
+</div>-->
+<div class="default-container-pdf">
+    
+    <div class="button-container">
+        <input type="button" value="Löschen" class="canvas-clear custom-modal-btn" />
+        <button class="custom-modal-btn" @onclick="() => ExecuteSendEmail()">Senden</button>
+        <!--<input type="button" value="Send Signature" class="send-signature" />-->
+        <button class="custom-modal-btn" @onclick="() => ExecuteSendSignature()">Unterschrift</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas" width="400" height="65"></canvas>
+    </div>
+    <div class="pdf-container">
+        <embed id="myPDF" type="application/pdf" class="pdf-show" src="@path" frameborder="0">
+    </div>
+</div>
+
+
+@code {
+    public GetGenerationServiceData data = new GetGenerationServiceData();
+    public string pid;
+    public static int pid_sign { get; set; }
+    public static int uid { get; set; }
+    public static string path { get; set; }
+    protected override void OnInitialized()
+    {
+        pid = _srvice.proposalId;
+    }
+    public void ExecuteSendEmail()
+    {
+        navigationManager.NavigateTo($"/sendEmail/{StartingScreen.GetUserId.UserId}/{pid.ToString()}");
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JavaScript.InvokeVoidAsync("window.onload");
+        }
+    }
+
+    public async Task ExecuteSendSignature()
+    {
+        string result = await JavaScript.InvokeAsync<string>("getSignatureValue");
+        Console.WriteLine(result); // Ausgabe: Hello from JavaScript
+        data.WritePDFDataSignature(pid_sign, uid, result);
+    }
+
+}

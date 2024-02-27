@@ -1,0 +1,6 @@
+@GenerationService_HostAddress = http://localhost:5552
+
+GET {{GenerationService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

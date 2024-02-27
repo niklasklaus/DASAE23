@@ -1,0 +1,129 @@
+﻿@page "/ListOfLVs/{uid}/{pid}"
+@using DA_Angebotserstellungssoftware.Proposals
+@inject IModalService Modal
+@inject SharedService _srvice
+@inject NavigationManager navigationManager
+@inject InsertLVsService lvs
+@inject UpdateProposalPriceService _UpdateProposalPriceService
+
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/listOfLV.css" rel="stylesheet"/>
+
+<div class="default-content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic />
+    
+    <div class="concrete-content-container-lv_list">
+        <div class="header-lv_list"><h1>Leistungsverzeichnis hinzufügen:</h1></div>
+        <div class="subheader-lv_list"><h3>Liste der LVs:</h3></div>
+        
+        <div class="showList-container">
+            <div class="showList-concrete-item-div">
+                <p class="nameOfLVPos">@shortPVLV</p>
+                <a @onclick="ExecuteEditPV" class="button-position-properties button-position-delete"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+            </div>
+            <div class="showList-concrete-item-div">
+                <p class="nameOfLVPos">@shortHausanschlussPV</p>
+                <a @onclick="ExecuteEditHausanschluss" class="button-position-properties button-position-delete"><img class="img-size" src="css/images_login_page/Edit_Icon.png"/></a>
+            </div>
+            
+        </div>
+        
+        <div class="button-position-div">
+            <a @onclick="@(()=>Modal.Show<Modal>("Einstellungen"))" class="button-position-properties button-position-settings"><img class="img-size" src="css/images_login_page/Settings_Icon.png"/></a>
+            <button @onclick="ExecuteBack" class="primary-btn-login button-position-backButton" type="submit" id="loginBtn">Zurück</button>
+            <button @onclick = "ExecuteNext" class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Weiter</button>
+        </div>
+    </div>
+    
+    <!-- Blazor Footer Component -->
+    <Footer_Basic />
+</div>
+
+@code {
+    [Parameter] 
+    public string uid { get; set; }
+    
+    [Parameter] 
+    public string pid { get; set; }
+    
+
+    public int convertedUID;
+    public int convertedPID;
+
+    public int checkValuesInPVLV;
+    public int checkValuesINHausanschlussPV;
+    public string shortPVLV;
+    public string shortHausanschlussPV;
+
+    double proposalPrice;
+    double discount;
+    private List<double> calculatedGBs = new List<double>();
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _srvice.proposalId = pid;
+        _srvice.userId = uid;
+        convertedUID = Int32.Parse(uid);
+        convertedPID = Int32.Parse(pid);
+        checkValuesInPVLV = await lvs.ReturnCheckIfPVLVExists(convertedUID, convertedPID);
+        checkValuesINHausanschlussPV = await lvs.ReturnCheckIfHausAnschlussLV(convertedUID, convertedPID);
+        shortPVLV = await lvs.ReturnPVLV(checkValuesInPVLV, convertedUID, convertedPID);
+        shortHausanschlussPV = await lvs.ReturnHausanschlussLV(checkValuesINHausanschlussPV, convertedUID, convertedPID);
+        proposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedUID, convertedPID);
+        calculatedGBs = await _UpdateProposalPriceService.ReturnCalculatedGb(convertedUID, convertedPID);
+        discount = await _UpdateProposalPriceService.ReturnProposalDiscount(convertedUID, convertedPID);
+    }
+    
+    
+    /*private void LoadDataFromDatabase(int parsedId)
+    {
+    // Hier könntest du Logik einfügen, um Daten aus der Datenbank basierend auf der id zu laden
+    // Z.B. du könntest eine Methode aufrufen, die die Daten aus der Datenbank lädt
+    }*/
+    
+    
+    public ChooseLVModel _ChooseLv { get; set; } = new();
+    
+    public class ChooseLVModel
+    {
+        public string MainLV { get; set; }
+        public string SubLV { get; set; }
+    }
+
+    public void ExecuteConfirm()
+    {
+        _ChooseLv = new ChooseLVModel();
+    }
+
+    public async Task ExecuteNext()
+    {
+        double price;
+        //if (proposalPrice == 0.00)
+        //{
+            price = await _UpdateProposalPriceService.UpdateProposalPriceWithCalculatedGb(convertedUID, convertedPID, calculatedGBs, proposalPrice);
+            await _UpdateProposalPriceService.UpdateProposalPriceWithDiscount(convertedUID, convertedPID, discount, price);
+        //}
+        navigationManager.NavigateTo($"/PaymentTerms/{uid.ToString()}/{pid.ToString()}");
+    }
+
+    public void ExecuteBack()
+    {
+        navigationManager.NavigateTo($"/customer/{uid.ToString()}/{pid.ToString()}");
+    }
+
+    public void ExecuteEditPV()
+    {
+        string type = "PV";
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}",  forceLoad: true);
+    }
+
+    public void ExecuteEditHausanschluss()
+    {
+        string type = "Hausanschluss";
+        navigationManager.NavigateTo($"/EditLV_Page/{uid.ToString()}/{pid.ToString()}/{type.ToString()}", forceLoad: true);
+    }
+}

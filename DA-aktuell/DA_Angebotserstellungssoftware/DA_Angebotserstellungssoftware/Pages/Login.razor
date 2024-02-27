@@ -1,0 +1,93 @@
+﻿@inject LoginService loginService
+@inject NavigationManager navigationManager
+@inject SelectUserIdService _SelectUserIdService
+@page "/"
+@using DA_Angebotserstellungssoftware.Users
+
+<title>Login</title>
+
+<link href="/css/mainComponents.css" rel="stylesheet"/>
+<link href="/css/login.css" rel="stylesheet"/>
+
+<div class="content-container">
+    
+    <!-- Blazor Navbar Component -->
+    <Navbar_Basic/>
+
+
+    <div class="default-container">
+        <div class="item-topic"><h1>Login</h1></div>
+        <div class="item-input-Username">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <label class="primary-label-text" for="usernameLogin">Username:</label>
+                <InputText class="input-form" type="text"  id="usernameLogin" @bind-Value="_loginModel.Username"></InputText>
+            </EditForm>
+        </div>
+        <div class="item-input-Password">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <label class="primary-label-text" for="passwordLogin">Passwort:</label>
+                <InputText class="input-form" type="password" id="passwordLogin" @bind-Value="_loginModel.Password"></InputText>
+            </EditForm>
+        </div>
+        <div class="item-input-Remember">
+            <EditForm Model="@_loginModel" OnValidSubmit="ExecuteLogin">
+                <input class="check-box-style" type="checkbox" id="addition" name="math" value="add" bind-Value="@_loginModel.RememberMe"/>
+                <label class="primary-label-text" for="addition">Remember Me?</label>
+            </EditForm>
+        </div>
+        <div class="item-input-ButtonLogin">
+            <button @onclick="ExecuteLogin" class="primary-btn-login" type="submit" id="loginBtn">Anmelden</button>
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <img class="img-property" src="css/images_login_page/Logo_Neu_1.png"/>
+    </div>
+    
+    @if (!string.IsNullOrEmpty(Msg))
+    {
+        <div class="alert alert-danger">
+            <p>@Msg</p>
+        </div>
+    }
+    
+    
+    
+    
+</div>
+
+@code {
+
+    public LoginModel _loginModel = new();
+    public static string Msg;
+    public int userid;
+
+    public class LoginModel
+    {
+
+        public string Username { get; set; } 
+        public string Password { get; set; } 
+        public bool RememberMe { get; set; }
+    }
+    
+   
+
+    public async Task ExecuteLogin()
+    {
+        userid = await _SelectUserIdService.ReturnUserId(_loginModel.Username, _loginModel.Password);
+        bool isAuthenticated = loginService.Authenticate(_loginModel.Username, _loginModel.Password);
+        if (isAuthenticated)
+        {
+            navigationManager.NavigateTo($"/StartingScreen/{userid.ToString()}");
+                
+        }
+
+        else
+        {
+            Msg = $"Fehler bei der Anmeldung. Bitte überprüfen Sie die eingegebenen Daten";
+        }
+    }
+
+   
+    
+}

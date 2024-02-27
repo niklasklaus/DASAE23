@@ -255,3 +255,8 @@ C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebot
 C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\Renci.SshNet.dll
 C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\SshNet.Security.Cryptography.dll
 C:\Users\Niklas\repos_da_5chit\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
+C:\Users\lukas\repos\DA\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\Renci.SshNet.Async.dll
+C:\Users\lukas\repos\DA\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\SSH.Client.dll
+C:\Users\lukas\repos\DA\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\Renci.SshNet.dll
+C:\Users\lukas\repos\DA\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\SshNet.Security.Cryptography.dll
+C:\Users\lukas\repos\DA\DASAE23\DA_Angebotserstellungssoftware\DA_Angebotserstellungssoftware\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll

@@ -1,0 +1,49 @@
+﻿.default-container-pdf{
+    display: grid;
+    grid-template-rows: 1fr 2fr 15fr;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.button-container{
+    grid-row: 1;
+    align-items: flex-start;
+}
+
+.pdf-container{
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+}
+
+.canvas-container{
+    grid-row: 2;
+}
+
+.custom-modal-btn{
+    background-color: #E92020;
+    color: #ffffff;
+    border: none;
+    width: 110px;
+    border-radius: 5px;
+}
+
+.modal-settings{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90vh;
+}
+
+#canvas{
+    border:2px solid;
+}
+
+@media only screen and (max-height: 550px) {
+    .pdf-container{
+        grid-row: 3;
+        height: 180%;
+        width: 100%;
+    }
+}

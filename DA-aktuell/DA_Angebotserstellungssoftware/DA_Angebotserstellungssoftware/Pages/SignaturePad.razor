@@ -1,0 +1,21 @@
+﻿@page "/signature"
+@inject IJSRuntime JSRuntime
+
+<canvas id="signatureCanvas" width="400" height="200"></canvas>
+<button @onclick="SaveSignature">Save Signature</button>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeSignaturePad", "signatureCanvas");
+        }
+    }
+
+    async Task SaveSignature()
+    {
+        var signatureData = await JSRuntime.InvokeAsync<string>("getSignature", "signatureCanvas");
+        // Hier kannst du signatureData an das Formular binden oder an den Server senden
+    }
+}

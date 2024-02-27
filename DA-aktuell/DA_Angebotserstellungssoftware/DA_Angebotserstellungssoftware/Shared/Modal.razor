@@ -1,0 +1,87 @@
+﻿@using DA_Angebotserstellungssoftware.Proposals
+@inject InsertEffortAndDiscountService insertEffortAndDiscountService
+@inject SharedService _srvice
+@inject NavigationManager navigationManager
+@inject UpdateProposalPriceService _UpdateProposalPriceService
+@inject InsertEffortAndDiscountService InsertEffortAndDiscount
+<link href="/css/popUpCard_style.css" rel="stylesheet"/>
+
+<div class="content-container-popup">
+    <div class="popup-header1"><h1>Schwierigkeitsgrad:</h1></div>
+    <div class="popup-slider">
+        <RadzenSlider style="width: 100%" @bind-Value="@value" TValue="double" Min="0" Max="5" Step="0.1"/>
+        <input type="text" class="popup-input" value="@value" @oninput="UpdateSliderValue"/>
+    </div>
+    <div class="popup-header2"><h1>Preisnachlass:</h1></div>
+    <div class="price-input-container"><input type="text" class="price-input" @bind="@price"/></div>
+    <div class="btn-confirm-position"><button @onclick="ExecuteUpdate"  class="primary-btn-login button-position-nextButton" type="submit" id="loginBtn">Bestätigen</button></div>
+    @if (!string.IsNullOrEmpty(Msg))
+    {
+        <div class="alert alert-info">
+            <p>@Msg</p>
+        </div>
+    }
+</div>
+
+@code
+{
+
+    public string uid;
+    public string pid;
+    double value;
+    double price;
+    int convertedNumberProposal;
+    int convertedNumberUser;
+    
+    private double ProposalDiscount;
+    private double currentProposalPrice;
+    
+    private List<int> resultslvAmount = new List<int>(); // Variable to store the results
+    private List<double> resultscalculatedEp = new List<double>(); // Variable to store the results
+    public int lvID;
+    
+    private List<double> calculatedGBs = new List<double>();
+    private double proposalPrice;
+    private double Price;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        pid = _srvice.proposalId;
+        uid = _srvice.userId;
+        convertedNumberProposal = Int32.Parse(pid);
+        convertedNumberUser = Int32.Parse(uid);
+        value = await insertEffortAndDiscountService.ReturnEffort(convertedNumberUser, convertedNumberProposal);
+        price = await insertEffortAndDiscountService.ReturnDiscount(convertedNumberUser, convertedNumberProposal);
+        resultslvAmount = await InsertEffortAndDiscount.ReturnLvAmount(convertedNumberUser, convertedNumberProposal);
+        resultscalculatedEp = await InsertEffortAndDiscount.ReturnCalculatedEp(convertedNumberUser, convertedNumberProposal);
+        lvID = await InsertEffortAndDiscount.ReturnLvId(convertedNumberUser, convertedNumberProposal);
+        ProposalDiscount = await _UpdateProposalPriceService.ReturnProposalDiscount(convertedNumberUser, convertedNumberProposal);
+        await base.OnInitializedAsync();
+    }
+
+
+    string Msg;
+   
+    
+    private void UpdateSliderValue(ChangeEventArgs args)
+    {
+        if (double.TryParse(args.Value.ToString(), out double inputValue))
+        {
+            value = inputValue;
+        }
+    }
+
+    public async Task ExecuteUpdate()
+    {
+        await insertEffortAndDiscountService.InsertEffortAndDiscount(value, price, convertedNumberUser, convertedNumberProposal, resultslvAmount, lvID); 
+        calculatedGBs = await _UpdateProposalPriceService.ReturnCalculatedGb(convertedNumberUser, convertedNumberProposal);
+        
+        currentProposalPrice = await _UpdateProposalPriceService.ReturnProposalPrice(convertedNumberUser, convertedNumberProposal);
+        
+        Price  = await _UpdateProposalPriceService.UpdateProposalPriceWithCalculatedGb(convertedNumberUser, convertedNumberProposal, calculatedGBs, currentProposalPrice);
+        await _UpdateProposalPriceService.UpdateProposalPriceWithDiscount(convertedNumberUser, convertedNumberProposal, price, Price);
+        
+        navigationManager.NavigateTo($"/ListOfLVs/{uid.ToString()}/{pid.ToString()}", forceLoad: true);
+        Msg = $"Die betroffenen Leistungsverzeichnisse wurden geändert";
+    }
+}

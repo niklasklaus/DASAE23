@@ -1,0 +1,465 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DA_Angebotserstellungssoftware.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DA_Angebotserstellungssoftware.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\SignatureJavaScript\\signature.js",
+      "PackagePath": "staticwebassets\\SignatureJavaScript\\signature.js"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm",
+      "PackagePath": "staticwebassets\\css\\LV\\PV-Kleinbaustellen_Ansichten.xlsm"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\chooseLV_style.css",
+      "PackagePath": "staticwebassets\\css\\chooseLV_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\customerData.css",
+      "PackagePath": "staticwebassets\\css\\customerData.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\editLV_style.css",
+      "PackagePath": "staticwebassets\\css\\editLV_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Add_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Add_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\CreateOffer.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\CreateOffer.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Delete_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Delete_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Download_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Download_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\EditLV.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\EditLV.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Edit_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Edit_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Logo.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Logo_Neu.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Logo_Neu_1.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Logo_Neu_1.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Max_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Max_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Navbar_Menu_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Navbar_Menu_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\SearchOffer.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\SearchOffer.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Search_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Search_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Settings_Icon.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Settings_Icon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\ShowOffer.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\ShowOffer.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\images_login_page\\Strabag_Logo.png",
+      "PackagePath": "staticwebassets\\css\\images_login_page\\Strabag_Logo.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\listOfLV.css",
+      "PackagePath": "staticwebassets\\css\\listOfLV.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\mainComponents.css",
+      "PackagePath": "staticwebassets\\css\\mainComponents.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\payment_terms_style.css",
+      "PackagePath": "staticwebassets\\css\\payment_terms_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\popUpCard_style.css",
+      "PackagePath": "staticwebassets\\css\\popUpCard_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\projectSearch_style.css",
+      "PackagePath": "staticwebassets\\css\\projectSearch_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\sendEmail_style.css",
+      "PackagePath": "staticwebassets\\css\\sendEmail_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showAllOffers_style.css",
+      "PackagePath": "staticwebassets\\css\\showAllOffers_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\showPDF_style.css",
+      "PackagePath": "staticwebassets\\css\\showPDF_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\css\\startingScreen_style.css",
+      "PackagePath": "staticwebassets\\css\\startingScreen_style.css"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1076219_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1076219_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1076219_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1076219_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1076219_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1076219_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1660633_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1660633_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1660633_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1660633_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_1660633_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_1660633_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2220464_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2220464_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2220464_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2220464_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2370480_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2370480_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2370480_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2370480_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2682503_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2682503_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2682503_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2682503_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_2682503_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_2682503_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_3300350_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_3300350_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_3300350_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_3300350_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_3359339_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_3359339_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_3359339_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_3359339_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_352585_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_352585_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_352585_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_352585_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_352585_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_352585_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_4352202_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_4352202_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_4920615_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_4920615_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_5177395_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_5177395_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_5727788_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_5727788_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_6200570_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_6200570_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_6200570_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_6200570_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_6200570_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_6200570_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_65607_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_65607_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_7250637_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_7250637_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_7250637_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_7250637_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\1\\1_8453667_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\1\\1_8453667_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_1535938_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_1535938_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_1760486_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_1760486_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_2785072_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_2785072_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_2785072_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_2785072_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_331264_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_331264_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_331264_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_331264_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_5757713_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_5757713_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_5757713_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_5757713_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\2\\2_8035657_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\2\\2_8035657_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_1785279_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_1785279_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_1785279_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_1785279_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_2090421_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_2090421_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_2161300_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_2161300_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_2635497_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_2635497_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3029572_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3029572_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3029572_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3029572_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3029572_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3029572_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3077537_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3077537_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3694776_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3694776_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3813975_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3813975_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_3813975_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_3813975_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_4014400_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_4014400_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_4945721_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_4945721_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_6224306_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_6224306_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_625660_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_625660_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_6553513_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_6553513_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_6622623_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_6622623_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_6924579_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_6924579_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_8101690_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_8101690_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_8101690_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_8101690_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_8101690_Angebot.pdf_signature.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_8101690_Angebot.pdf_signature.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_8343203_Angebot.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_8343203_Angebot.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\3\\3_8343203_Angebot.pdf_signature.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\3\\3_8343203_Angebot.pdf_signature.pdf"
+    },
+    {
+      "Id": "G:\\5CHIT\\Diplomarbeit\\DA-aktuell\\DA_Angebotserstellungssoftware\\DA_Angebotserstellungssoftware\\wwwroot\\pdfs\\Kleinangebote LV.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Kleinangebote LV.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DA_Angebotserstellungssoftware.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DA_Angebotserstellungssoftware.props",
+      "PackagePath": "build\\DA_Angebotserstellungssoftware.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DA_Angebotserstellungssoftware.props",
+      "PackagePath": "buildMultiTargeting\\DA_Angebotserstellungssoftware.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DA_Angebotserstellungssoftware.props",
+      "PackagePath": "buildTransitive\\DA_Angebotserstellungssoftware.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

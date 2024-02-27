@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DA_PDF_Generierung_Result.props" />
+</Project>
